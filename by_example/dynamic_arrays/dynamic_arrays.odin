@@ -41,3 +41,21 @@ main :: proc() {
 	}
 
 	// Maintain the order of the elements.
+	ordered_remove(&dyn, 0)
+
+	// Do not maintain the order. 
+	// This is faster since ordered_remove has to copy, 
+	// whereas this effectively swaps the last element 
+	// with that of your choice and pops it.
+	unordered_remove(&dyn, 0)
+
+	// Copy the dynamic array into dyn_copy.
+	dyn_copy := make([dynamic]int, len(dyn), cap(dyn))
+	defer delete(dyn_copy)
+	
+	copy(dyn_copy[:], dyn[:])
+	
+	fmt.println("Elements:", dyn)
+	fmt.println("Length:  ", len(dyn))
+	fmt.println("Capacity:", cap(dyn))
+}
