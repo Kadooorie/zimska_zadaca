@@ -1,4 +1,7 @@
 package main 
 
 import "core:fmt"
-import "cor
+import "core:os"
+
+main :: proc() {
+	// os.args i
