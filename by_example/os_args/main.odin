@@ -4,4 +4,5 @@ import "core:fmt"
 import "core:os"
 
 main :: proc() {
-	// os.args i
+	// os.args is a []string
+	fmt.println(os.args
