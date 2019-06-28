@@ -1,4 +1,6 @@
 package read_console_input
 
 import "core:fmt"
-import 
+import "core:os"
+
+main :: pr
