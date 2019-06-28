@@ -8,4 +8,7 @@ main :: proc() {
 	fmt.println("Please enter some text:")
 	n, err := os.read(os.stdin, buf[:])
 	if err < 0 {
-		// H
+		// Handle error
+		return
+	}
+	str :=
