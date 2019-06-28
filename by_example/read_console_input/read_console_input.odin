@@ -5,4 +5,5 @@ import "core:os"
 
 main :: proc() {
 	buf: [256]byte
-	fmt.println("Please enter some text:"
+	fmt.println("Please enter some text:")
+	n, err := os.read(os.stdin, bu
