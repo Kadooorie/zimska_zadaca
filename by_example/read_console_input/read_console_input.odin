@@ -5,4 +5,4 @@ import "core:os"
 
 main :: proc() {
 	buf: [256]byte
-	fmt.print
+	fmt.println("Please enter some text:"
