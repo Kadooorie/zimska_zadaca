@@ -1,1 +1,4 @@
-package read_console_in
+package read_console_input
+
+import "core:fmt"
+import 
