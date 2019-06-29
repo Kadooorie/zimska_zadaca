@@ -11,4 +11,5 @@ main :: proc() {
 		// Handle error
 		return
 	}
-	str :=
+	str := string(buf[:n])
+	fmt.println("Outp
