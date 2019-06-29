@@ -1,3 +1,4 @@
 package basic_string_example
 
-import "core:fm
+import "core:fmt"
+import "core:strings"
