@@ -12,4 +12,5 @@ main :: proc() {
 		return
 	}
 	str := string(buf[:n])
-	fmt.println("Outp
+	fmt.println("Outputted text:", str)
+}
