@@ -4,4 +4,6 @@ import "core:fmt"
 import "core:strings"
 
 /*
-	Strings in Odin 
+	Strings in Odin are immutable.
+	 
+	Runes are unencod
