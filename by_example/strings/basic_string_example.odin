@@ -18,4 +18,6 @@ main :: proc() {
 	name2 := "月"
 
 	// Check if the names are equal.
-	is_equal := 
+	is_equal := strings.compare(name1, name2)
+
+	if i
