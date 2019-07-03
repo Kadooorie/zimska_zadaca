@@ -12,4 +12,6 @@ import "core:strings"
 	You can think of runes as characters, but be careful, as one rune does not always equal one character.
 	For example: 👋🏻 produces 2 runes. One for the hand and one for the mask color.
 */
-m
+main :: proc() {
+
+	name1 := "雪"
