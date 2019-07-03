@@ -15,3 +15,6 @@ import "core:strings"
 main :: proc() {
 
 	name1 := "雪"
+	name2 := "月"
+
+	// Check if 
