@@ -17,4 +17,5 @@ main :: proc() {
 	name1 := "雪"
 	name2 := "月"
 
-	// Check if 
+	// Check if the names are equal.
+	is_equal := 
