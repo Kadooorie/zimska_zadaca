@@ -20,4 +20,5 @@ main :: proc() {
 	// Check if the names are equal.
 	is_equal := strings.compare(name1, name2)
 
-	if i
+	if is_equal == 0 {
+		fmt.println("Th
