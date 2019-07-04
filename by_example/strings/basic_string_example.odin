@@ -21,4 +21,6 @@ main :: proc() {
 	is_equal := strings.compare(name1, name2)
 
 	if is_equal == 0 {
-		fmt.println("Th
+		fmt.println("The names match!")
+	} else {
+		fmt.println(
