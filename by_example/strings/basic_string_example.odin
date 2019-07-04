@@ -23,4 +23,7 @@ main :: proc() {
 	if is_equal == 0 {
 		fmt.println("The names match!")
 	} else {
-		fmt.println(
+		fmt.println("The names do not match!")
+	}
+
+	
