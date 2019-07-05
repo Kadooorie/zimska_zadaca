@@ -27,4 +27,4 @@ main :: proc() {
 	}
 
 	// contains_rune will return the index of the rune or -1 if it does not contain the rune.
-	name1_in
+	name1_index := strings.conta
