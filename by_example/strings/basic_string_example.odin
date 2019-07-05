@@ -26,4 +26,4 @@ main :: proc() {
 		fmt.println("The names do not match!")
 	}
 
-	
+	// contains_rune will return th
