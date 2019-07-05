@@ -26,4 +26,5 @@ main :: proc() {
 		fmt.println("The names do not match!")
 	}
 
-	// contains_rune will return the index of the rune or -1 if it does not
+	// contains_rune will return the index of the rune or -1 if it does not contain the rune.
+	name1_in
