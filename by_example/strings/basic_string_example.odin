@@ -31,4 +31,4 @@ main :: proc() {
 	if name1_index == -1 {
 		fmt.println("name_1 does not contain the rune!")
 	} else {
-		fmt.printl
+		fmt.println("name_1 contains the rune a
