@@ -37,4 +37,5 @@ main :: proc() {
 	fmt.println("name1 is", strings.rune_count(name1), "rune(s) long.")
 
 	// Join the two names together separated by a comma!
-	list_of_names := 
+	list_of_names := strings.join({name1, name2}, ",")
+	de
