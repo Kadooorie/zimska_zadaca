@@ -36,4 +36,4 @@ main :: proc() {
 	
 	fmt.println("name1 is", strings.rune_count(name1), "rune(s) long.")
 
-	// Jo
+	// Join the two names together sepa
