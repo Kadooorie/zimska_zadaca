@@ -34,4 +34,6 @@ main :: proc() {
 		fmt.println("name_1 contains the rune and is located at index:", name1_index)
 	}
 	
-	fmt.println("name1 is", strings.rune_co
+	fmt.println("name1 is", strings.rune_count(name1), "rune(s) long.")
+
+	// Jo
