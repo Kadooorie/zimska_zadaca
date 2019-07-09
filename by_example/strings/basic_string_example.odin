@@ -39,3 +39,4 @@ main :: proc() {
 	// Join the two names together separated by a comma!
 	list_of_names := strings.join({name1, name2}, ",")
 	defer delete(list_of_names)
+	fmt.println(list_of_nam
