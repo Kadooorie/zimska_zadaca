@@ -41,4 +41,5 @@ main :: proc() {
 	defer delete(list_of_names)
 	fmt.println(list_of_names)
 
-	// Split the list of
+	// Split the list of names into an array of names.
+	names
