@@ -44,4 +44,6 @@ main :: proc() {
 	// Split the list of names into an array of names.
 	names := strings.split(list_of_names, ",")
 	defer delete(names)
-	fmt.print
+	fmt.println(names)
+
+	// Concatenate strin
