@@ -42,4 +42,6 @@ main :: proc() {
 	fmt.println(list_of_names)
 
 	// Split the list of names into an array of names.
-	names := strings.split(list_of_names,
+	names := strings.split(list_of_names, ",")
+	defer delete(names)
+	fmt.print
