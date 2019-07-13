@@ -49,4 +49,6 @@ main :: proc() {
 	// Concatenate strings.
 	new_name := strings.concatenate({name1, name2})
 	defer delete(new_name)
-	fmt.print
+	fmt.println(new_name)
+
+	FILE_CONTENTS :: 
