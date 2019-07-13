@@ -47,4 +47,4 @@ main :: proc() {
 	fmt.println(names)
 
 	// Concatenate strings.
-	new_name := string
+	new_name := strings.concatenate({name1, name2})
