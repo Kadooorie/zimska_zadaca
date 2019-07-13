@@ -46,4 +46,5 @@ main :: proc() {
 	defer delete(names)
 	fmt.println(names)
 
-	// Concatenate strin
+	// Concatenate strings.
+	new_name := string
