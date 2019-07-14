@@ -55,3 +55,5 @@ main :: proc() {
 	`README.md
 	 .gitignore
 	 chapter_1.md`
+
+	file_names := strings.split
