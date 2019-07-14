@@ -56,4 +56,5 @@ main :: proc() {
 	 .gitignore
 	 chapter_1.md`
 
-	file_names := strings.split
+	file_names := strings.split(FILE_CONTENTS, "\n")
+	defe
