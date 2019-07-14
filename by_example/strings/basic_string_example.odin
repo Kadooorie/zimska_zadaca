@@ -52,3 +52,6 @@ main :: proc() {
 	fmt.println(new_name)
 
 	FILE_CONTENTS :: 
+	`README.md
+	 .gitignore
+	 chapter_1.md`
