@@ -61,4 +61,5 @@ main :: proc() {
 	file_count := len(file_names)
 	markdown_file_count: int
 
-	for line in f
+	for line in file_names {
+		if strings.cont
