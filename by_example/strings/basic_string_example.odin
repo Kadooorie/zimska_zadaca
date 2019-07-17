@@ -57,4 +57,5 @@ main :: proc() {
 	 chapter_1.md`
 
 	file_names := strings.split(FILE_CONTENTS, "\n")
-	defe
+	defer delete(file_names)
+	file_count := le
