@@ -58,4 +58,5 @@ main :: proc() {
 
 	file_names := strings.split(FILE_CONTENTS, "\n")
 	defer delete(file_names)
-	file_count := le
+	file_count := len(file_names)
+	markdown_file
