@@ -62,4 +62,5 @@ main :: proc() {
 	markdown_file_count: int
 
 	for line in file_names {
-		if strings.cont
+		if strings.contains(line, ".md") {
+			markdown_fil
