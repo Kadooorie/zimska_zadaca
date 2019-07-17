@@ -63,4 +63,8 @@ main :: proc() {
 
 	for line in file_names {
 		if strings.contains(line, ".md") {
-			markdown_fil
+			markdown_file_count += 1
+		}
+	}
+
+	fmt.printf("There are 
