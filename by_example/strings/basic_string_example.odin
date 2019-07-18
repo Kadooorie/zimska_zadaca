@@ -67,4 +67,6 @@ main :: proc() {
 		}
 	}
 
-	fmt.printf("There are %i files and %i of them are markdown files.\n", file_coun
+	fmt.printf("There are %i files and %i of them are markdown files.\n", file_count, markdown_file_count)
+
+	// The f
