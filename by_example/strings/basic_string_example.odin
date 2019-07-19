@@ -69,4 +69,4 @@ main :: proc() {
 
 	fmt.printf("There are %i files and %i of them are markdown files.\n", file_count, markdown_file_count)
 
-	// The fields proc will split the string with the separator being white
+	// The fields proc will split the string with the separator being whitespace. Extra whitespace will be i
