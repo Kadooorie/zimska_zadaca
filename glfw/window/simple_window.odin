@@ -1,3 +1,4 @@
 package glfw_window
 
-import 
+import "core:fmt"
+import "vendor:g
