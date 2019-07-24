@@ -73,4 +73,6 @@ main :: proc() {
 	command_string := "ls   Downloads"
 	command_tokens := strings.fields(command_string)
 	defer delete(command_tokens)
-	f
+	fmt.println(command_tokens)
+
+}
