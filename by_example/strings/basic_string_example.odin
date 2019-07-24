@@ -71,4 +71,6 @@ main :: proc() {
 
 	// The fields proc will split the string with the separator being whitespace. Extra whitespace will be ignored.
 	command_string := "ls   Downloads"
-	command_tokens := strings.fields(command_string
+	command_tokens := strings.fields(command_string)
+	defer delete(command_tokens)
+	f
