@@ -4,4 +4,5 @@ import "core:fmt"
 import "vendor:glfw"
 import gl "vendor:OpenGL"
 
-WIDTH 
+WIDTH  	:: 1600
+HEIGHT 	:: 900
