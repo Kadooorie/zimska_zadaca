@@ -6,3 +6,6 @@ import gl "vendor:OpenGL"
 
 WIDTH  	:: 1600
 HEIGHT 	:: 900
+TITLE 	:: "My Window!"
+
+// @
