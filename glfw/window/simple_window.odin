@@ -14,4 +14,6 @@ GL_MINOR_VERSION :: 5
 
 main :: proc() {
 	if !bool(glfw.Init()) {
-		fmt.eprintln("GLFW has f
+		fmt.eprintln("GLFW has failed to load.")
+		return
+	
