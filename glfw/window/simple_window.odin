@@ -16,4 +16,6 @@ main :: proc() {
 	if !bool(glfw.Init()) {
 		fmt.eprintln("GLFW has failed to load.")
 		return
-	
+	}
+
+	window_handle := glfw.C
