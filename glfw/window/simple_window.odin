@@ -10,4 +10,6 @@ TITLE 	:: "My Window!"
 
 // @note You might need to lower this to 3.3 depending on how old your graphics card is.
 GL_MAJOR_VERSION :: 4
-GL_MIN
+GL_MINOR_VERSION :: 5
+
+main ::
