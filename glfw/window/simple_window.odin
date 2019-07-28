@@ -12,4 +12,5 @@ TITLE 	:: "My Window!"
 GL_MAJOR_VERSION :: 4
 GL_MINOR_VERSION :: 5
 
-main ::
+main :: proc() {
+	if !bool(glfw.Init()) {
