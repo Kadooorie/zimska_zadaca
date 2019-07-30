@@ -18,4 +18,6 @@ main :: proc() {
 		return
 	}
 
-	window_handle := glfw.CreateWindow(WIDTH, HEIGHT, TITLE,
+	window_handle := glfw.CreateWindow(WIDTH, HEIGHT, TITLE, nil, nil)
+
+	defer glfw.Term
