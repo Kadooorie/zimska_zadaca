@@ -18,4 +18,4 @@ main :: proc() {
 		return
 	}
 
-	window_handle := glfw.C
+	window_handle := glfw.CreateWindow(WIDTH, HEIGHT, TITLE,
