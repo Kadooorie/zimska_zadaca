@@ -21,4 +21,6 @@ main :: proc() {
 	window_handle := glfw.CreateWindow(WIDTH, HEIGHT, TITLE, nil, nil)
 
 	defer glfw.Terminate()
-	defer glfw.DestroyWindow(w
+	defer glfw.DestroyWindow(window_handle)
+
+	if window_handle 
