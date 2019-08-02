@@ -24,4 +24,8 @@ main :: proc() {
 	defer glfw.DestroyWindow(window_handle)
 
 	if window_handle == nil {
-		fmt.eprintln("GLFW has failed to load the
+		fmt.eprintln("GLFW has failed to load the window.")
+		return
+	}
+
+	// Loa
