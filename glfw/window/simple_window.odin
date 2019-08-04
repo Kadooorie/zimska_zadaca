@@ -28,4 +28,4 @@ main :: proc() {
 		return
 	}
 
-	// Loa
+	// Load OpenGL context or the "state" of Op
