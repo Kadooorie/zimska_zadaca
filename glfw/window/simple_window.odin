@@ -30,4 +30,4 @@ main :: proc() {
 
 	// Load OpenGL context or the "state" of OpenGL.
 	glfw.MakeContextCurrent(window_handle)
-	// Load Op
+	// Load OpenGL function pointers with the
