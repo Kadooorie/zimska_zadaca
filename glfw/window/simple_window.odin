@@ -28,4 +28,5 @@ main :: proc() {
 		return
 	}
 
-	// Load OpenGL context or the "state" of Op
+	// Load OpenGL context or the "state" of OpenGL.
+	glfw.MakeContextCur
