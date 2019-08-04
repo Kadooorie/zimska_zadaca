@@ -29,4 +29,5 @@ main :: proc() {
 	}
 
 	// Load OpenGL context or the "state" of OpenGL.
-	glfw.MakeContextCur
+	glfw.MakeContextCurrent(window_handle)
+	// Load Op
