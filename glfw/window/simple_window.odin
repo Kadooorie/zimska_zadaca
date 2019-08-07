@@ -34,4 +34,5 @@ main :: proc() {
 	gl.load_up_to(GL_MAJOR_VERSION, GL_MINOR_VERSION, glfw.gl_set_proc_address)
 
 	for !glfw.WindowShouldClose(window_handle) {
-		// Process all incoming events like keyboard press,
+		// Process all incoming events like keyboard press, window resize, and etc.
+		glfw.P
