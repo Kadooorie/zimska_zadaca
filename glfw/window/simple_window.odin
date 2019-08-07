@@ -37,4 +37,5 @@ main :: proc() {
 		// Process all incoming events like keyboard press, window resize, and etc.
 		glfw.PollEvents()
 
-		gl.ClearColor(0.5, 0.0
+		gl.ClearColor(0.5, 0.0, 1.0, 1.0)
+		gl.Clear(gl.COLOR_BUFFER
