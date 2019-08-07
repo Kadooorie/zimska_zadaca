@@ -33,4 +33,5 @@ main :: proc() {
 	// Load OpenGL function pointers with the specficed OpenGL major and minor version.
 	gl.load_up_to(GL_MAJOR_VERSION, GL_MINOR_VERSION, glfw.gl_set_proc_address)
 
-	for !glfw.WindowShouldCl
+	for !glfw.WindowShouldClose(window_handle) {
+		// Process all
