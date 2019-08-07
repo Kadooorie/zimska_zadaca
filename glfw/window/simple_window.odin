@@ -35,4 +35,6 @@ main :: proc() {
 
 	for !glfw.WindowShouldClose(window_handle) {
 		// Process all incoming events like keyboard press, window resize, and etc.
-		glfw.P
+		glfw.PollEvents()
+
+		gl.ClearColor(0.5, 0.0
