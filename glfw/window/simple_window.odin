@@ -40,4 +40,6 @@ main :: proc() {
 		gl.ClearColor(0.5, 0.0, 1.0, 1.0)
 		gl.Clear(gl.COLOR_BUFFER_BIT)
 
-		glfw.SwapBuffers(w
+		glfw.SwapBuffers(window_handle)
+	}
+}
