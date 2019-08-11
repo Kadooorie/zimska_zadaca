@@ -4,4 +4,5 @@
   "window_height": 1080,
   "window_title": "My Game!",
 
-  "rendering_api": 
+  "rendering_api": "opengl",
+  "renderer_setting
