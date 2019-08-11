@@ -7,4 +7,7 @@
   "rendering_api": "opengl",
   "renderer_settings": {
     "msaa": false,
-    "depth_testing"
+    "depth_testing": true
+  }
+
+}
