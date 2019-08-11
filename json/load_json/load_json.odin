@@ -35,3 +35,17 @@ main :: proc() {
 		root["window_height"],
 		"window_title:",
 		root["window_title"],
+	)
+	fmt.println("rendering_api:", root["rendering_api"])
+
+	// Store the value.
+	window_width := root["window_width"].(json.Float)
+	fmt.println("window_width:", window_width)
+
+	fmt.println("")
+
+	fmt.println("Renderer Settings:")
+	renderer_settings := root["renderer_settings"].(json.Object)
+	fmt.println("msaa:", renderer_settings["msaa"])
+	fmt.println("depth_testing:", renderer_settings["depth_testing"])
+}
