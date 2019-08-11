@@ -5,4 +5,6 @@
   "window_title": "My Game!",
 
   "rendering_api": "opengl",
-  "renderer_setting
+  "renderer_settings": {
+    "msaa": false,
+    "depth_testing"
