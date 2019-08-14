@@ -72,3 +72,32 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer pass->release()
 
 		color_attachment := pass->colorAttachments()->object(0)
+		assert(color_attachment != nil)
+		color_attachment->setClearColor(MTL.ClearColor{0.25, 0.5, 1.0, 1.0})
+		color_attachment->setLoadAction(.Clear)
+		color_attachment->setStoreAction(.Store)
+		color_attachment->setTexture(drawable->texture())
+
+
+		command_buffer := command_queue->commandBuffer()
+		defer command_buffer->release()
+
+		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
+		defer render_encoder->release()
+
+		render_encoder->endEncoding()
+
+		command_buffer->presentDrawable(drawable)
+		command_buffer->commit()
+	}
+
+	return nil
+}
+
+main :: proc() {
+	err := metal_main()
+	if err != nil {
+		fmt.eprintln(err->localizedDescription()->odinString())
+		os.exit(1)
+	}
+}
