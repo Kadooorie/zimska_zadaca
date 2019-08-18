@@ -96,3 +96,29 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer device->release()
 
 	fmt.println(device->name()->odinString())
+
+	swapchain := CA.MetalLayer.layer()
+	defer swapchain->release()
+
+	swapchain->setDevice(device)
+	swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
+	swapchain->setFramebufferOnly(true)
+	swapchain->setFrame(native_window->frame())
+
+	native_window->contentView()->setLayer(swapchain)
+	native_window->setOpaque(true)
+	native_window->setBackgroundColor(nil)
+
+	library, pso := build_shaders(device) or_return
+	defer library->release()
+	defer pso->release()
+
+	vertex_positions_buffer, vertex_colors_buffer := build_buffers(device)
+	defer vertex_positions_buffer->release()
+	defer vertex_colors_buffer->release()
+
+	command_queue := device->newCommandQueue()
+	defer command_queue->release()
+
+	SDL.ShowWindow(window)
+	for quit := false; !quit;  {
