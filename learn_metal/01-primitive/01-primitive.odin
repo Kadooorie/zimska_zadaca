@@ -55,3 +55,44 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 }
 
 build_buffers :: proc(device: ^MTL.Device) -> (vertex_positions_buffer, vertex_colors_buffer: ^MTL.Buffer) {
+	NUM_VERTICES :: 3
+	positions := [NUM_VERTICES][3]f32{
+		{-0.8,  0.8, 0.0},
+		{ 0.0, -0.8, 0.0},
+		{+0.8,  0.8, 0.0},
+	}
+	colors := [NUM_VERTICES][3]f32{
+		{1.0, 0.3, 0.2},
+		{0.8, 1.0, 0.0},
+		{0.8, 0.0, 1.0},
+	}
+
+	vertex_positions_buffer = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	vertex_colors_buffer    = device->newBufferWithSlice(colors[:],    {.StorageModeManaged})
+	return
+}
+
+metal_main :: proc() -> (err: ^NS.Error) {
+	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "metal")
+	SDL.setenv("METAL_DEVICE_WRAPPER_TYPE", "1", 0)
+	SDL.Init({.VIDEO})
+	defer SDL.Quit()
+
+	window := SDL.CreateWindow("Metal in Odin - 01 primitive",
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
+		854, 480,
+		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
+	)
+	defer SDL.DestroyWindow(window)
+
+	window_system_info: SDL.SysWMinfo
+	SDL.GetVersion(&window_system_info.version)
+	SDL.GetWindowWMInfo(window, &window_system_info)
+	assert(window_system_info.subsystem == .COCOA)
+
+	native_window := (^NS.Window)(window_system_info.info.cocoa.window)
+
+	device := MTL.CreateSystemDefaultDevice()
+	defer device->release()
+
+	fmt.println(device->name()->odinString())
