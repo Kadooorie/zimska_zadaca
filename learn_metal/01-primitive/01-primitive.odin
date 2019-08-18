@@ -122,3 +122,34 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	SDL.ShowWindow(window)
 	for quit := false; !quit;  {
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch e.type {
+			case .QUIT:
+				quit = true
+			case .KEYDOWN:
+				if e.key.keysym.sym == .ESCAPE {
+					quit = true
+				}
+			}
+		}
+
+		drawable := swapchain->nextDrawable()
+		assert(drawable != nil)
+		defer drawable->release()
+
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		defer pass->release()
+
+		color_attachment := pass->colorAttachments()->object(0)
+		assert(color_attachment != nil)
+		color_attachment->setClearColor(MTL.ClearColor{0.25, 0.5, 1.0, 1.0})
+		color_attachment->setLoadAction(.Clear)
+		color_attachment->setStoreAction(.Store)
+		color_attachment->setTexture(drawable->texture())
+
+
+		command_buffer := command_queue->commandBuffer()
+		defer command_buffer->release()
+
+		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
+		defer render_encoder->release()
