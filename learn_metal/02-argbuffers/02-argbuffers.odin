@@ -46,3 +46,39 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	fragment_function := library->newFunctionWithName(NS.AT("fragment_main"))
 	defer vertex_function->release()
 	defer fragment_function->release()
+
+	desc := MTL.RenderPipelineDescriptor.alloc()->init()
+	defer desc->release()
+
+	desc->setVertexFunction(vertex_function)
+	desc->setFragmentFunction(fragment_function)
+	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
+
+	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
+	return
+}
+
+build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_positions_buffer, vertex_colors_buffer, arg_buffer: ^MTL.Buffer) {
+	NUM_VERTICES :: 3
+	positions := [NUM_VERTICES][3]f32{
+		{-0.8,  0.8, 0.0},
+		{ 0.0, -0.8, 0.0},
+		{+0.8,  0.8, 0.0},
+	}
+	colors := [NUM_VERTICES][3]f32{
+		{1.0, 0.3, 0.2},
+		{0.8, 1.0, 0.0},
+		{0.8, 0.0, 1.0},
+	}
+
+	vertex_positions_buffer = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	vertex_colors_buffer    = device->newBufferWithSlice(colors[:],    {.StorageModeManaged})
+
+	vertex_function := library->newFunctionWithName(NS.AT("vertex_main"))
+	defer vertex_function->release()
+
+	arg_encoder := vertex_function->newArgumentEncoder(0)
+	defer arg_encoder->release()
+
+	arg_buffer = device->newBuffer(arg_encoder->encodedLength(), {.StorageModeManaged})
+	arg_encoder->setArgumentBufferWithOffset(arg_buffer, 0)
