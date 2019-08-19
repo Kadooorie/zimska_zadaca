@@ -173,3 +173,22 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setRenderPipelineState(pso)
 		render_encoder->setVertexBuffer(arg_buffer, 0, 0)
 		render_encoder->useResource(vertex_positions_buffer, {.Read})
+		render_encoder->useResource(vertex_colors_buffer, {.Read})
+		render_encoder->drawPrimitives(.Triangle, 0, 3)
+
+		render_encoder->endEncoding()
+
+		command_buffer->presentDrawable(drawable)
+		command_buffer->commit()
+	}
+
+	return nil
+}
+
+main :: proc() {
+	err := metal_main()
+	if err != nil {
+		fmt.eprintln(err->localizedDescription()->odinString())
+		os.exit(1)
+	}
+}
