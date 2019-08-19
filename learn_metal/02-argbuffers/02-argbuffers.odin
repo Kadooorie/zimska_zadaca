@@ -152,3 +152,24 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		drawable := swapchain->nextDrawable()
 		assert(drawable != nil)
 		defer drawable->release()
+
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		defer pass->release()
+
+		color_attachment := pass->colorAttachments()->object(0)
+		assert(color_attachment != nil)
+		color_attachment->setClearColor(MTL.ClearColor{0.25, 0.5, 1.0, 1.0})
+		color_attachment->setLoadAction(.Clear)
+		color_attachment->setStoreAction(.Store)
+		color_attachment->setTexture(drawable->texture())
+
+
+		command_buffer := command_queue->commandBuffer()
+		defer command_buffer->release()
+
+		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
+		defer render_encoder->release()
+
+		render_encoder->setRenderPipelineState(pso)
+		render_encoder->setVertexBuffer(arg_buffer, 0, 0)
+		render_encoder->useResource(vertex_positions_buffer, {.Read})
