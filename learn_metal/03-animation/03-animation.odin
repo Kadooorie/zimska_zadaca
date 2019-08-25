@@ -14,4 +14,4 @@ Frame_Data :: struct {
 	angle: f32,
 }
 
-build_shad
+build_shaders :: proc(device: ^MTL.Device) -> (l
