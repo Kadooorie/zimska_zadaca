@@ -10,4 +10,8 @@ import "core:fmt"
 import "core:os"
 
 
-Frame_Data :: st
+Frame_Data :: struct {
+	angle: f32,
+}
+
+build_shad
