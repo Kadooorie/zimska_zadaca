@@ -7,4 +7,7 @@ import CA "vendor:darwin/QuartzCore"
 import SDL "vendor:sdl2"
 
 import "core:fmt"
-import 
+import "core:os"
+
+
+Frame_Data :: st
