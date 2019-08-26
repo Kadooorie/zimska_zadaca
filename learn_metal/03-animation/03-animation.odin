@@ -14,4 +14,6 @@ Frame_Data :: struct {
 	angle: f32,
 }
 
-build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.RenderPipelineState, err: ^NS.Error
+build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.RenderPipelineState, err: ^NS.Error) {
+	shader_src := `
+	#inclu
