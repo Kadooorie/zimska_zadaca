@@ -16,4 +16,5 @@ Frame_Data :: struct {
 
 build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.RenderPipelineState, err: ^NS.Error) {
 	shader_src := `
-	#inclu
+	#include <metal_stdlib>
+	using namespace 
