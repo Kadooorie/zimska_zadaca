@@ -25,4 +25,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	};
 
 	struct Vertex_Data {
-		device packed_float3* 
+		device packed_float3* positions [[id(0)]];
+		devi
