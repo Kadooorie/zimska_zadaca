@@ -24,4 +24,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		half3 color;
 	};
 
-	struct Vertex_
+	struct Vertex_Data {
+		device packed_float3* 
