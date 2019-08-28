@@ -21,4 +21,7 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	struct v2f {
 		float4 position [[position]];
-		half3 colo
+		half3 color;
+	};
+
+	struct Vertex_
