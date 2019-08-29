@@ -29,4 +29,8 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		device packed_float3* colors    [[id(1)]];
 	};
 
-	struct 
+	struct Frame_Data {
+		float angle;
+	};
+
+	v
