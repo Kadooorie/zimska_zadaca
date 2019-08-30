@@ -33,4 +33,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float angle;
 	};
 
-	v2f vertex vertex_main(device co
+	v2f vertex vertex_main(device const Vertex_Data* vertex_data [
