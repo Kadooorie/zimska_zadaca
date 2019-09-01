@@ -36,4 +36,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	v2f vertex vertex_main(device const Vertex_Data* vertex_data [[buffer(0)]],
 	                       device const Frame_Data*  frame_data  [[buffer(1)]],
 	                       uint vertex_id                        [[vertex_id]]) {
-		float a = frame_dat
+		float a = frame_data->angle;
+		float3x3 rotation_m
