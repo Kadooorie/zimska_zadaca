@@ -37,4 +37,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	                       device const Frame_Data*  frame_data  [[buffer(1)]],
 	                       uint vertex_id                        [[vertex_id]]) {
 		float a = frame_data->angle;
-		float3x3 rotation_matrix = float3x3(sin(a), cos(a), 0.0, c
+		float3x3 rotation_matrix = float3x3(sin(a), cos(a), 0.0, cos(a), -sin(a), 0.0, 0.0, 0.0, 1.0);
+	
