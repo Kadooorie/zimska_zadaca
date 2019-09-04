@@ -40,4 +40,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float3x3 rotation_matrix = float3x3(sin(a), cos(a), 0.0, cos(a), -sin(a), 0.0, 0.0, 0.0, 1.0);
 		float3 position = float3(vertex_data->positions[vertex_id]);
 		v2f o;
-		o.position = float4(rotation_matrix * position, 1
+		o.position = float4(rotation_matrix * position, 1.0);
+		o.color = half3(vertex_data->
