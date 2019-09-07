@@ -45,4 +45,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return o;
 	}
 
-	half4 fragment fragment_main(v2f in [[stage_in]])
+	half4 fragment fragment_main(v2f in [[stage_in]]) {
+		return half4(in.color, 1.0);
