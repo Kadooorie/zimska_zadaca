@@ -54,4 +54,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	library = device->newLibraryWithSource(shader_src_str, nil) or_return
 
-	v
+	vertex_function   := library->newFu
