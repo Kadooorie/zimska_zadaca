@@ -69,3 +69,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
 	return
 }
+
+build_buffers :: proc(
