@@ -66,4 +66,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->setFragmentFunction(fragment_function)
 	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
 
-	pso = device->new
+	pso = device->newRenderPipelineStateWithDescr
