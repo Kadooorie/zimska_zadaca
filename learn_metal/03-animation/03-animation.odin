@@ -70,4 +70,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	return
 }
 
-build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_positions_buffer, 
+build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_positions_buffer, vertex_colors_buffer, arg_buffer: ^
