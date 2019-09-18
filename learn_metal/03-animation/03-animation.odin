@@ -74,4 +74,6 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	NUM_VERTICES :: 3
 	positions := [NUM_VERTICES][3]f32{
 		{-0.8,  0.8, 0.0},
-		{ 0.0, -0.8, 
+		{ 0.0, -0.8, 0.0},
+		{+0.8,  0.8, 0.0},
+	}
