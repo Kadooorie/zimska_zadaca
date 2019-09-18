@@ -72,4 +72,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_positions_buffer, vertex_colors_buffer, arg_buffer: ^MTL.Buffer) {
 	NUM_VERTICES :: 3
-	positions := [NUM_VERTICES][3
+	positions := [NUM_VERTICES][3]f32{
+		{-0.8,  0.8, 0.0},
+		{ 0.0, -0.8, 
