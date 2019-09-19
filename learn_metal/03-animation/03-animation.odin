@@ -78,3 +78,5 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 		{+0.8,  0.8, 0.0},
 	}
 	colors := [NUM_VERTICES][3]f32{
+		{1.0, 0.3, 0.2},
+		{0.8, 1.0,
