@@ -83,4 +83,5 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 		{0.8, 0.0, 1.0},
 	}
 
-	vertex_positions_buffer = device->newBufferWithSlice(positions[:],
+	vertex_positions_buffer = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	v
