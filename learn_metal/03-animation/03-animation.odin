@@ -86,4 +86,4 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	vertex_positions_buffer = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
 	vertex_colors_buffer    = device->newBufferWithSlice(colors[:],    {.StorageModeManaged})
 
-	ver
+	vertex_function := library->ne
