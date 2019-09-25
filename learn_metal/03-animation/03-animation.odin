@@ -87,4 +87,6 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	vertex_colors_buffer    = device->newBufferWithSlice(colors[:],    {.StorageModeManaged})
 
 	vertex_function := library->newFunctionWithName(NS.AT("vertex_main"))
-	defer vertex_func
+	defer vertex_function->release()
+
+	arg_encoder := verte
