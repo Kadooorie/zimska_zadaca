@@ -92,4 +92,4 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	arg_encoder := vertex_function->newArgumentEncoder(0)
 	defer arg_encoder->release()
 
-	arg_buf
+	arg_buffer = device->newBuffer(arg
