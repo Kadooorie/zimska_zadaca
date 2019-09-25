@@ -89,4 +89,5 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	vertex_function := library->newFunctionWithName(NS.AT("vertex_main"))
 	defer vertex_function->release()
 
-	arg_encoder := verte
+	arg_encoder := vertex_function->newArgumentEncoder(0)
+	defer
