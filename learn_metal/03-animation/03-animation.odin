@@ -94,4 +94,4 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 
 	arg_buffer = device->newBuffer(arg_encoder->encodedLength(), {.StorageModeManaged})
 	arg_encoder->setArgumentBufferWithOffset(arg_buffer, 0)
-	arg_en
+	arg_encoder->setBuffer(vertex_pos
