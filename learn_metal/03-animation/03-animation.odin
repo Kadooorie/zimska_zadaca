@@ -96,4 +96,7 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	arg_encoder->setArgumentBufferWithOffset(arg_buffer, 0)
 	arg_encoder->setBuffer(vertex_positions_buffer, 0, 0)
 	arg_encoder->setBuffer(vertex_colors_buffer,    0, 1)
-	arg_buffer->didModifyRange(NS.Range_Make(0, arg_
+	arg_buffer->didModifyRange(NS.Range_Make(0, arg_buffer->length()))
+
+	return
+}
