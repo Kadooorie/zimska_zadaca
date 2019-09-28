@@ -101,4 +101,5 @@ build_buffers :: proc(device: ^MTL.Device, library: ^MTL.Library) -> (vertex_pos
 	return
 }
 
-metal_main :: proc() -> (err: ^N
+metal_main :: proc() -> (err: ^NS.Error) {
+	SDL.SetHint(SDL.HIN
