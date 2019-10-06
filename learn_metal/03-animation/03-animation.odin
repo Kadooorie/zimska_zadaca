@@ -108,4 +108,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("Metal in Odin - 03 animation",
-		SDL.WINDOWPO
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CEN
