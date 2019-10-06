@@ -107,4 +107,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
 
-	window 
+	window := SDL.CreateWindow("Metal i
