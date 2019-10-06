@@ -110,4 +110,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	window := SDL.CreateWindow("Metal in Odin - 03 animation",
 		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
 		854, 480,
-		{.ALLOW_HIG
+		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
