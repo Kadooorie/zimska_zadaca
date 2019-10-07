@@ -116,3 +116,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	window_system_info: SDL.SysWMinfo
 	SDL.GetVersion(&window_system_info.version)
+	SDL.GetWindowWMInfo(window,
