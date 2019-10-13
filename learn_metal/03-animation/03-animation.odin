@@ -129,4 +129,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	swapchain := CA.MetalLayer.layer()
 	defer swapchain->release()
 
-	swapchain->setDe
+	swapchain->setDevice(device)
+	swapchain->setPix
