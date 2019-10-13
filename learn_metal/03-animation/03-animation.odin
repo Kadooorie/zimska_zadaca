@@ -127,4 +127,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	fmt.println(device->name()->odinString())
 
 	swapchain := CA.MetalLayer.layer()
-	defer swapcha
+	defer swapchain->release()
+
+	swapchain->setDe
