@@ -135,4 +135,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	swapchain->setFrame(native_window->frame())
 
 	native_window->contentView()->setLayer(swapchain)
-	native_window->setOpaque(true
+	native_window->setOpaque(true)
+	native_window->setBackgrou
