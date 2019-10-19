@@ -142,4 +142,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer library->release()
 	defer pso->release()
 
-	vertex_position
+	vertex_positions_buffer, vertex_colors_buffer, arg_buffe
