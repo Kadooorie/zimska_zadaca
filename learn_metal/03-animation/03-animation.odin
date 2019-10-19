@@ -143,4 +143,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer pso->release()
 
 	vertex_positions_buffer, vertex_colors_buffer, arg_buffer := build_buffers(device, library)
-	de
+	defer arg_buffer->release()
+
