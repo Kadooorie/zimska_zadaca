@@ -145,4 +145,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	vertex_positions_buffer, vertex_colors_buffer, arg_buffer := build_buffers(device, library)
 	defer arg_buffer->release()
 
-	frame_data_buffer := device->newB
+	frame_data_buffer := device->newBuffer(size_of(Frame_Data), {.Sto
