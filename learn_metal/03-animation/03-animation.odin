@@ -153,4 +153,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	SDL.ShowWindow(window)
 	for quit := false; !quit;  {
-		for e: SDL.Event; SDL.P
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial sw
