@@ -152,4 +152,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer command_queue->release()
 
 	SDL.ShowWindow(window)
-	for quit := false; !q
+	for quit := false; !quit;  {
+		for e: SDL.Event; SDL.P
