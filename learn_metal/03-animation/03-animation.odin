@@ -148,4 +148,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	frame_data_buffer := device->newBuffer(size_of(Frame_Data), {.StorageModeManaged})
 	defer frame_data_buffer->release()
 
-	command_queue :
+	command_queue := device->newCommandQueue()
+	defer c
