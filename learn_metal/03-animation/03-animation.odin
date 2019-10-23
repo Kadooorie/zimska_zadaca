@@ -149,4 +149,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer frame_data_buffer->release()
 
 	command_queue := device->newCommandQueue()
-	defer c
+	defer command_queue->release()
+
+	SDL.Sho
