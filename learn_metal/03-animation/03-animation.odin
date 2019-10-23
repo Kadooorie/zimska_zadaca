@@ -156,4 +156,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		for e: SDL.Event; SDL.PollEvent(&e); {
 			#partial switch e.type {
 			case .QUIT:
-				q
+				quit = true
+			case .KEYDOW
