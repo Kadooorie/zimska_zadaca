@@ -166,3 +166,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		@static angle: f32
 		frame_data := (^Frame_Data)(frame_data_buffer->contentsPointer())
+		frame_data.angle = angle
+		angle
