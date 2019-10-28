@@ -164,4 +164,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			}
 		}
 
-		@static ang
+		@static angle: f32
+		frame_data := 
