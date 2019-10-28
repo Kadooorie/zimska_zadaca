@@ -158,4 +158,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			case .QUIT:
 				quit = true
 			case .KEYDOWN:
-				if e.key.keysym.sy
+				if e.key.keysym.sym == .ESCAPE {
+					quit = t
