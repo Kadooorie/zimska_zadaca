@@ -168,4 +168,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		frame_data := (^Frame_Data)(frame_data_buffer->contentsPointer())
 		frame_data.angle = angle
 		angle += 0.01
-		frame_data_buffer->didModifyRange(NS.Range_Make(0, 
+		frame_data_buffer->didModifyRange(NS.Range_Make(0, size_of(Frame_Data)))
+
+		draw
