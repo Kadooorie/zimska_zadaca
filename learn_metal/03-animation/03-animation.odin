@@ -170,4 +170,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		angle += 0.01
 		frame_data_buffer->didModifyRange(NS.Range_Make(0, size_of(Frame_Data)))
 
-		draw
+		drawable := swapchain->nextDrawable()
