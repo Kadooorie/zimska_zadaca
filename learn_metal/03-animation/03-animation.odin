@@ -171,4 +171,7 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		frame_data_buffer->didModifyRange(NS.Range_Make(0, size_of(Frame_Data)))
 
 		drawable := swapchain->nextDrawable()
-		assert(drawable != ni
+		assert(drawable != nil)
+		defer drawable->release()
+
+		pass := MTL.Rend
