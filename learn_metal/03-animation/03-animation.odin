@@ -175,4 +175,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer drawable->release()
 
 		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
-		defer p
+		defer pass->release()
+
+		color_at
