@@ -178,4 +178,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer pass->release()
 
 		color_attachment := pass->colorAttachments()->object(0)
-		assert
+		assert(color_attachment != nil)
+		c
