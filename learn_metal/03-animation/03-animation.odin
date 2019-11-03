@@ -184,4 +184,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		color_attachment->setStoreAction(.Store)
 		color_attachment->setTexture(drawable->texture())
 
-		command_bu
+		command_buffer := command_queue->comm
