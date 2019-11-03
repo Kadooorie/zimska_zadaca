@@ -185,4 +185,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		color_attachment->setTexture(drawable->texture())
 
 		command_buffer := command_queue->commandBuffer()
-		defer command_buffer->r
+		defer command_buffer->release()
+
+		render_encoder 
