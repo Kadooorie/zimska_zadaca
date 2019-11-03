@@ -188,4 +188,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer command_buffer->release()
 
 		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
-		defer render_encod
+		defer render_encoder->release()
+
+		render_encoder
