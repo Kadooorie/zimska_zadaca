@@ -191,4 +191,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer render_encoder->release()
 
 		render_encoder->setRenderPipelineState(pso)
-		render_encoder->setVertex
+		render_encoder->setVertexBuffer(arg_buffer,        0,
