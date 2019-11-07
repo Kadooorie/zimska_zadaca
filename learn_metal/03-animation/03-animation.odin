@@ -197,4 +197,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->useResource(vertex_colors_buffer, {.Read})
 		render_encoder->drawPrimitives(.Triangle, 0, 3)
 
-		re
+		render_encoder->endEncoding()
+
+		com
