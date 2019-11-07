@@ -195,4 +195,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setVertexBuffer(frame_data_buffer, 0, 1)
 		render_encoder->useResource(vertex_positions_buffer, {.Read})
 		render_encoder->useResource(vertex_colors_buffer, {.Read})
-		render_encoder->drawP
+		render_encoder->drawPrimitives(.Triangle, 0, 3)
+
+		re
