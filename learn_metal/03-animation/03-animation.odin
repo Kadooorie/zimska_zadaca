@@ -194,4 +194,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setVertexBuffer(arg_buffer,        0, 0)
 		render_encoder->setVertexBuffer(frame_data_buffer, 0, 1)
 		render_encoder->useResource(vertex_positions_buffer, {.Read})
-		render_encoder-
+		render_encoder->useResource(vertex_colors_buffe
