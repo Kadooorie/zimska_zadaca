@@ -192,4 +192,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		render_encoder->setRenderPipelineState(pso)
 		render_encoder->setVertexBuffer(arg_buffer,        0, 0)
-		render_encoder->setVert
+		render_encoder->setVertexBuffer(frame_data_buffer, 0, 1)
+		
