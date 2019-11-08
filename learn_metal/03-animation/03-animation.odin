@@ -199,4 +199,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		render_encoder->endEncoding()
 
-		com
+		command_buffer->presentDrawable(drawab
