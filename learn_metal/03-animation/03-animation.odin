@@ -206,3 +206,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	return nil
 }
 
+main :: proc() {
+	err := metal_ma
