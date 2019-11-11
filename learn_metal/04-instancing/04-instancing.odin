@@ -60,3 +60,37 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	vertex_function   := library->newFunctionWithName(NS.AT("vertex_main"))
 	fragment_function := library->newFunctionWithName(NS.AT("fragment_main"))
+	defer vertex_function->release()
+	defer fragment_function->release()
+
+	desc := MTL.RenderPipelineDescriptor.alloc()->init()
+	defer desc->release()
+
+	desc->setVertexFunction(vertex_function)
+	desc->setFragmentFunction(fragment_function)
+	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
+
+	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
+	return
+}
+
+build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, instance_buffer: ^MTL.Buffer) {
+	s :: 0.5
+	positions := [][3]f32{
+		{-s, -s, +s},
+		{+s, -s, +s},
+		{+s, +s, +s},
+		{-s, +s, +s},
+	}
+	indices := []u16{
+		0, 1, 2,
+		2, 3, 0,
+	}
+
+	vertex_buffer   = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	index_buffer    = device->newBufferWithSlice(indices[:],   {.StorageModeManaged})
+	instance_buffer = device->newBuffer(NUM_INSTANCES*size_of(Instance_Data), {.StorageModeManaged})
+	return
+}
+
+metal_main :: proc() -> (err: ^NS.Error) {
