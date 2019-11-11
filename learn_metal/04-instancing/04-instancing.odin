@@ -123,3 +123,34 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	swapchain->setDevice(device)
 	swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
+	swapchain->setFramebufferOnly(true)
+	swapchain->setFrame(native_window->frame())
+
+	native_window->contentView()->setLayer(swapchain)
+	native_window->setOpaque(true)
+	native_window->setBackgroundColor(nil)
+
+	library, pso := build_shaders(device) or_return
+	defer library->release()
+	defer pso->release()
+
+	vertex_buffer, index_buffer, instance_buffer := build_buffers(device)
+	defer vertex_buffer->release()
+	defer index_buffer->release()
+	defer instance_buffer->release()
+
+	command_queue := device->newCommandQueue()
+	defer command_queue->release()
+
+	SDL.ShowWindow(window)
+	for quit := false; !quit;  {
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch e.type {
+			case .QUIT:
+				quit = true
+			case .KEYDOWN:
+				if e.key.keysym.sym == .ESCAPE {
+					quit = true
+				}
+			}
+		}
