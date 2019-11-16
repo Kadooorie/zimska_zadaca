@@ -56,3 +56,31 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	                       uint instance_id                          [[instance_id]]) {
 		v2f o;
 		float4 pos = float4(vertex_data[vertex_id].position, 1.0);
+		pos = instance_data[instance_id].transform * pos;
+		pos = camera_data.perspective_transform * camera_data.world_transform * pos;
+		o.position = pos;
+		o.color = half3(instance_data[instance_id].color.rgb);
+		return o;
+	}
+
+	half4 fragment fragment_main(v2f in [[stage_in]]) {
+		return half4(in.color, 1.0);
+	}
+	`
+	shader_src_str := NS.String.alloc()->initWithOdinString(shader_src)
+	defer shader_src_str->release()
+
+	library = device->newLibraryWithSource(shader_src_str, nil) or_return
+
+	vertex_function   := library->newFunctionWithName(NS.AT("vertex_main"))
+	fragment_function := library->newFunctionWithName(NS.AT("fragment_main"))
+	defer vertex_function->release()
+	defer fragment_function->release()
+
+	desc := MTL.RenderPipelineDescriptor.alloc()->init()
+	defer desc->release()
+
+	desc->setVertexFunction(vertex_function)
+	desc->setFragmentFunction(fragment_function)
+	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
+	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
