@@ -181,3 +181,24 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	command_queue := device->newCommandQueue()
 	defer command_queue->release()
+
+	SDL.ShowWindow(window)
+	for quit := false; !quit;  {
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch e.type {
+			case .QUIT:
+				quit = true
+			case .KEYDOWN:
+				if e.key.keysym.sym == .ESCAPE {
+					quit = true
+				}
+			}
+		}
+
+		w, h: i32
+		SDL.GetWindowSize(window, &w, &h)
+		aspect_ratio := f32(w)/max(f32(h), 1)
+
+		{
+			@static angle: f32
+			angle += 0.01
