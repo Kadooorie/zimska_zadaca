@@ -154,3 +154,34 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				}
 			}
 		}
+
+		{
+			@static angle: f32
+			angle += 0.01
+			instance_data := instance_buffer->contentsAsSlice([]Instance_Data)[:NUM_INSTANCES]
+			for instance, idx in &instance_data {
+				scl :: 0.1
+
+				i := f32(idx) / NUM_INSTANCES
+				xoff := (i*2 - 1) + (1.0/NUM_INSTANCES)
+				yoff := math.sin((i + angle) * math.TAU)
+				instance.transform = matrix[4, 4]f32{
+					scl * math.sin(angle),  scl * math.cos(angle), 0, xoff,
+					scl * math.cos(angle), -scl * math.sin(angle), 0, yoff,
+					                    0,                      0, 0,    0,
+					                    0,                      0, 0,    1,
+				}
+				instance.color = {i, 1-i, math.sin(math.TAU * i), 1}
+			}
+			sz := NS.UInteger(len(instance_data)*size_of(instance_data[0]))
+			instance_buffer->didModifyRange(NS.Range_Make(0, sz))
+		}
+
+		drawable := swapchain->nextDrawable()
+		assert(drawable != nil)
+		defer drawable->release()
+
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		defer pass->release()
+
+		color_attachment := pass->colorAttachments()->object(0)
