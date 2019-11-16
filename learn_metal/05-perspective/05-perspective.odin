@@ -84,3 +84,38 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->setFragmentFunction(fragment_function)
 	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
 	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
+
+	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
+	return
+}
+
+build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, instance_buffer: ^MTL.Buffer) {
+	s :: 0.5
+	positions := [][3]f32{
+		{-s, -s, +s},
+		{+s, -s, +s},
+		{+s, +s, +s},
+		{-s, +s, +s},
+
+		{-s, -s, -s},
+		{-s, +s, -s},
+		{+s, +s, -s},
+		{+s, -s, -s},
+	}
+	indices := []u16{
+		0, 1, 2, // front
+		2, 3, 0,
+
+		1, 7, 6, // right
+		6, 2, 1,
+
+		7, 4, 5, // back
+		5, 6, 7,
+
+		4, 0, 3, // left
+		3, 5, 4,
+
+		3, 2, 6, // top
+		6, 5, 3,
+
+		4, 7, 1, // bottom
