@@ -202,3 +202,34 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		{
 			@static angle: f32
 			angle += 0.01
+
+			object_position := glm.vec3{0, 0, -5}
+			rt := glm.mat4Translate(object_position)
+			rr := glm.mat4Rotate({0, 1, 0}, -angle)
+			rt_inv := glm.mat4Translate(-object_position)
+			full_obj_rot := rt * rr * rt_inv
+
+			instance_data := instance_buffer->contentsAsSlice([]Instance_Data)[:NUM_INSTANCES]
+			for instance, idx in &instance_data {
+				scl :: 0.1
+
+				i := f32(idx) / NUM_INSTANCES
+				xoff := (i*2 - 1) + (1.0/NUM_INSTANCES)
+				yoff := math.sin((i + angle) * math.TAU)
+
+				scale := glm.mat4Scale({scl, scl, scl})
+				zrot := glm.mat4Rotate({0, 0, 1}, angle)
+				yrot := glm.mat4Rotate({0, 1, 0}, angle)
+				translate := glm.mat4Translate(object_position + {xoff, yoff, 0})
+
+				instance.transform = full_obj_rot * translate * yrot * zrot * scale
+				instance.color = {i, 1-i, math.sin(math.TAU * i), 1}
+			}
+			sz := NS.UInteger(len(instance_data)*size_of(instance_data[0]))
+			instance_buffer->didModifyRange(NS.Range_Make(0, sz))
+		}
+
+		{
+			camera_data := camera_buffer->contentsAsType(Camera_Data)
+			camera_data.perspective_transform = glm.mat4Perspective(glm.radians_f32(45), aspect_ratio, 0.03, 500)
+			camera_data.world_transform = 1
