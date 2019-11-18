@@ -13,3 +13,6 @@ import glm "core:math/linalg/glsl"
 
 
 Vertex_Data :: struct {
+	position: glm.vec3,
+	normal:   glm.vec3,
+}
