@@ -17,4 +17,5 @@ Vertex_Data :: struct {
 	normal:   glm.vec3,
 }
 
-Instance_Data :: struc
+Instance_Data :: struct #align 16 {
+	transform:  
