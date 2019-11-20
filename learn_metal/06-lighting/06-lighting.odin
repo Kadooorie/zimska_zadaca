@@ -16,3 +16,5 @@ Vertex_Data :: struct {
 	position: glm.vec3,
 	normal:   glm.vec3,
 }
+
+Instance_Data :: struc
