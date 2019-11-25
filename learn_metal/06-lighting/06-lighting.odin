@@ -29,4 +29,5 @@ INSTANCE_DEPTH  :: 10
 NUM_INSTANCES   :: INSTANCE_WIDTH*INSTANCE_HEIGHT*INSTANCE_DEPTH
 
 Camera_Data :: struct #align 16 {
-	perspectiv
+	perspective_transform:  glm.mat4,
+	world_tran
