@@ -28,4 +28,5 @@ INSTANCE_HEIGHT :: 10
 INSTANCE_DEPTH  :: 10
 NUM_INSTANCES   :: INSTANCE_WIDTH*INSTANCE_HEIGHT*INSTANCE_DEPTH
 
-Camera_Data :
+Camera_Data :: struct #align 16 {
+	perspectiv
