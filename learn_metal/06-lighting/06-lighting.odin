@@ -30,4 +30,5 @@ NUM_INSTANCES   :: INSTANCE_WIDTH*INSTANCE_HEIGHT*INSTANCE_DEPTH
 
 Camera_Data :: struct #align 16 {
 	perspective_transform:  glm.mat4,
-	world_tran
+	world_transform:        glm.mat4,
+	world_norm
