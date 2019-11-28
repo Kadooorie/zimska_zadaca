@@ -34,4 +34,4 @@ Camera_Data :: struct #align 16 {
 	world_normal_transform: glm.mat3,
 }
 
-build
+build_shaders :: proc(device: ^MTL
