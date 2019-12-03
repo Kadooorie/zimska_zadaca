@@ -50,4 +50,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		packed_float3 normal;
 	};
 
-	s
+	struct Instance_Data {
+		float4x
