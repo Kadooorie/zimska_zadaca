@@ -56,4 +56,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float3x3 normal_transform;
 	};
 
-	struct Camera
+	struct Camera_Data {
+		float4x4 perspective_
