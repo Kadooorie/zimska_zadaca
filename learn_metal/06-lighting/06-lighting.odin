@@ -52,4 +52,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	struct Instance_Data {
 		float4x4 transform;
-		float4   c
+		float4   color;
+		float3x3 nor
