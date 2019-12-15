@@ -70,4 +70,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		v2f o;
 
 		const device Vertex_Data&   vd = vertex_data[vertex_id];
-		const device Instance_Data& id = instance_data
+		const device Instance_Data& id = instance_data[instance_id];
+
+		float4 pos = float
