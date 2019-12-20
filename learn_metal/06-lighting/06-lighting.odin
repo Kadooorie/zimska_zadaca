@@ -79,4 +79,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		float3 normal = id.normal_transform * float3(vd.normal);
 		normal   = camera_data.world_normal_transform * normal;
-		
+		o.normal = normal;
+
+		o.c
