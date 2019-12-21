@@ -81,4 +81,8 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		normal   = camera_data.world_normal_transform * normal;
 		o.normal = normal;
 
-		o.color = half3(id.color.rgb
+		o.color = half3(id.color.rgb);
+		return o;
+	}
+
+	half4 fragment 
