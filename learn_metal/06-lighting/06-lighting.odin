@@ -85,4 +85,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return o;
 	}
 
-	half4 fragment fragment_main(v2f in [[s
+	half4 fragment fragment_main(v2f in [[stage_in]]) {
+		// assume light
