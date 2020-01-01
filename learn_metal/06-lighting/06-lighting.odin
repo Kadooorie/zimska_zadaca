@@ -95,4 +95,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return half4(in.color * 0.1 + in.color * ndotl, 1.0);
 	}
 	`
-	shader_src_st
+	shader_src_str := NS.String.alloc()->initWithOd
