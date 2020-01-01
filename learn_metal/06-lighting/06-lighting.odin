@@ -92,4 +92,7 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		float ndotl = saturate(dot(n, l));
 
-		return half4(in.color * 0.1 + in.color * 
+		return half4(in.color * 0.1 + in.color * ndotl, 1.0);
+	}
+	`
+	shader_src_st
