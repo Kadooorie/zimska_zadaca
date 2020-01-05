@@ -108,4 +108,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc := MTL.RenderPipelineDescriptor.alloc()->init()
 	defer desc->release()
 
-	desc->setVertexFunction(vertex_f
+	desc->setVertexFunction(vertex_function)
+	desc->setFragmentFunction(
