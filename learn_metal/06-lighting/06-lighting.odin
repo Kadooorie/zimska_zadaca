@@ -110,4 +110,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	desc->setVertexFunction(vertex_function)
 	desc->setFragmentFunction(fragment_function)
-	desc->colorAt
+	desc->colorAttachments()->object(0)->setPixe
