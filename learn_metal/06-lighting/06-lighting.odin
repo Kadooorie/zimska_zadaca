@@ -114,4 +114,7 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
 
 	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
-	retur
+	return
+}
+
+build_buffers :: proc(
