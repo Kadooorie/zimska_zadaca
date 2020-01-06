@@ -113,4 +113,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
 	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
 
-	pso = device->newRenderPipelineS
+	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
+	retur
