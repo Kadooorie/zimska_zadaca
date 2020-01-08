@@ -119,4 +119,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, instance_buffer: ^MTL.Buffer) {
 	s :: 0.5
-	positions := []Vert
+	positions := []Vertex_Data{
+		// Positio
