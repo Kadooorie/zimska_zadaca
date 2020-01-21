@@ -153,4 +153,5 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 		 0,  1,  2,  2,  3,  0, // front
 		 4,  5,  6,  6,  7,  4, // right
 		 8,  9, 10, 10, 11,  8, // back
-		12,
+		12, 13, 14, 14, 15, 12, // left
+		16, 17, 18,
