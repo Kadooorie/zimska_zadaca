@@ -164,4 +164,5 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 	return
 }
 
-metal_main :: pr
+metal_main :: proc() -> (err: ^NS.Error) {
+	SDL.Se
