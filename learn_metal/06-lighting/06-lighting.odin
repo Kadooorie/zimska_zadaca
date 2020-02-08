@@ -169,3 +169,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	SDL.setenv("METAL_DEVICE_WRAPPER_TYPE", "1", 0)
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
+
+	window := SDL.CreateWindow("Metal i
