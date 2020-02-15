@@ -171,4 +171,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("Metal in Odin - 06 lighting",
-		SDL.WINDOWPOS_CENTERED, SDL
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
+		102
