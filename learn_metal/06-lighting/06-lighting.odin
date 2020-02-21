@@ -176,3 +176,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
 	)
 	defer SDL.DestroyWindow(window)
+
+	window_system_info: SDL.
