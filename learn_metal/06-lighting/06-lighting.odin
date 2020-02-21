@@ -174,3 +174,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
 		1024, 1024,
 		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
+	)
+	defer SDL.DestroyWindow(window)
