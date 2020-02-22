@@ -178,4 +178,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.DestroyWindow(window)
 
 	window_system_info: SDL.SysWMinfo
-	SDL.GetVersion(&window_syste
+	SDL.GetVersion(&window_system_info.version)
+	SDL.GetWindowWMInfo(wi
