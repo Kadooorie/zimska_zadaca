@@ -193,4 +193,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer swapchain->release()
 
 	swapchain->setDevice(device)
-	swapchain->setPixelFormat(.BGRA8Unorm_s
+	swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
+	swapchain->setFramebufferOnly(tr
