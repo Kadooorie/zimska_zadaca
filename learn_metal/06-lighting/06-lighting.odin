@@ -187,4 +187,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	device := MTL.CreateSystemDefaultDevice()
 	defer device->release()
 
-	fmt.println(device->name()->odinString
+	fmt.println(device->name()->odinString())
+
+	swapchain := CA.MetalLayer.la
