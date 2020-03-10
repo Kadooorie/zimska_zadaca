@@ -201,4 +201,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	native_window->setOpaque(true)
 	native_window->setBackgroundColor(nil)
 
-	
+	library, pso := build_shaders(d
