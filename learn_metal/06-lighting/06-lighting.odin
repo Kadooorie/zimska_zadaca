@@ -203,4 +203,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	library, pso := build_shaders(device) or_return
 	defer library->release()
-	defer pso->re
+	defer pso->release()
+
+	// Build Depth
