@@ -215,3 +215,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	vertex_buffer, index_buffer, instance_buffer := build_buffers(device)
 	defer vertex_buffer->release()
+	defer index_buffer->releas
