@@ -219,4 +219,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer instance_buffer->release()
 
 	camera_buffer := device->newBuffer(size_of(Camera_Data), {.StorageModeManaged})
-	de
+	defer camera_buffer->relea
