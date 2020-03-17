@@ -227,4 +227,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	command_queue := device->newCommandQueue()
 	defer command_queue->release()
 
-	SDL.ShowWi
+	SDL.ShowWindow(window)
+	for quit := false
