@@ -240,4 +240,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			}
 		}
 
-		w,
+		w, h: i32
+		SDL.GetWindowSize(window,
