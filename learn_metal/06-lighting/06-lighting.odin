@@ -250,4 +250,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			angle += 0.002
 
 			object_position := glm.vec3{0, 0, -10}
-			rt := glm.mat4T
+			rt := glm.mat4Translate(object_position)
+			rr1 
