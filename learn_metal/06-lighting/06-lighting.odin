@@ -259,4 +259,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 			ix, iy, iz := 0, 0, 0
 
-			instance_da
+			instance_data := instance_buffer->contentsAsSl
