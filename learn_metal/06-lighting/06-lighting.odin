@@ -271,4 +271,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				}
 				defer ix += 1
 
-	
+				scl :: 0.2
+
+				scale := glm.mat4Sc
