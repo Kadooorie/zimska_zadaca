@@ -265,4 +265,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 					ix = 0
 					iy += 1
 				}
-				if iy == INSTANCE_
+				if iy == INSTANCE_HEIGHT {
+					iy = 0
+					i
