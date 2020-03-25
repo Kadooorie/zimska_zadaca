@@ -275,4 +275,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 				scale := glm.mat4Scale({scl, scl, scl})
 				zrot := glm.mat4Rotate({0, 0, 1}, angle * math.sin(f32(ix)))
-				yrot := glm.mat4Rotate({0, 1, 0}, angle * math.co
+				yrot := glm.mat4Rotate({0, 1, 0}, angle * math.cos(f32(iy)))
+
+				pos := glm.
