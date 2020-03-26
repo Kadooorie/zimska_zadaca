@@ -279,4 +279,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 				pos := glm.vec3{
 					(f32(ix) - INSTANCE_WIDTH * 0.5) * 2*scl + scl,
-					(f32(iy) - INSTANCE_HEIGHT* 0.5
+					(f32(iy) - INSTANCE_HEIGHT* 0.5) * 2*scl + scl,
+					(f32(iz)
