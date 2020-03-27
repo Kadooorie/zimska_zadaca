@@ -283,4 +283,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 					(f32(iz) - INSTANCE_DEPTH * 0.5) * 2*scl,
 				}
 
-				translate := glm.mat4Translate(object_posit
+				translate := glm.mat4Translate(object_position + pos)
+
+				instance.transfor
