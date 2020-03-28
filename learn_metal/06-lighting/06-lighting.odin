@@ -288,4 +288,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				instance.transform = full_obj_rot * translate * yrot * zrot * scale
 				instance.normal_transform = glm.mat3(instance.transform)
 
-				r := f32(idx) / 
+				r := f32(idx) / NUM_INSTANCES
+				inst
