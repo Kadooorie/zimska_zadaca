@@ -300,4 +300,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			camera_data := camera_buffer->contentsAsType(Camera_Data)
 			camera_data.perspective_transform = glm.mat4Perspective(glm.radians_f32(45), aspect_ratio, 0.03, 500)
 			camera_data.world_transform = 1
-			camera_data.world_normal_transform = glm.mat3(camera_
+			camera_data.world_normal_transform = glm.mat3(camera_data.world_transform
