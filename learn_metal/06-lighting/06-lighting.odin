@@ -302,4 +302,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			camera_data.world_transform = 1
 			camera_data.world_normal_transform = glm.mat3(camera_data.world_transform)
 
-			camera_buffer->didModif
+			camera_buffer->didModifyRange(NS.Range_Make(0, siz
