@@ -307,4 +307,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		if depth_texture == nil ||
 		   depth_texture->width() != NS.UInteger(w) ||
-		   depth_texture->height(
+		   depth_texture->height() != NS.UInteger(h) {
+			de
