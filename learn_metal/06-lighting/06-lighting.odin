@@ -319,4 +319,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			desc->setUsage({.RenderTarget})
 			desc->setStorageMode(.Private)
 
-			if depth_texture != ni
+			if depth_texture != nil {
+				depth_texture->relea
