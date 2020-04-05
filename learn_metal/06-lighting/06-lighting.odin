@@ -317,4 +317,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			defer desc->release()
 
 			desc->setUsage({.RenderTarget})
-			desc->setStora
+			desc->setStorageMode(.Private)
+
+			i
