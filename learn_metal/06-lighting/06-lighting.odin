@@ -316,4 +316,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			)
 			defer desc->release()
 
-			desc->setUsa
+			desc->setUsage({.RenderTarget})
+			desc->setStora
