@@ -327,4 +327,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		}
 
 
-		drawable := swapchain->next
+		drawable := swapchain->nextDrawable()
+		assert(draw
