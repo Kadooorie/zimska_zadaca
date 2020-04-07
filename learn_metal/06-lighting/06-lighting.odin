@@ -331,4 +331,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		assert(drawable != nil)
 		defer drawable->release()
 
-		pass := MTL.Re
+		pass := MTL.RenderPassDescriptor.renderPassDescripto
