@@ -334,4 +334,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
 		defer pass->release()
 
-		col
+		color_attachment := pass->c
