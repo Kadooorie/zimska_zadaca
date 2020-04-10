@@ -343,4 +343,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		depth_attachment := pass->depthAttachment()
 		depth_attachment->setTexture(depth_texture)
-		
+		depth_attachment->setClearDep
