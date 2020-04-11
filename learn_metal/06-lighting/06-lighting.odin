@@ -347,4 +347,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		depth_attachment->setLoadAction(.Clear)
 		depth_attachment->setStoreAction(.Store)
 
-		command_buffer := comman
+		command_buffer := command_queue->commandBuffer()
+		defer 
