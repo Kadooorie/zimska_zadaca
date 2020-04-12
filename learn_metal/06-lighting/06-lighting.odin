@@ -350,4 +350,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		command_buffer := command_queue->commandBuffer()
 		defer command_buffer->release()
 
-		
+		render_encoder := command_buf
