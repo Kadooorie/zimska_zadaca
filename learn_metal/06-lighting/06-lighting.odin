@@ -361,4 +361,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setVertexBuffer(buffer=camera_buffer,   offset=0, index=2)
 
 		render_encoder->setCullMode(.Back)
-		render_encoder->setFrontFacing
+		render_encoder->setFrontFacingWinding(.CounterClockwise)
+		render
