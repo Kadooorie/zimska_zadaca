@@ -374,4 +374,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 }
 
 main :: proc() {
-	err := 
+	err := metal_main()
+	if err != nil {
+		f
