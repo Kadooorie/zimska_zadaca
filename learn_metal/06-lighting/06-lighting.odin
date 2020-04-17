@@ -370,4 +370,8 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		command_buffer->commit()
 	}
 
-	return n
+	return nil
+}
+
+main :: proc() {
+	err := 
