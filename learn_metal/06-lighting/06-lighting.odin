@@ -377,4 +377,6 @@ main :: proc() {
 	err := metal_main()
 	if err != nil {
 		fmt.eprintln(err->localizedDescription()->odinString())
-		
+		os.exit(1)
+	}
+}
