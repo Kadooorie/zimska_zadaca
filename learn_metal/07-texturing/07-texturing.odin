@@ -8,3 +8,5 @@ import SDL "vendor:sdl2"
 
 import "core:fmt"
 import "core:os"
+import "core:math"
+impo
