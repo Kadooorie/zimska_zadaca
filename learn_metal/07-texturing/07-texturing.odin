@@ -18,4 +18,4 @@ Vertex_Data :: struct {
 	texcoord: glm.vec2,
 }
 
-I
+Instance_Data :: struct
