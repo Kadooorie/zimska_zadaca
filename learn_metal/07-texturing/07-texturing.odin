@@ -9,4 +9,8 @@ import SDL "vendor:sdl2"
 import "core:fmt"
 import "core:os"
 import "core:math"
-import glm "core:math/linalg/gl
+import glm "core:math/linalg/glsl"
+
+
+Vertex_Data :: struct {
+	positi
