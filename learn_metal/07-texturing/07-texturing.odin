@@ -24,4 +24,5 @@ Instance_Data :: struct #align 16 {
 	normal_transform: glm.mat3,
 }
 
-INSTANCE_
+INSTANCE_WIDTH  :: 10
+INSTANCE_HEIGHT :: 10
