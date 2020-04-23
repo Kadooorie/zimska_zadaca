@@ -18,4 +18,5 @@ Vertex_Data :: struct {
 	texcoord: glm.vec2,
 }
 
-Instance_Data :: struct
+Instance_Data :: struct #align 16 {
+	transform:       
