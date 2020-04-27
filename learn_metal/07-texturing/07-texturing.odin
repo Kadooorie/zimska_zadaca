@@ -37,4 +37,7 @@ Camera_Data :: struct #align 16 {
 
 build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.RenderPipelineState, err: ^NS.Error) {
 	shader_src := `
-	#include <metal_
+	#include <metal_stdlib>
+	using namespace metal;
+
+	struct v2f 
