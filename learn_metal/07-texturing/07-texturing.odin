@@ -43,4 +43,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	struct v2f {
 		float4 position [[position]];
 		float3 normal;
-		half3 co
+		half3 color;
+		float2 texcoord;
+	};
