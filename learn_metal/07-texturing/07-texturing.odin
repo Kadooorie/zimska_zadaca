@@ -40,4 +40,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	#include <metal_stdlib>
 	using namespace metal;
 
-	struct v2f 
+	struct v2f {
+		float4 position [[position
