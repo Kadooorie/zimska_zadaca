@@ -46,3 +46,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		half3 color;
 		float2 texcoord;
 	};
+
+	struct Vertex_Data {
+		packed_float
