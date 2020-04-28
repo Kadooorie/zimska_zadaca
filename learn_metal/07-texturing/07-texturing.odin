@@ -49,4 +49,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	struct Vertex_Data {
 		packed_float3 position;
-		packed_float3 
+		packed_float3 normal;
+		packed_float2 texcoord;
+	};
