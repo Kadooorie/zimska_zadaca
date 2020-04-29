@@ -61,3 +61,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	struct Camera_Data {
 		float4x4 perspective_transform;
+		float4x4 world_tr
