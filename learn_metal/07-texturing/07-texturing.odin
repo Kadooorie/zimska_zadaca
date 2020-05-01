@@ -65,4 +65,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float3x3 world_normal_transform;
 	};
 
-	v2f vertex vertex_main(device const Vertex_
+	v2f vertex vertex_main(device const Vertex_Data*   vertex_data   [[buffe
