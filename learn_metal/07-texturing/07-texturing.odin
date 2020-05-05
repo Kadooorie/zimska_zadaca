@@ -69,4 +69,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	                       device const Instance_Data* instance_data [[buffer(1)]],
 	                       device const Camera_Data&   camera_data   [[buffer(2)]],
 	                       uint vertex_id                            [[vertex_id]],
-	                       uint instance_id      
+	                       uint instance_id                          [[instan
