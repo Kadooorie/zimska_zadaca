@@ -89,3 +89,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		o.color = half3(id.color.rgb);
 		return o;
 	}
+
+	half4 fragment fragment_ma
