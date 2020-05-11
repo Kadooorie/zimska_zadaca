@@ -91,4 +91,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	}
 
 	half4 fragment fragment_main(v2f in                              [[stage_in]],
-	                             texture2d<half, access::samp
+	                             texture2d<half, access::sample> tex [[texture(0)]]) {
+		conste
