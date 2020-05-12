@@ -96,3 +96,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		half3 texel = tex.sample(s, in.texcoord).rgb;
 
 		// assume light coming from front-top-right
+		float3 l = normalize(float3(1
