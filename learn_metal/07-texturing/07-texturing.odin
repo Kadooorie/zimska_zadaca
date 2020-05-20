@@ -112,4 +112,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	vertex_function   := library->newFunctionWithName(NS.AT("vertex_main"))
 	fragment_function := library->newFunctionWithName(NS.AT("fragment_main"))
-	defer vertex_func
+	defer vertex_function->release()
+	defer fr
