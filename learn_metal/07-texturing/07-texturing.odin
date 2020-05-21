@@ -116,4 +116,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	defer fragment_function->release()
 
 	desc := MTL.RenderPipelineDescriptor.alloc()->init()
-	defer de
+	defer desc->release()
+
+	desc->setV
