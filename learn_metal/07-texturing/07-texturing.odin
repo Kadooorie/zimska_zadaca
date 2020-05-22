@@ -119,4 +119,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	defer desc->release()
 
 	desc->setVertexFunction(vertex_function)
-	desc->setFragmentFunction
+	desc->setFragmentFunction(fragment_function)
+	desc->color
