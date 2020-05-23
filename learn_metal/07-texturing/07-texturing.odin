@@ -127,4 +127,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	return
 }
 
-bu
+build_buffers :: proc(device: ^MTL
