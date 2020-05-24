@@ -132,4 +132,5 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 	positions := []Vertex_Data{
 		//                                         Texture
 		//   Positions           Normals         Coordinates
-		{{-s, -s, +s}, { 
+		{{-s, -s, +s}, { 0,  0,  1}, {0, 1}},
+		{
