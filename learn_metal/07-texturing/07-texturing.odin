@@ -164,4 +164,4 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 	}
 	indices := []u16{
 		 0,  1,  2,  2,  3,  0, // front
-		 4,  5,  6,
+		 4,  5,  6,  6,  7,  4, // rig
