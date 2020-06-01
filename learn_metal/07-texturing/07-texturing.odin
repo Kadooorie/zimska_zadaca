@@ -171,4 +171,5 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 		20, 21, 22, 22, 23, 20, // bottom
 	}
 
-	vertex_buffer   = device->newBufferWithSlice(positions[:], {.Storag
+	vertex_buffer   = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	index_b
