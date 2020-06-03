@@ -177,4 +177,4 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 	return
 }
 
-build_texture :: proc(de
+build_texture :: proc(device: ^MTL.Device) -> ^MTL.Tex
