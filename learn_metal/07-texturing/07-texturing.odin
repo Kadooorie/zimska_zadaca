@@ -181,4 +181,6 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	tw, th :: 128, 128
 
 	desc := MTL.TextureDescriptor.alloc()->init()
-	defer desc->rel
+	defer desc->release()
+
+	desc->setWidth(t
