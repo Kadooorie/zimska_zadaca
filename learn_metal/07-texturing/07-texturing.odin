@@ -192,4 +192,5 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	texture := device->newTextureWithDescriptor(desc)
 
 	texture_data := make([][4]u8, tw*th, context.temp_allocator)
-	f
+	for y in 0..<th {
+		for x in 0..
