@@ -189,4 +189,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	desc->setStorageMode(.Managed)
 	desc->setUsage({.ShaderRead})
 
-	texture := device
+	texture := device->newTextureWithDescriptor
