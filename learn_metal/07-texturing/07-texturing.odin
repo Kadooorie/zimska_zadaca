@@ -187,4 +187,6 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	desc->setHeight(th)
 	desc->setPixelFormat(.RGBA8Unorm)
 	desc->setStorageMode(.Managed)
-	desc->setUsage({.ShaderRe
+	desc->setUsage({.ShaderRead})
+
+	texture := device
