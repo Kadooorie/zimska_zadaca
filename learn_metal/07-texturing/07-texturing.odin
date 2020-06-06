@@ -189,4 +189,6 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	desc->setStorageMode(.Managed)
 	desc->setUsage({.ShaderRead})
 
-	texture := device->newTextureWithDescriptor
+	texture := device->newTextureWithDescriptor(desc)
+
+	texture_data := make([][4]u8, 
