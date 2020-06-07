@@ -197,4 +197,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 			is_white := ((x~y) & 0b0100_0000) != 0
 			c: u8 = 0xff if is_white else 0x0a
 			i := y * tw + x
-			t
+			texture_data[i].rgb =
