@@ -194,4 +194,5 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	texture_data := make([][4]u8, tw*th, context.temp_allocator)
 	for y in 0..<th {
 		for x in 0..<tw {
-			is_white := ((x~y) & 0b0100_0
+			is_white := ((x~y) & 0b0100_0000) != 0
+			c: u8 = 0xff if is_whi
