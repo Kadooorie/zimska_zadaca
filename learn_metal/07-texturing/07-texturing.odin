@@ -204,4 +204,7 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 
 	texture->replaceRegion(MTL.Region{{0, 0, 0}, {tw, th, 1}}, 0, raw_data(texture_data), tw*4)
 
-	return te
+	return texture
+}
+
+metal_main ::
