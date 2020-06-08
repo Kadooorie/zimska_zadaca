@@ -202,4 +202,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 		}
 	}
 
-	texture->replaceRegion(MTL.Region{{0,
+	texture->replaceRegion(MTL.Region{{0, 0, 0}, {tw, th, 1}}, 0, raw_dat
