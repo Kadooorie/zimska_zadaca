@@ -207,4 +207,5 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	return texture
 }
 
-metal_main ::
+metal_main :: proc() -> (err: ^NS.Error) {
+	SDL.
