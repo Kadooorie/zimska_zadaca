@@ -208,4 +208,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 }
 
 metal_main :: proc() -> (err: ^NS.Error) {
-	SDL.
+	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "m
