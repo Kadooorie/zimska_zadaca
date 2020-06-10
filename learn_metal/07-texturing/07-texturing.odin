@@ -213,4 +213,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
 
-	window := SDL.CreateWindow(
+	window := SDL.CreateWindow("Metal in Odin - 07 Texturing",
+		SD
