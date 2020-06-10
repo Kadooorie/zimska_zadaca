@@ -214,4 +214,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("Metal in Odin - 07 Texturing",
-		SD
+		SDL.WINDOWPOS_CENTERED, SDL.WIND
