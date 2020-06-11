@@ -220,4 +220,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	)
 	defer SDL.DestroyWindow(window)
 
-	wi
+	window_system_info: SDL.
