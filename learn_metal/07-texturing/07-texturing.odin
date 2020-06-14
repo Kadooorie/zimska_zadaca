@@ -225,4 +225,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	SDL.GetWindowWMInfo(window, &window_system_info)
 	assert(window_system_info.subsystem == .COCOA)
 
-	native_window := (^NS.Window)(window_system_info.i
+	native_window := (^NS.Window)(window_system_info.info.cocoa.window)
+
+	device := MTL.Cre
