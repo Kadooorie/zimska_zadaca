@@ -230,4 +230,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	device := MTL.CreateSystemDefaultDevice()
 	defer device->release()
 
-	
+	fmt.println(device->na
