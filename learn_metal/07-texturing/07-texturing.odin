@@ -246,4 +246,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	library, pso := build_shaders(device) or_return
 	defer library->release()
-	defer pso->r
+	defer pso->release()
+
+	// Build Depth Stencil S
