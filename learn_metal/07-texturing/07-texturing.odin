@@ -250,4 +250,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	// Build Depth Stencil State
 	depth_stencil_state: ^MTL.DepthStencilState
-	
+	depth_desc := MTL.DepthStencilDesc
