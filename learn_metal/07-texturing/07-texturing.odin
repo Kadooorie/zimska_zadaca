@@ -256,4 +256,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	depth_stencil_state = device->newDepthStencilState(depth_desc)
 	depth_desc->release()
 
-	vert
+	vertex_buffer, index_buffer, instan
