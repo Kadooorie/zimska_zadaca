@@ -261,4 +261,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer index_buffer->release()
 	defer instance_buffer->release()
 
-	camera_buffer := devic
+	camera_buffer := device->newBuffer(size_of(Came
