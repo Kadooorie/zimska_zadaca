@@ -267,4 +267,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	depth_texture: ^MTL.Texture = nil
 	defer if depth_texture != nil do depth_texture->release()
 
-	command_queue := device-
+	command_queue := device->newCommandQueue()
+	defer command_q
