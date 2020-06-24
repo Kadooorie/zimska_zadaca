@@ -279,4 +279,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			#partial switch e.type {
 			case .QUIT:
 				quit = true
-			case .KEYDOWN
+			case .KEYDOWN:
+				if e.key.keysym.sym == .E
