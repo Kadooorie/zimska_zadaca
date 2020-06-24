@@ -282,4 +282,9 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			case .KEYDOWN:
 				if e.key.keysym.sym == .ESCAPE {
 					quit = true
-	
+				}
+			}
+		}
+
+		w, h: i32
+		SDL
