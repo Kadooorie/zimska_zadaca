@@ -275,4 +275,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	SDL.ShowWindow(window)
 	for quit := false; !quit;  {
-		for
+		for e: SDL.Event; SDL.PollEvent(&
