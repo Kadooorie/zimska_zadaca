@@ -293,4 +293,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		{
 			@static angle: f32
-			an
+			angle += 0.002
+
+			object_pos
