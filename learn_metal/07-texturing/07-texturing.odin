@@ -300,4 +300,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			rr1 := glm.mat4Rotate({0, 1, 0}, -angle)
 			rr0 := glm.mat4Rotate({1, 0, 0}, angle*0.5)
 			rt_inv := glm.mat4Translate(-object_position)
-			full_ob
+			full_obj_rot := rt * rr1 * rr0 * rt_inv
