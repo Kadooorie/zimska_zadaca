@@ -307,4 +307,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 			instance_data := instance_buffer->contentsAsSlice([]Instance_Data)[:NUM_INSTANCES]
 			for instance, idx in &instance_data {
-				if ix == 
+				if ix == INSTANCE_WIDTH {
+					ix = 0
+					iy +=
