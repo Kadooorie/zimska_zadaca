@@ -315,4 +315,7 @@ metal_main :: proc() -> (err: ^NS.Error) {
 					iy = 0
 					iz += 1
 				}
-	
+				defer ix += 1
+
+				scl :: 0.2
+
