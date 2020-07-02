@@ -319,3 +319,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 				scl :: 0.2
 
+				scale := glm.mat4Scale({scl, sc
