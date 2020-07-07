@@ -332,4 +332,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				translate := glm.mat4Translate(object_position + pos)
 
 				instance.transform = full_obj_rot * translate * yrot * zrot * scale
-				instance.no
+				instance.normal_transform = glm.mat3(
