@@ -339,4 +339,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 			}
 			sz := NS.UInteger(len(instance_data)*size_of(instance_data[0]))
-			insta
+			instance_buffer->didModifyRange(NS.Range
