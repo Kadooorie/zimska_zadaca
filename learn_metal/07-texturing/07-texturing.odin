@@ -338,4 +338,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				instance.color = {r, 1-r, math.sin(math.TAU * r), 1}
 
 			}
-			sz := NS.UIn
+			sz := NS.UInteger(len(instance_data)*size_
