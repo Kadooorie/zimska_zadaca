@@ -343,4 +343,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		}
 
 		{
-			camera_d
+			camera_data := camera_buffer->contentsAsType(C
