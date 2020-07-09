@@ -339,4 +339,8 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 			}
 			sz := NS.UInteger(len(instance_data)*size_of(instance_data[0]))
-			instance_buffer->didModifyRange(NS.Range
+			instance_buffer->didModifyRange(NS.Range_Make(0, sz))
+		}
+
+		{
+			camera_d
