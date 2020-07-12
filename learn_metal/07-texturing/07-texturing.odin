@@ -351,4 +351,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			camera_buffer->didModifyRange(NS.Range_Make(0, size_of(Camera_Data)))
 		}
 
-		if depth_te
+		if depth_texture == nil ||
+		   depth_texture-
