@@ -360,4 +360,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				height = NS.UInteger(h),
 				mipmapped = false,
 			)
-			defer desc-
+			defer desc->release()
+
+			desc->setUsage({.RenderT
