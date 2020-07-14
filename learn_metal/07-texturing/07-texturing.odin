@@ -358,4 +358,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				pixelFormat = .Depth16Unorm,
 				width = NS.UInteger(w),
 				height = NS.UInteger(h),
-				mipmappe
+				mipmapped = false,
+			)
+			defer desc-
