@@ -369,4 +369,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				depth_texture->release()
 			}
 
-			depth_texture = d
+			depth_texture = device->newTextureWithDescripto
