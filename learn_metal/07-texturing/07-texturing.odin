@@ -369,4 +369,8 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				depth_texture->release()
 			}
 
-			depth_texture = device->newTextureWithDescripto
+			depth_texture = device->newTextureWithDescriptor(desc)
+		}
+
+
+		drawable := swapch
