@@ -377,4 +377,7 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		assert(drawable != nil)
 		defer drawable->release()
 
-		pass := MTL.RenderPassDescriptor.renderPassDescriptor(
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		defer pass->release()
+
+		color_attach
