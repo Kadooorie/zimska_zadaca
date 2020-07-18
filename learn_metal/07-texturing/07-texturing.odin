@@ -387,4 +387,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		color_attachment->setStoreAction(.Store)
 		color_attachment->setTexture(drawable->texture())
 
-		depth_attachment := pass->depthA
+		depth_attachment := pass->depthAttachment()
+		depth_attachment->
