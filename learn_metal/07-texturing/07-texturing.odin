@@ -384,4 +384,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		assert(color_attachment != nil)
 		color_attachment->setClearColor(MTL.ClearColor{0.1, 0.1, 0.1, 1.0})
 		color_attachment->setLoadAction(.Clear)
-		
+		color_attachment->setStoreAct
