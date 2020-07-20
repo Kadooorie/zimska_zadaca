@@ -394,4 +394,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		depth_attachment->setStoreAction(.Store)
 
 		command_buffer := command_queue->commandBuffer()
-		defer command_buf
+		defer command_buffer->release()
+
+		render_encod
