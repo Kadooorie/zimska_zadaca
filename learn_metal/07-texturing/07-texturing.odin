@@ -399,4 +399,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
 		defer render_encoder->release()
 
-		render_encoder->setRenderPi
+		render_encoder->setRenderPipelineState(pso)
+		render_e
