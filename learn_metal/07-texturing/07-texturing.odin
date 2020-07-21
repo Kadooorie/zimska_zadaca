@@ -400,4 +400,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		defer render_encoder->release()
 
 		render_encoder->setRenderPipelineState(pso)
-		render_e
+		render_encoder->setDepthStencilState(depth_st
