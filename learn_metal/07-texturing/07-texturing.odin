@@ -402,4 +402,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setRenderPipelineState(pso)
 		render_encoder->setDepthStencilState(depth_stencil_state)
 
-		render_encod
+		render_encoder->setVertexBuffer(buffer=vertex_buf
