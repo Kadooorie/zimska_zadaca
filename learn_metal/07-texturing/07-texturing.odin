@@ -409,4 +409,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setFragmentTexture(texture, 0)
 
 		render_encoder->setCullMode(.Back)
-		render_encoder->setFrontFacingWindin
+		render_encoder->setFrontFacingWinding(.CounterClockwise)
+		render_encoder
