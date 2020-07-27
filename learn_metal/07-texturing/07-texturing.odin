@@ -412,4 +412,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setFrontFacingWinding(.CounterClockwise)
 		render_encoder->drawIndexedPrimitivesWithInstanceCount(.Triangle, 6*6, .UInt16, index_buffer, 0, NUM_INSTANCES)
 
-		render_encoder->e
+		render_encoder->endEncoding()
+
+		command_buff
