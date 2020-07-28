@@ -423,4 +423,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 main :: proc() {
 	err := metal_main()
-	if 
+	if err != nil {
+		fmt.eprin
