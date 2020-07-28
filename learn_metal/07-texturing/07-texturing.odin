@@ -415,4 +415,10 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->endEncoding()
 
 		command_buffer->presentDrawable(drawable)
-		command_buffer->commit
+		command_buffer->commit()
+	}
+
+	return nil
+}
+
+main 
