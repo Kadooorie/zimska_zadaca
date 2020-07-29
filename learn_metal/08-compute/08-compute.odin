@@ -45,3 +45,36 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	using namespace metal;
 
 	struct v2f {
+		float4 position [[position]];
+		float3 normal;
+		half3 color;
+		float2 texcoord;
+	};
+
+	struct Vertex_Data {
+		packed_float3 position;
+		packed_float3 normal;
+		packed_float2 texcoord;
+	};
+
+	struct Instance_Data {
+		float4x4 transform;
+		float4   color;
+		float3x3 normal_transform;
+	};
+
+	struct Camera_Data {
+		float4x4 perspective_transform;
+		float4x4 world_transform;
+		float3x3 world_normal_transform;
+	};
+
+	v2f vertex vertex_main(device const Vertex_Data*   vertex_data   [[buffer(0)]],
+	                       device const Instance_Data* instance_data [[buffer(1)]],
+	                       device const Camera_Data&   camera_data   [[buffer(2)]],
+	                       uint vertex_id                            [[vertex_id]],
+	                       uint instance_id                          [[instance_id]]) {
+		v2f o;
+
+		const device Vertex_Data&   vd = vertex_data[vertex_id];
+		const device Instance_Data& id = instance_data[instance_id];
