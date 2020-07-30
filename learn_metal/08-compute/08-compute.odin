@@ -78,3 +78,34 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		const device Vertex_Data&   vd = vertex_data[vertex_id];
 		const device Instance_Data& id = instance_data[instance_id];
+
+		float4 pos = float4(vd.position, 1.0);
+		pos = id.transform * pos;
+		pos = camera_data.perspective_transform * camera_data.world_transform * pos;
+		o.position = pos;
+
+		float3 normal = id.normal_transform * float3(vd.normal);
+		normal   = camera_data.world_normal_transform * normal;
+		o.normal = normal;
+
+		o.texcoord = float2(vd.texcoord.xy);
+
+		o.color = half3(id.color.rgb);
+		return o;
+	}
+
+	half4 fragment fragment_main(v2f in                              [[stage_in]],
+	                             texture2d<half, access::sample> tex [[texture(0)]]) {
+		constexpr sampler s(address::repeat, filter::linear);
+		half3 texel = tex.sample(s, in.texcoord).rgb;
+
+		// assume light coming from front-top-right
+		float3 l = normalize(float3(1.0, 1.0, 0.8));
+		float3 n = normalize(in.normal);
+
+		float ndotl = saturate(dot(n, l));
+
+		half3 illum = in.color * texel * 0.1 + in.color * texel * ndotl;
+		return half4(illum, 1.0);
+	}
+	`
