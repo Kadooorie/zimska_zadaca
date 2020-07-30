@@ -126,3 +126,36 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->setFragmentFunction(fragment_function)
 	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
 	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
+
+	pso = device->newRenderPipelineStateWithDescriptor(desc) or_return
+	return
+}
+
+build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, instance_buffer: ^MTL.Buffer) {
+	s :: 0.5
+	positions := []Vertex_Data{
+		//                                         Texture
+		//   Positions           Normals         Coordinates
+		{{-s, -s, +s}, { 0,  0,  1}, {0, 1}},
+		{{+s, -s, +s}, { 0,  0,  1}, {1, 1}},
+		{{+s, +s, +s}, { 0,  0,  1}, {1, 0}},
+		{{-s, +s, +s}, { 0,  0,  1}, {0, 0}},
+
+		{{+s, -s, +s}, { 1,  0,  0}, {0, 1}},
+		{{+s, -s, -s}, { 1,  0,  0}, {1, 1}},
+		{{+s, +s, -s}, { 1,  0,  0}, {1, 0}},
+		{{+s, +s, +s}, { 1,  0,  0}, {0, 0}},
+
+		{{+s, -s, -s}, { 0,  0, -1}, {0, 1}},
+		{{-s, -s, -s}, { 0,  0, -1}, {1, 1}},
+		{{-s, +s, -s}, { 0,  0, -1}, {1, 0}},
+		{{+s, +s, -s}, { 0,  0, -1}, {0, 0}},
+
+		{{-s, -s, -s}, {-1,  0,  0}, {0, 1}},
+		{{-s, -s, +s}, {-1,  0,  0}, {1, 1}},
+		{{-s, +s, +s}, {-1,  0,  0}, {1, 0}},
+		{{-s, +s, -s}, {-1,  0,  0}, {0, 0}},
+
+		{{-s, +s, +s}, { 0,  1,  0}, {0, 1}},
+		{{+s, +s, +s}, { 0,  1,  0}, {1, 1}},
+		{{+s, +s, -s}, { 0,  1,  0}, {1, 0}},
