@@ -109,3 +109,20 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return half4(illum, 1.0);
 	}
 	`
+	shader_src_str := NS.String.alloc()->initWithOdinString(shader_src)
+	defer shader_src_str->release()
+
+	library = device->newLibraryWithSource(shader_src_str, nil) or_return
+
+	vertex_function   := library->newFunctionWithName(NS.AT("vertex_main"))
+	fragment_function := library->newFunctionWithName(NS.AT("fragment_main"))
+	defer vertex_function->release()
+	defer fragment_function->release()
+
+	desc := MTL.RenderPipelineDescriptor.alloc()->init()
+	defer desc->release()
+
+	desc->setVertexFunction(vertex_function)
+	desc->setFragmentFunction(fragment_function)
+	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
+	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
