@@ -221,3 +221,35 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 
 		// Convert iteration result to colors
 		half color = (0.5 + 0.5 * cos(3.0 + iteration * 0.15));
+		tex.write(half4(color, color, color, 1.0), index, 0);
+	}`
+
+	kernel_src_str := NS.String.alloc()->initWithOdinString(kernel_src)
+	defer kernel_src_str->release()
+
+	compute_library := device->newLibraryWithSource(kernel_src_str, nil) or_return
+	defer compute_library->release()
+
+	mandelbrot_set := compute_library->newFunctionWithName(NS.AT("mandelbrot_set"))
+	defer mandelbrot_set->release()
+
+	return device->newComputePipelineStateWithFunction(mandelbrot_set)
+}
+
+generate_mandelbrot_texture :: proc(command_queue: ^MTL.CommandQueue, compute_pso: ^MTL.ComputePipelineState, texture: ^MTL.Texture) {
+	command_buffer := command_queue->commandBuffer()
+	defer command_buffer->release()
+
+	compute_encoder := command_buffer->computeCommandEncoder()
+
+	compute_encoder->setComputePipelineState(compute_pso)
+	compute_encoder->setTexture(texture, 0)
+
+	grid_size := MTL.Size{TEXTURE_WIDTH, TEXTURE_HEIGHT, 1}
+	thread_group_size := MTL.Size{NS.Integer(compute_pso->maxTotalThreadsPerThreadgroup()), 1, 1}
+
+	compute_encoder->dispatchThreads(grid_size, thread_group_size)
+	compute_encoder->endEncoding()
+
+	command_buffer->commit()
+}
