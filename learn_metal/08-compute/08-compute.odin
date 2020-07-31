@@ -293,3 +293,37 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	library, pso := build_shaders(device) or_return
 	defer library->release()
+	defer pso->release()
+
+	// Build Depth Stencil State
+	depth_stencil_state: ^MTL.DepthStencilState
+	depth_desc := MTL.DepthStencilDescriptor.alloc()->init()
+	depth_desc->setDepthCompareFunction(.Less)
+	depth_desc->setDepthWriteEnabled(true)
+	depth_stencil_state = device->newDepthStencilState(depth_desc)
+	depth_desc->release()
+
+	vertex_buffer, index_buffer, instance_buffer := build_buffers(device)
+	defer vertex_buffer->release()
+	defer index_buffer->release()
+	defer instance_buffer->release()
+
+	camera_buffer := device->newBuffer(size_of(Camera_Data), {.StorageModeManaged})
+	defer camera_buffer->release()
+
+	depth_texture: ^MTL.Texture = nil
+	defer if depth_texture != nil do depth_texture->release()
+
+	compute_pso := build_compute_pipeline(device) or_return
+	defer compute_pso->release()
+
+	command_queue := device->newCommandQueue()
+	defer command_queue->release()
+
+	texture := build_texture(device)
+	defer texture->release()
+
+	generate_mandelbrot_texture(command_queue, compute_pso, texture)
+
+	SDL.ShowWindow(window)
+	for quit := false; !quit;  {
