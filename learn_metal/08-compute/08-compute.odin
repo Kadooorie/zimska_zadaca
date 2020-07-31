@@ -159,3 +159,39 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 		{{-s, +s, +s}, { 0,  1,  0}, {0, 1}},
 		{{+s, +s, +s}, { 0,  1,  0}, {1, 1}},
 		{{+s, +s, -s}, { 0,  1,  0}, {1, 0}},
+		{{-s, +s, -s}, { 0,  1,  0}, {0, 0}},
+
+		{{-s, -s, -s}, { 0, -1,  0}, {0, 1}},
+		{{+s, -s, -s}, { 0, -1,  0}, {1, 1}},
+		{{+s, -s, +s}, { 0, -1,  0}, {1, 0}},
+		{{-s, -s, +s}, { 0, -1,  0}, {0, 0}},
+	}
+	indices := []u16{
+		 0,  1,  2,  2,  3,  0, // front
+		 4,  5,  6,  6,  7,  4, // right
+		 8,  9, 10, 10, 11,  8, // back
+		12, 13, 14, 14, 15, 12, // left
+		16, 17, 18, 18, 19, 16, // top
+		20, 21, 22, 22, 23, 20, // bottom
+	}
+
+	vertex_buffer   = device->newBufferWithSlice(positions[:], {.StorageModeManaged})
+	index_buffer    = device->newBufferWithSlice(indices[:],   {.StorageModeManaged})
+	instance_buffer = device->newBuffer(NUM_INSTANCES*size_of(Instance_Data), {.StorageModeManaged})
+	return
+}
+
+build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
+	desc := MTL.TextureDescriptor.alloc()->init()
+	defer desc->release()
+
+	desc->setWidth(TEXTURE_WIDTH)
+	desc->setHeight(TEXTURE_HEIGHT)
+	desc->setPixelFormat(.RGBA8Unorm)
+	desc->setStorageMode(.Managed)
+	desc->setUsage({.ShaderRead, .ShaderWrite})
+
+	return device->newTextureWithDescriptor(desc)
+}
+
+build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelineState, err: ^NS.Error) {
