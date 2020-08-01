@@ -401,3 +401,37 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			camera_data.world_normal_transform = glm.mat3(camera_data.world_transform)
 
 			camera_buffer->didModifyRange(NS.Range_Make(0, size_of(Camera_Data)))
+		}
+
+		if depth_texture == nil ||
+		   depth_texture->width() != NS.UInteger(w) ||
+		   depth_texture->height() != NS.UInteger(h) {
+			desc := MTL.TextureDescriptor.texture2DDescriptorWithPixelFormat(
+				pixelFormat = .Depth16Unorm,
+				width = NS.UInteger(w),
+				height = NS.UInteger(h),
+				mipmapped = false,
+			)
+			defer desc->release()
+
+			desc->setUsage({.RenderTarget})
+			desc->setStorageMode(.Private)
+
+			if depth_texture != nil {
+				depth_texture->release()
+			}
+
+			depth_texture = device->newTextureWithDescriptor(desc)
+		}
+
+
+		drawable := swapchain->nextDrawable()
+		assert(drawable != nil)
+		defer drawable->release()
+
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		defer pass->release()
+
+		color_attachment := pass->colorAttachments()->object(0)
+		assert(color_attachment != nil)
+		color_attachment->setClearColor(MTL.ClearColor{0.1, 0.1, 0.1, 1.0})
