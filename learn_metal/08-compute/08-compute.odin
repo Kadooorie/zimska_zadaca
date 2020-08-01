@@ -366,3 +366,38 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				if iy == INSTANCE_HEIGHT {
 					iy = 0
 					iz += 1
+				}
+				defer ix += 1
+
+				scl :: 0.2
+
+				scale := glm.mat4Scale({scl, scl, scl})
+				zrot := glm.mat4Rotate({0, 0, 1}, angle * math.sin(f32(ix)))
+				yrot := glm.mat4Rotate({0, 1, 0}, angle * math.cos(f32(iy)))
+
+				pos := glm.vec3{
+					(f32(ix) - INSTANCE_WIDTH * 0.5) * 2*scl + scl,
+					(f32(iy) - INSTANCE_HEIGHT* 0.5) * 2*scl + scl,
+					(f32(iz) - INSTANCE_DEPTH * 0.5) * 2*scl,
+				}
+
+				translate := glm.mat4Translate(object_position + pos)
+
+				instance.transform = full_obj_rot * translate * yrot * zrot * scale
+				instance.normal_transform = glm.mat3(instance.transform)
+
+				r := f32(idx) / NUM_INSTANCES
+				instance.color = {r, 1-r, math.sin(math.TAU * r), 1}
+
+			}
+			sz := NS.UInteger(len(instance_data)*size_of(instance_data[0]))
+			instance_buffer->didModifyRange(NS.Range_Make(0, sz))
+		}
+
+		{
+			camera_data := camera_buffer->contentsAsType(Camera_Data)
+			camera_data.perspective_transform = glm.mat4Perspective(glm.radians_f32(45), aspect_ratio, 0.03, 500)
+			camera_data.world_transform = 1
+			camera_data.world_normal_transform = glm.mat3(camera_data.world_transform)
+
+			camera_buffer->didModifyRange(NS.Range_Make(0, size_of(Camera_Data)))
