@@ -327,3 +327,42 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	SDL.ShowWindow(window)
 	for quit := false; !quit;  {
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch e.type {
+			case .QUIT:
+				quit = true
+			case .KEYDOWN:
+				if e.key.keysym.sym == .ESCAPE {
+					quit = true
+				}
+			}
+		}
+
+		w, h: i32
+		SDL.GetWindowSize(window, &w, &h)
+		aspect_ratio := f32(w)/max(f32(h), 1)
+
+
+		{
+			@static angle: f32
+			angle += 0.002
+
+			object_position := glm.vec3{0, 0, -10}
+			rt := glm.mat4Translate(object_position)
+			rr1 := glm.mat4Rotate({0, 1, 0}, -angle)
+			rr0 := glm.mat4Rotate({1, 0, 0}, angle*0.5)
+			rt_inv := glm.mat4Translate(-object_position)
+			full_obj_rot := rt * rr1 * rr0 * rt_inv
+
+
+			ix, iy, iz := 0, 0, 0
+
+			instance_data := instance_buffer->contentsAsSlice([]Instance_Data)[:NUM_INSTANCES]
+			for instance, idx in &instance_data {
+				if ix == INSTANCE_WIDTH {
+					ix = 0
+					iy += 1
+				}
+				if iy == INSTANCE_HEIGHT {
+					iy = 0
+					iz += 1
