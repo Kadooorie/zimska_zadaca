@@ -468,3 +468,15 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		command_buffer->presentDrawable(drawable)
 		command_buffer->commit()
+	}
+
+	return nil
+}
+
+main :: proc() {
+	err := metal_main()
+	if err != nil {
+		fmt.eprintln(err->localizedDescription()->odinString())
+		os.exit(1)
+	}
+}
