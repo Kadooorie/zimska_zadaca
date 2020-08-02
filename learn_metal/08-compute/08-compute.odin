@@ -435,3 +435,36 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		color_attachment := pass->colorAttachments()->object(0)
 		assert(color_attachment != nil)
 		color_attachment->setClearColor(MTL.ClearColor{0.1, 0.1, 0.1, 1.0})
+		color_attachment->setLoadAction(.Clear)
+		color_attachment->setStoreAction(.Store)
+		color_attachment->setTexture(drawable->texture())
+
+		depth_attachment := pass->depthAttachment()
+		depth_attachment->setTexture(depth_texture)
+		depth_attachment->setClearDepth(1.0)
+		depth_attachment->setLoadAction(.Clear)
+		depth_attachment->setStoreAction(.Store)
+
+		command_buffer := command_queue->commandBuffer()
+		defer command_buffer->release()
+
+		render_encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
+		defer render_encoder->release()
+
+		render_encoder->setRenderPipelineState(pso)
+		render_encoder->setDepthStencilState(depth_stencil_state)
+
+		render_encoder->setVertexBuffer(buffer=vertex_buffer,   offset=0, index=0)
+		render_encoder->setVertexBuffer(buffer=instance_buffer, offset=0, index=1)
+		render_encoder->setVertexBuffer(buffer=camera_buffer,   offset=0, index=2)
+
+		render_encoder->setFragmentTexture(texture, 0)
+
+		render_encoder->setCullMode(.Back)
+		render_encoder->setFrontFacingWinding(.CounterClockwise)
+		render_encoder->drawIndexedPrimitivesWithInstanceCount(.Triangle, 6*6, .UInt16, index_buffer, 0, NUM_INSTANCES)
+
+		render_encoder->endEncoding()
+
+		command_buffer->presentDrawable(drawable)
+		command_buffer->commit()
