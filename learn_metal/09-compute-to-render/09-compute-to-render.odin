@@ -1,3 +1,4 @@
 package main
 
-import NS
+import NS "vendor:darwin/Foundation"
+impo
