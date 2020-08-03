@@ -6,4 +6,5 @@ import CA "vendor:darwin/QuartzCore"
 
 import SDL "vendor:sdl2"
 
-impor
+import "core:fmt"
+import "co
