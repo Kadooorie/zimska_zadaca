@@ -20,3 +20,4 @@ Vertex_Data :: struct {
 
 Instance_Data :: struct #align 16 {
 	transform:        glm.mat4,
+	color:            glm.vec4,
