@@ -19,4 +19,4 @@ Vertex_Data :: struct {
 }
 
 Instance_Data :: struct #align 16 {
-	transfo
+	transform:        glm.mat4,
