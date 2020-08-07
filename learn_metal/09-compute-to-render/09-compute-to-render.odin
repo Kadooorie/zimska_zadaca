@@ -25,4 +25,5 @@ Instance_Data :: struct #align 16 {
 }
 
 INSTANCE_WIDTH  :: 10
-INSTAN
+INSTANCE_HEIGHT :: 10
+INSTANCE_DEPTH  :: 1
