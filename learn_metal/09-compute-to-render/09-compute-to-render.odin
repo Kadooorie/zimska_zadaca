@@ -32,4 +32,5 @@ NUM_INSTANCES   :: INSTANCE_WIDTH*INSTANCE_HEIGHT*INSTANCE_DEPTH
 TEXTURE_WIDTH  :: 128
 TEXTURE_HEIGHT :: 128
 
-Camera_Data :: struct #align
+Camera_Data :: struct #align 16 {
+	perspective_transfor
