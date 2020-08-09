@@ -35,4 +35,7 @@ TEXTURE_HEIGHT :: 128
 Camera_Data :: struct #align 16 {
 	perspective_transform:  glm.mat4,
 	world_transform:        glm.mat4,
-	world_normal_transform: gl
+	world_normal_transform: glm.mat3,
+}
+
+build_shaders :: proc(device
