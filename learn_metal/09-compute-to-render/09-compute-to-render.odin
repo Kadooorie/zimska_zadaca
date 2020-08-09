@@ -34,4 +34,5 @@ TEXTURE_HEIGHT :: 128
 
 Camera_Data :: struct #align 16 {
 	perspective_transform:  glm.mat4,
-	world_t
+	world_transform:        glm.mat4,
+	w
