@@ -48,4 +48,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float3 normal;
 		half3 color;
 		float2 texcoord;
-	
+	};
+
+	struct Vertex_
