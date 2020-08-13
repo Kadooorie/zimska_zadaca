@@ -56,4 +56,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		packed_float2 texcoord;
 	};
 
-	struct In
+	struct Instance_Data {
+		float4x4 trans
