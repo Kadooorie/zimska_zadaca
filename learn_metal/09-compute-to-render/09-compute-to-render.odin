@@ -69,4 +69,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	};
 
 	v2f vertex vertex_main(device const Vertex_Data*   vertex_data   [[buffer(0)]],
-	                       device const Instance_Data* instance_d
+	                       device const Instance_Data* instance_data [[buffer(1)]],
+	         
