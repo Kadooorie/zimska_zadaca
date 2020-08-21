@@ -81,4 +81,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		float4 pos = float4(vd.position, 1.0);
 		pos = id.transform * pos;
 		pos = camera_data.perspective_transform * camera_data.world_transform * pos;
-		o.position
+		o.position = pos;
+
+		float3 normal = id.normal_
