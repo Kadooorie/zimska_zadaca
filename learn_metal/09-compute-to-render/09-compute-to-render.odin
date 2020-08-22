@@ -93,4 +93,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return o;
 	}
 
-	half4 fragment fragme
+	half4 fragment fragment_main(v2f in                      
