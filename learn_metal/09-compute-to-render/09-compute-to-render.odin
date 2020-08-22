@@ -90,4 +90,7 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		o.texcoord = float2(vd.texcoord.xy);
 
 		o.color = half3(id.color.rgb);
-		retur
+		return o;
+	}
+
+	half4 fragment fragme
