@@ -89,4 +89,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		o.texcoord = float2(vd.texcoord.xy);
 
-		o.color =
+		o.color = half3(id.color.rgb);
+		retur
