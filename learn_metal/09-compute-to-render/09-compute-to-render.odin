@@ -98,4 +98,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		constexpr sampler s(address::repeat, filter::linear);
 		half3 texel = tex.sample(s, in.texcoord).rgb;
 
-		// assume light comin
+		// assume light coming from front-top-right
+		float3 
