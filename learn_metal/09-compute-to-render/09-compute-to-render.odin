@@ -96,4 +96,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	half4 fragment fragment_main(v2f in                              [[stage_in]],
 	                             texture2d<half, access::sample> tex [[texture(0)]]) {
 		constexpr sampler s(address::repeat, filter::linear);
-		half3 texel = tex.sample(s, i
+		half3 texel = tex.sample(s, in.texcoord).rgb;
+
+		// assume light comin
