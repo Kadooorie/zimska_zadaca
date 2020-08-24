@@ -100,4 +100,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		// assume light coming from front-top-right
 		float3 l = normalize(float3(1.0, 1.0, 0.8));
-		float3 n = normalize(in
+		float3 n = normalize(in.normal);
+
+		float ndotl = satura
