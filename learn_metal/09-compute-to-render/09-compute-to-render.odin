@@ -104,4 +104,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 		float ndotl = saturate(dot(n, l));
 
-		half3 illum
+		half3 illum = in.color * texel * 0.1 + in.
