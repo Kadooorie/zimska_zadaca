@@ -108,4 +108,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 		return half4(illum, 1.0);
 	}
 	`
-	shader_src_str := NS.String.alloc()->initWithO
+	shader_src_str := NS.String.alloc()->initWithOdinString(shader_s
