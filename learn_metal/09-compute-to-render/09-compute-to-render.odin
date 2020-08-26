@@ -111,4 +111,4 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	shader_src_str := NS.String.alloc()->initWithOdinString(shader_src)
 	defer shader_src_str->release()
 
-	library = device->newLibr
+	library = device->newLibraryWithSource(shader_src_str,
