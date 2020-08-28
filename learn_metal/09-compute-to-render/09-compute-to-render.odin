@@ -113,4 +113,5 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 
 	library = device->newLibraryWithSource(shader_src_str, nil) or_return
 
-	vertex_function   := library->newFunctionWithNa
+	vertex_function   := library->newFunctionWithName(NS.AT("vertex_main"))
+	fragment_f
