@@ -124,4 +124,6 @@ build_shaders :: proc(device: ^MTL.Device) -> (library: ^MTL.Library, pso: ^MTL.
 	desc->setVertexFunction(vertex_function)
 	desc->setFragmentFunction(fragment_function)
 	desc->colorAttachments()->object(0)->setPixelFormat(.BGRA8Unorm_sRGB)
-	desc->setDepthAttachmentPixelFormat(.Depth
+	desc->setDepthAttachmentPixelFormat(.Depth16Unorm)
+
+	pso = device->newRen
