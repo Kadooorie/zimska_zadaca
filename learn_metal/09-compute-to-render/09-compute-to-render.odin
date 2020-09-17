@@ -182,4 +182,4 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 }
 
 build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
-	d
+	desc := MTL.TextureDescriptor.allo
