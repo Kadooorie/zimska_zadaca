@@ -179,3 +179,6 @@ build_buffers :: proc(device: ^MTL.Device) -> (vertex_buffer, index_buffer, inst
 	instance_buffer = device->newBuffer(NUM_INSTANCES*size_of(Instance_Data), {.StorageModeManaged})
 	texture_animation_buffer = device->newBuffer(size_of(u32), {.StorageModeManaged})
 	return
+}
+
+build_texture :: proc(device: ^MTL.
