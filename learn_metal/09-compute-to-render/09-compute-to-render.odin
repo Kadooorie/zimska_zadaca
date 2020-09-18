@@ -186,4 +186,5 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	defer desc->release()
 
 	desc->setWidth(TEXTURE_WIDTH)
-	desc->setHeight(TE
+	desc->setHeight(TEXTURE_HEIGHT)
+	desc->setPixelFormat(.R
