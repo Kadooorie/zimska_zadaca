@@ -191,4 +191,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	desc->setStorageMode(.Managed)
 	desc->setUsage({.ShaderRead, .ShaderWrite})
 
-	return devi
+	return device->newTextureWithDescript
