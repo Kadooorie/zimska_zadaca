@@ -194,4 +194,4 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 	return device->newTextureWithDescriptor(desc)
 }
 
-build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.Co
+build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelineState, err: ^NS.Error)
