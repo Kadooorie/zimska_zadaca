@@ -196,4 +196,5 @@ build_texture :: proc(device: ^MTL.Device) -> ^MTL.Texture {
 
 build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelineState, err: ^NS.Error) {
 	kernel_src := `
-	#include <metal_
+	#include <metal_stdlib>
+	using namespace 
