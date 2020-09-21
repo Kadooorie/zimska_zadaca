@@ -199,4 +199,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	#include <metal_stdlib>
 	using namespace metal;
 
-	kernel void mande
+	kernel void mandelbrot_set(texture2d<half, access::w
