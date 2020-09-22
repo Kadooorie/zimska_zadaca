@@ -200,4 +200,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	using namespace metal;
 
 	kernel void mandelbrot_set(texture2d<half, access::write> tex [[texture(0)]],
-	                           uint2 index                        [[thre
+	                           uint2 index                        [[thread_position_in_grid]],
+	              
