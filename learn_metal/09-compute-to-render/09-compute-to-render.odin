@@ -203,4 +203,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	                           uint2 index                        [[thread_position_in_grid]],
 	                           uint2 grid_size                    [[threads_per_grid]],
 	                           device const uint* frame           [[buffer(0)]]) {
-		constexpr float ANIMATIO
+		constexpr float ANIMATION_FREQUENCY = 0.01;
+		const
