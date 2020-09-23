@@ -202,4 +202,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	kernel void mandelbrot_set(texture2d<half, access::write> tex [[texture(0)]],
 	                           uint2 index                        [[thread_position_in_grid]],
 	                           uint2 grid_size                    [[threads_per_grid]],
-	                   
+	                           device const uint*
