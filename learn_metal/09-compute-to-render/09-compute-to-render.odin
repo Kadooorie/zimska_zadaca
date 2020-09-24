@@ -206,4 +206,6 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		constexpr float ANIMATION_FREQUENCY = 0.01;
 		constexpr float ANIMATION_SPEED = 4;
 		constexpr float ANIMATION_SCALE_LOW = 0.62;
-		constexpr float
+		constexpr float ANIMATION_SCALE = 0.38;
+
+	
