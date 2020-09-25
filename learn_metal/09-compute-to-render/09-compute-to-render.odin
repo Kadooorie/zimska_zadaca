@@ -209,4 +209,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		constexpr float ANIMATION_SCALE = 0.38;
 
 		constexpr float2 MANDELBROT_PIXEL_OFFSET = {-0.2, -0.35};
-		constexpr float2 MANDELBROT_ORIGIN = {-1.2, -0
+		constexpr float2 MANDELBROT_ORIGIN = {-1.2, -0.32};
+		constexpr float2 MANDE
