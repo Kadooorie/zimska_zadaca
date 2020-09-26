@@ -212,4 +212,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		constexpr float2 MANDELBROT_ORIGIN = {-1.2, -0.32};
 		constexpr float2 MANDELBROT_SCALE = {2.2, 2.0};
 
-		// Map time to zoom value 
+		// Map time to zoom value in [ANIMATION_SCALE_LOW, 1]
+		flo
