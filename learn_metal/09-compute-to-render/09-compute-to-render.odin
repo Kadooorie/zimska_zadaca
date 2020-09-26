@@ -213,4 +213,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		constexpr float2 MANDELBROT_SCALE = {2.2, 2.0};
 
 		// Map time to zoom value in [ANIMATION_SCALE_LOW, 1]
-		float zoom = ANIMATION_SCALE_LOW + ANIM
+		float zoom = ANIMATION_SCALE_LOW + ANIMATION_SCALE * cos(ANIMATION_FREQUENCY * *f
