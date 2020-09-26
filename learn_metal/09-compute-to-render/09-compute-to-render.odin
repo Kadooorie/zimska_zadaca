@@ -215,4 +215,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		// Map time to zoom value in [ANIMATION_SCALE_LOW, 1]
 		float zoom = ANIMATION_SCALE_LOW + ANIMATION_SCALE * cos(ANIMATION_FREQUENCY * *frame);
 		// Speed up zooming
-		zoo
+		zoom = pow(zoom, ANIMATION_SPEED
