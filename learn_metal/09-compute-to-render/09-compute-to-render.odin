@@ -219,4 +219,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 
 		//Scale
 		float x0 = zoom * MANDELBROT_SCALE.x * ((float)index.x / grid_size.x + MANDELBROT_PIXEL_OFFSET.x) + MANDELBROT_ORIGIN.x;
-		float y0 = zoom * MANDELBROT_SCALE.y * ((float)index.y / grid_si
+		float y0 = zoom * MANDELBROT_SCALE.y * ((float)index.y / grid_size.y + MANDELBROT_PIXEL_OFFSET.y) + M
