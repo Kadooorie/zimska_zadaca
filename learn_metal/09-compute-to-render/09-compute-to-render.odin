@@ -218,4 +218,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		zoom = pow(zoom, ANIMATION_SPEED);
 
 		//Scale
-		float x0 = zoom * MANDELBROT_SCA
+		float x0 = zoom * MANDELBROT_SCALE.x * ((float)index.x 
