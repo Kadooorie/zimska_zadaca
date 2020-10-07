@@ -227,4 +227,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		uint iteration = 0;
 		uint max_iteration = 1000;
 		float xtmp = 0.0;
-		while (x * x + y * y <= 4 && iteration < max_
+		while (x * x + y * y <= 4 && iteration < max_iteration) {
+			xtmp =
