@@ -223,4 +223,6 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 
 		// Implement Mandelbrot set
 		float x = 0.0;
-		float y = 0.
+		float y = 0.0;
+		uint iteration = 0;
+		uint max_iterati
