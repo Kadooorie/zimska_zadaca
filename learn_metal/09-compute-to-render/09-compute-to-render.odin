@@ -231,4 +231,7 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 			xtmp = x * x - y * y + x0;
 			y = 2 * x * y + y0;
 			x = xtmp;
-	
+			iteration += 1;
+		}
+
+		// Convert 
