@@ -234,4 +234,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 			iteration += 1;
 		}
 
-		// Convert 
+		// Convert iteration result to colors
+		
