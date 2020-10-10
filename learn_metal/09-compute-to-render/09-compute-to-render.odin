@@ -235,4 +235,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		}
 
 		// Convert iteration result to colors
-		
+		half color = (0.5 +
