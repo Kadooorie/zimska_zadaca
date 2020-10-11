@@ -235,4 +235,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		}
 
 		// Convert iteration result to colors
-		half color = (0.5 + 0.5 * cos(3.0 + iteration
+		half color = (0.5 + 0.5 * cos(3.0 + iteration * 0.15));
+		tex.write(half4(colo
