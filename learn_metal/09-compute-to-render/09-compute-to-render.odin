@@ -239,4 +239,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 		tex.write(half4(color, color, color, 1.0), index, 0);
 	}`
 
-	kernel_src_str := NS.S
+	kernel_src_str := NS.String.alloc()->initWithOdinStr
