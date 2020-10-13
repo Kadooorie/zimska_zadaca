@@ -242,4 +242,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	kernel_src_str := NS.String.alloc()->initWithOdinString(kernel_src)
 	defer kernel_src_str->release()
 
-	compute_library := device->newLibraryWithSource(kernel_src_str, nil) or_ret
+	compute_library := device->newLibraryWithSource(kernel_src_str, nil) or_return
+	defer compute_library->release()
