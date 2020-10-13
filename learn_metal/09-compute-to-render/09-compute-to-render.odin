@@ -244,3 +244,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 
 	compute_library := device->newLibraryWithSource(kernel_src_str, nil) or_return
 	defer compute_library->release()
+
+	mandelbrot_set := compute_
