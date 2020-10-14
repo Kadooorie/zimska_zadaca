@@ -248,4 +248,4 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	mandelbrot_set := compute_library->newFunctionWithName(NS.AT("mandelbrot_set"))
 	defer mandelbrot_set->release()
 
-	r
+	return device->newComputeP
