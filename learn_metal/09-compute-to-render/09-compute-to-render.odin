@@ -251,4 +251,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 	return device->newComputePipelineStateWithFunction(mandelbrot_set)
 }
 
-generate_mandelbrot_text
+generate_mandelbrot_texture :: proc(
+	command_bu
