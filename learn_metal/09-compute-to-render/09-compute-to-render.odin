@@ -255,4 +255,6 @@ generate_mandelbrot_texture :: proc(
 	command_buffer: ^MTL.CommandBuffer,
 	compute_pso: ^MTL.ComputePipelineState,
 	texture_animation_buffer: ^MTL.Buffer,
-	texture: ^MTL.Textur
+	texture: ^MTL.Texture) {
+
+	@static animation_index
