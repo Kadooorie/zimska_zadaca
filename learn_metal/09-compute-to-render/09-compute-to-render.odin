@@ -253,4 +253,5 @@ build_compute_pipeline :: proc(device: ^MTL.Device) -> (pso: ^MTL.ComputePipelin
 
 generate_mandelbrot_texture :: proc(
 	command_buffer: ^MTL.CommandBuffer,
-	compute_pso: ^MTL.ComputePipelin
+	compute_pso: ^MTL.ComputePipelineState,
+	texture_animation_buff
