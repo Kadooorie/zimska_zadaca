@@ -258,4 +258,5 @@ generate_mandelbrot_texture :: proc(
 	texture: ^MTL.Texture) {
 
 	@static animation_index: u32
-	ptr := texture_animation_bu
+	ptr := texture_animation_buffer->contentsAsType(u32)
+	ptr
