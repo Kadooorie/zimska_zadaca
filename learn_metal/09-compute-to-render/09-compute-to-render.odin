@@ -260,4 +260,7 @@ generate_mandelbrot_texture :: proc(
 	@static animation_index: u32
 	ptr := texture_animation_buffer->contentsAsType(u32)
 	ptr^ = animation_index
-	animation_index = (animation_index + 1
+	animation_index = (animation_index + 1) % 5000
+
+
+	compute_en
