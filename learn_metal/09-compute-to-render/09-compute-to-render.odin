@@ -263,4 +263,4 @@ generate_mandelbrot_texture :: proc(
 	animation_index = (animation_index + 1) % 5000
 
 
-	compute_en
+	compute_encoder := command_buffer->comp
