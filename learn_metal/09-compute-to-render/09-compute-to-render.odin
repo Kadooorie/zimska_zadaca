@@ -265,4 +265,4 @@ generate_mandelbrot_texture :: proc(
 
 	compute_encoder := command_buffer->computeCommandEncoder()
 
-	compute_en
+	compute_encoder->setComputePipel
