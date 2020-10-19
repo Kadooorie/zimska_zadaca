@@ -266,4 +266,5 @@ generate_mandelbrot_texture :: proc(
 	compute_encoder := command_buffer->computeCommandEncoder()
 
 	compute_encoder->setComputePipelineState(compute_pso)
-	compute_encoder->
+	compute_encoder->setTexture(texture, 0)
+	comput
