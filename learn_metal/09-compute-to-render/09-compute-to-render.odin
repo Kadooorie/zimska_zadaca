@@ -267,4 +267,4 @@ generate_mandelbrot_texture :: proc(
 
 	compute_encoder->setComputePipelineState(compute_pso)
 	compute_encoder->setTexture(texture, 0)
-	comput
+	compute_encoder->setBuffer(texture_animat
