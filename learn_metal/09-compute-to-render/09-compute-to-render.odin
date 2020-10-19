@@ -270,4 +270,4 @@ generate_mandelbrot_texture :: proc(
 	compute_encoder->setBuffer(texture_animation_buffer, 0, 0)
 
 	grid_size := MTL.Size{TEXTURE_WIDTH, TEXTURE_HEIGHT, 1}
-	thread_group_size := MTL.Size{NS
+	thread_group_size := MTL.Size{NS.Integer(compute_pso->maxTotalTh
