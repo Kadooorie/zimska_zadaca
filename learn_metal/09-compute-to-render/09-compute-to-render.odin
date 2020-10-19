@@ -269,4 +269,4 @@ generate_mandelbrot_texture :: proc(
 	compute_encoder->setTexture(texture, 0)
 	compute_encoder->setBuffer(texture_animation_buffer, 0, 0)
 
-	grid
+	grid_size := MTL.Size{TEXTURE_W
