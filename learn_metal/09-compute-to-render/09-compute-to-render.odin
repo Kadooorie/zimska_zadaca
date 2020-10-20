@@ -273,4 +273,7 @@ generate_mandelbrot_texture :: proc(
 	thread_group_size := MTL.Size{NS.Integer(compute_pso->maxTotalThreadsPerThreadgroup()), 1, 1}
 
 	compute_encoder->dispatchThreads(grid_size, thread_group_size)
-	compute_encoder->endEnco
+	compute_encoder->endEncoding()
+}
+
+metal_main ::
