@@ -276,4 +276,4 @@ generate_mandelbrot_texture :: proc(
 	compute_encoder->endEncoding()
 }
 
-metal_main ::
+metal_main :: proc() -> (err: ^NS.Error) 
