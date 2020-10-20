@@ -276,4 +276,5 @@ generate_mandelbrot_texture :: proc(
 	compute_encoder->endEncoding()
 }
 
-metal_main :: proc() -> (err: ^NS.Error) 
+metal_main :: proc() -> (err: ^NS.Error) {
+	SDL.SetHint(SDL.HINT_RE
