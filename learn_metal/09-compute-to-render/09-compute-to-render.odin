@@ -283,4 +283,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("Metal in Odin - 09 Compute to Render",
-		SDL.WINDOWP
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTER
