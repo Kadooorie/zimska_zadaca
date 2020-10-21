@@ -278,4 +278,4 @@ generate_mandelbrot_texture :: proc(
 
 metal_main :: proc() -> (err: ^NS.Error) {
 	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "metal")
-	SDL.set
+	SDL.setenv("METAL_DEVICE_WRAPPER_TYPE", "1", 0
