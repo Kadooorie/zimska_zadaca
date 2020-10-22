@@ -287,4 +287,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		1024, 1024,
 		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
 	)
-	defer SDL.Destroy
+	defer SDL.DestroyWindow(window)
+
+	w
