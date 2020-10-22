@@ -283,4 +283,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("Metal in Odin - 09 Compute to Render",
-		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTER
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
+		1024, 1024,
+		{.ALLOW_HIGHDPI, .HI
