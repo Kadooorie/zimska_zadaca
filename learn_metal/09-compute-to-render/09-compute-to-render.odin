@@ -301,4 +301,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	fmt.println(device->name()->odinString())
 
-	sw
+	swapchain := CA.MetalLayer.layer()
+	defe
