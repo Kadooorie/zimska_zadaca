@@ -297,4 +297,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	native_window := (^NS.Window)(window_system_info.info.cocoa.window)
 
 	device := MTL.CreateSystemDefaultDevice()
-	defer device->re
+	defer device->release()
+
+	fmt.println(device->na
