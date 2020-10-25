@@ -305,4 +305,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer swapchain->release()
 
 	swapchain->setDevice(device)
-	swap
+	swapchain->setPixelFormat(.BGRA8Uno
