@@ -306,4 +306,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	swapchain->setDevice(device)
 	swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
-	swapchain->set
+	swapchain->setFramebufferOnly(true)
+	swapchain->se
