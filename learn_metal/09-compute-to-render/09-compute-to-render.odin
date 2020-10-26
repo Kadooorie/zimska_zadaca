@@ -309,4 +309,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	swapchain->setFramebufferOnly(true)
 	swapchain->setFrame(native_window->frame())
 
-	native_window->contentView(
+	native_window->contentView()->setLayer(swapchain)
+	native_win
