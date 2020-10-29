@@ -318,4 +318,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer pso->release()
 
 	// Build Depth Stencil State
-	depth_stencil_state: ^MTL.DepthStencilS
+	depth_stencil_state: ^MTL.DepthStencilState
+	depth_desc := MTL.DepthSten
