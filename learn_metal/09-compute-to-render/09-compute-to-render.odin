@@ -321,4 +321,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	depth_stencil_state: ^MTL.DepthStencilState
 	depth_desc := MTL.DepthStencilDescriptor.alloc()->init()
 	depth_desc->setDepthCompareFunction(.Less)
-	depth_desc->
+	depth_desc->setDepthWriteEnabled(true)
