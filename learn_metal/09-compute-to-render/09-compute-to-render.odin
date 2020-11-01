@@ -322,4 +322,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	depth_desc := MTL.DepthStencilDescriptor.alloc()->init()
 	depth_desc->setDepthCompareFunction(.Less)
 	depth_desc->setDepthWriteEnabled(true)
-	depth_stencil_state = device->newDepthStencilState(d
+	depth_stencil_state = device->newDepthStencilState(depth_desc)
+	depth_desc->release()
