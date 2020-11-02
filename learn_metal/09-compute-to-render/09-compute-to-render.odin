@@ -325,4 +325,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	depth_stencil_state = device->newDepthStencilState(depth_desc)
 	depth_desc->release()
 
-	vertex_buffer, index_buffer, instance_buffer, texture_animation_buffer 
+	vertex_buffer, index_buffer, instance_buffer, texture_animation_buffer := build_buffers(device)
+	def
