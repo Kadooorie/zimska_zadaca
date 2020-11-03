@@ -329,4 +329,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer vertex_buffer->release()
 	defer index_buffer->release()
 	defer instance_buffer->release()
-	defer texture_animation_bu
+	defer texture_animation_buffer->release()
+
+	camera_buffer :
