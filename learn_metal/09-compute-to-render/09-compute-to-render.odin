@@ -328,4 +328,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	vertex_buffer, index_buffer, instance_buffer, texture_animation_buffer := build_buffers(device)
 	defer vertex_buffer->release()
 	defer index_buffer->release()
-	defer instance_buffer-
+	defer instance_buffer->release()
+	defer texture_animation_bu
