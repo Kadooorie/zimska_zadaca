@@ -332,4 +332,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer texture_animation_buffer->release()
 
 	camera_buffer := device->newBuffer(size_of(Camera_Data), {.StorageModeManaged})
-	
+	defer camera_buffer->release()
+
+	dept
