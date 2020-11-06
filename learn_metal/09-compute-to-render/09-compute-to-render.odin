@@ -339,3 +339,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 	compute_pso := build_compute_pipeline(device) or_return
 	defer compute_pso->release()
+
+	command_queue := devic
