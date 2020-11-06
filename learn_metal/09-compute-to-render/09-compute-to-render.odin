@@ -335,4 +335,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer camera_buffer->release()
 
 	depth_texture: ^MTL.Texture = nil
-	de
+	defer if depth_texture != nil do
