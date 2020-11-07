@@ -347,4 +347,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer texture->release()
 
 	SDL.ShowWindow(window)
-	f
+	for quit := false; !quit;  {
+		for e: S
