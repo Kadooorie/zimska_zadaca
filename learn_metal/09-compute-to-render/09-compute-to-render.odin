@@ -344,4 +344,7 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer command_queue->release()
 
 	texture := build_texture(device)
-	defer texture->releas
+	defer texture->release()
+
+	SDL.ShowWindow(window)
+	f
