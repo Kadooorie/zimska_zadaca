@@ -341,4 +341,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	defer compute_pso->release()
 
 	command_queue := device->newCommandQueue()
-	defer 
+	defer command_queue->release()
+
