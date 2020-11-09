@@ -350,4 +350,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 	for quit := false; !quit;  {
 		for e: SDL.Event; SDL.PollEvent(&e); {
 			#partial switch e.type {
-			cas
+			case .QUIT:
+				quit = true
