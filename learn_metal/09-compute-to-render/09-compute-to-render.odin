@@ -361,4 +361,8 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		w, h: i32
 		SDL.GetWindowSize(window, &w, &h)
-		aspect_ratio :
+		aspect_ratio := f32(w)/max(f32(h), 1)
+
+
+		{
+		
