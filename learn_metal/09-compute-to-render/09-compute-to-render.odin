@@ -368,4 +368,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			@static angle: f32
 			angle += 0.002
 
-			object_position := glm.ve
+			object_position := glm.vec3{0, 0, -10}
+			rt := glm.mat4
