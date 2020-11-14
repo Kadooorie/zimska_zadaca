@@ -376,4 +376,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			full_obj_rot := rt * rr1 * rr0 * rt_inv
 
 
-			ix, iy, iz :
+			ix, iy, iz := 0, 0, 0
+
+			instance_data := inst
