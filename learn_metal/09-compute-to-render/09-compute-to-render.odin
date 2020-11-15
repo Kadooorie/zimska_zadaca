@@ -382,4 +382,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			for instance, idx in &instance_data {
 				if ix == INSTANCE_WIDTH {
 					ix = 0
-			
+					iy += 1
+				}
+				if iy == 
