@@ -386,4 +386,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				}
 				if iy == INSTANCE_HEIGHT {
 					iy = 0
-			
+					iz += 1
+				}
+				defer ix +=
