@@ -393,4 +393,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				scl :: 0.2
 
 				scale := glm.mat4Scale({scl, scl, scl})
-				zrot := glm.mat4Rotate({0, 0, 1}
+				zrot := glm.mat4Rotate({0, 0, 1}, angle * math.sin(f32(ix)))
+	
