@@ -397,4 +397,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				yrot := glm.mat4Rotate({0, 1, 0}, angle * math.cos(f32(iy)))
 
 				pos := glm.vec3{
-					(
+					(f32(ix) - INSTANCE_WIDTH * 0.5) * 2*scl +
