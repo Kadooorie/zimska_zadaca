@@ -404,4 +404,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 				translate := glm.mat4Translate(object_position + pos)
 
-				i
+				instance.transform = full_obj_rot
