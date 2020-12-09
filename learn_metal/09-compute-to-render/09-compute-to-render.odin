@@ -433,3 +433,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				height = NS.UInteger(h),
 				mipmapped = false,
 			)
+			defer desc->release()
