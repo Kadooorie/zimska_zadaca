@@ -434,3 +434,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				mipmapped = false,
 			)
 			defer desc->release()
+
+			desc->setUsage({.
