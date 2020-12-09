@@ -430,4 +430,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			desc := MTL.TextureDescriptor.texture2DDescriptorWithPixelFormat(
 				pixelFormat = .Depth16Unorm,
 				width = NS.UInteger(w),
-				height = NS.UInteger(h
+				height = NS.UInteger(h),
+				mipmapped = false,
+			)
