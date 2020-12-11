@@ -441,3 +441,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 			if depth_texture != nil {
 				depth_texture->release()
 			}
+
+			depth_texture = dev
