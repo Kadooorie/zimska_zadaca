@@ -447,4 +447,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 
 		drawable := swapchain->nextDrawable()
-		as
+		assert(drawable != nil)
+		defer 
