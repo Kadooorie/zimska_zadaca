@@ -442,4 +442,8 @@ metal_main :: proc() -> (err: ^NS.Error) {
 				depth_texture->release()
 			}
 
-			depth_texture = device->newTextureWithDescriptor(
+			depth_texture = device->newTextureWithDescriptor(desc)
+		}
+
+
+		drawable := 
