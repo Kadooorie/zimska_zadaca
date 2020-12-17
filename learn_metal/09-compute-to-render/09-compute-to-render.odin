@@ -458,4 +458,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		color_attachment->setClearColor(MTL.ClearColor{0.1, 0.1, 0.1, 1.0})
 		color_attachment->setLoadAction(.Clear)
 		color_attachment->setStoreAction(.Store)
-		co
+		color_attachment->setTexture(drawa
