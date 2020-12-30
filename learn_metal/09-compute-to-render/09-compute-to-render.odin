@@ -469,4 +469,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		command_buffer := command_queue->commandBuffer()
 		defer command_buffer->release()
 
-		generate_mandelbrot_texture(command_buffer, compute_pso, texture_animation_buffer, te
+		generate_mandelbrot_texture(command_buffer, compute_pso, texture_animation_buffer, texture)
+
+		render_encoder := com
