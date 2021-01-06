@@ -478,4 +478,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setDepthStencilState(depth_stencil_state)
 
 		render_encoder->setVertexBuffer(buffer=vertex_buffer,   offset=0, index=0)
-		render_encoder->setVert
+		render_encoder->setVertexBuffer(buffer=instance
