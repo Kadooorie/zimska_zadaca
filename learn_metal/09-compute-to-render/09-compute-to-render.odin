@@ -483,4 +483,5 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		render_encoder->setFragmentTexture(texture, 0)
 
-		render_encoder->setC
+		render_encoder->setCullMode(.Back)
+		render_encoder
