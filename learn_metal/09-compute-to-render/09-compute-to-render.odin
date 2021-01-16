@@ -481,4 +481,6 @@ metal_main :: proc() -> (err: ^NS.Error) {
 		render_encoder->setVertexBuffer(buffer=instance_buffer, offset=0, index=1)
 		render_encoder->setVertexBuffer(buffer=camera_buffer,   offset=0, index=2)
 
-		render_encoder->setFragmentTexture(texture
+		render_encoder->setFragmentTexture(texture, 0)
+
+		render_encoder->setC
