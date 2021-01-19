@@ -485,4 +485,4 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		render_encoder->setCullMode(.Back)
 		render_encoder->setFrontFacingWinding(.CounterClockwise)
-		render_encoder->dra
+		render_encoder->drawIndexedPrimitivesWithInsta
