@@ -491,3 +491,9 @@ metal_main :: proc() -> (err: ^NS.Error) {
 
 		command_buffer->presentDrawable(drawable)
 		command_buffer->commit()
+	}
+
+	return nil
+}
+
+main :
