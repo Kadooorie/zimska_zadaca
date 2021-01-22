@@ -1,3 +1,3 @@
 # Getting started with Metal in Odin
 
-Odin officially bund
+Odin officially bundles with a low-overhead Odin int
