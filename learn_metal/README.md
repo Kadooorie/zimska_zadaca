@@ -4,4 +4,5 @@ Odin officially bundles with a low-overhead Odin interface for Metal that helps 
 
 ## Highlights
 
-* Odin native drop interface as an alternative to the Metal in
+* Odin native drop interface as an alternative to the Metal in Objective-C or Swift
+* Dir
