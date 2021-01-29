@@ -8,4 +8,4 @@ Odin officially bundles with a low-overhead Odin interface for Metal that helps 
 * Direct mapping of all Metal Objective-C classes, constants, and enumerations in Odin in `vendor:darwin/Metal`
 * No measurable overhead compared to calling Metal in Objective-C, due to built-in compiler support for Objective-C operations
 * No wrappers which do hidden memory allocations
-* String `ErrorDomain` constants have weak linkage and are automat
+* String `ErrorDomain` constants have weak linkage and are automatically set to `nil` if not a
