@@ -11,3 +11,6 @@ Odin officially bundles with a low-overhead Odin interface for Metal that helps 
 * String `ErrorDomain` constants have weak linkage and are automatically set to `nil` if not available
 
 ## How to use
+
+```odin
+import NS  "vendor:darwin/F
