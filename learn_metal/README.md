@@ -13,4 +13,5 @@ Odin officially bundles with a low-overhead Odin interface for Metal that helps 
 ## How to use
 
 ```odin
-import NS  "vendor:darwin/F
+import NS  "vendor:darwin/Foundation"
+import MTL "vendor:darwi
