@@ -16,4 +16,6 @@ Odin officially bundles with a low-overhead Odin interface for Metal that helps 
 import NS  "vendor:darwin/Foundation"
 import MTL "vendor:darwin/Metal"
 import CA  "vendor:darwin/QuartzCore"
-`
+```
+
+If you are using libraries
