@@ -20,4 +20,4 @@ import CA  "vendor:darwin/QuartzCore"
 
 If you are using libraries for SDL2 from Homebrew, you may require adding some extra linker flags:
 ```
-odin b
+odin build . -extra-linker-flags:"
