@@ -18,4 +18,4 @@ import MTL "vendor:darwin/Metal"
 import CA  "vendor:darwin/QuartzCore"
 ```
 
-If you are using libraries for SDL2 from Homebrew, you may re
+If you are using libraries for SDL2 from Homebrew, you may require adding some e
