@@ -29,4 +29,6 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 * https://pkg.odin-lang.org/vendor/darwin/Foundation/
 * https://pkg.odin-lang.org/vendor/darwin/QuartzCore/
 
-## Ex
+## Examples
+
+### [00-window](https://gith
