@@ -25,4 +25,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ## Package Documentation
 
-* https://
+* https://pkg.odin-lang.org/vendor/da
