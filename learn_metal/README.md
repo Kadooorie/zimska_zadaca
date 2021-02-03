@@ -31,4 +31,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ## Examples
 
-### [00-window](https://gith
+### [00-window](https://github.com/odin-lang/examples/tree/ma
