@@ -33,4 +33,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [00-window](https://github.com/odin-lang/examples/tree/master/learn_metal/00-window)
 
-![00-window](https://user-images.githubusercontent.com/3338141/
+![00-window](https://user-images.githubusercontent.com/3338141/163404425-9e41168c-8f7f-4fd7-b
