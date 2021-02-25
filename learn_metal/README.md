@@ -37,4 +37,6 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [01-primitive](https://github.com/odin-lang/examples/tree/master/learn_metal/01-primitive)
 
-![01-primitive](https://user-images.githubusercontent.com/3338141/163404549-0ece2502
+![01-primitive](https://user-images.githubusercontent.com/3338141/163404549-0ece2502-1890-4bf6-b816-c0de3bfff303.png)
+
+###
