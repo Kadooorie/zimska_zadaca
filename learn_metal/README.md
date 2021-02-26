@@ -47,4 +47,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ![03-animation](https://user-images.githubusercontent.com/3338141/163406377-9bffb411-b0e5-4c8f-b50f-a2fc20abfa55.mp4)
 
-### [04-instancing](https://githu
+### [04-instancing](https://github.com/odin-lang/examples/tree/ma
