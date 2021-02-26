@@ -41,4 +41,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [02-argbuffers](https://github.com/odin-lang/examples/tree/master/learn_metal/02-argbuffers)
 
-![02-a
+![02-argbuffers](https://user-images.githubus
