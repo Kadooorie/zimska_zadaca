@@ -45,4 +45,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [03-animation](https://github.com/odin-lang/examples/tree/master/learn_metal/03-animation)
 
-![03-animation](https://user-images.git
+![03-animation](https://user-images.githubusercontent.com/3338141/1634063
