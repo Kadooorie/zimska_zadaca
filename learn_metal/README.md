@@ -51,4 +51,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ![04-instancing](https://user-images.githubusercontent.com/3338141/163406745-e9e965a9-f187-4dbe-915e-096766a30e17.mp4)
 
-### [05-perspective](https://github.com/odi
+### [05-perspective](https://github.com/odin-lang/examples/tree/master/
