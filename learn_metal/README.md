@@ -53,4 +53,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [05-perspective](https://github.com/odin-lang/examples/tree/master/learn_metal/05-perspective)
 
-![05-perspective](https://user-images.githubusercontent.com/3338141/163406890-b6e96463-4754-
+![05-perspective](https://user-images.githubusercontent.com/3338141/163406890-b6e96463-4754-4f7f-b223-95e4dde73be3.mp4)
