@@ -57,4 +57,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [06-lighting](https://github.com/odin-lang/examples/tree/master/learn_metal/06-lighting)
 
-![06-lig
+![06-lighting](https://user-images.githubuserc
