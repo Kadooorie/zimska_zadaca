@@ -63,4 +63,6 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ![07-texturing](https://user-images.githubusercontent.com/3338141/163419029-d4b86185-74e3-487e-b22b-68cc676320ed.png)
 
-### [08-compute](https://github.com/odin-lang/examples/tree/master/learn_metal/08-c
+### [08-compute](https://github.com/odin-lang/examples/tree/master/learn_metal/08-compute)
+
+![08-compute](https:
