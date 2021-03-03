@@ -61,4 +61,4 @@ odin build . -extra-linker-flags:"-L/opt/homebrew/lib"
 
 ### [07-texturing](https://github.com/odin-lang/examples/tree/master/learn_metal/07-texturing)
 
-![07-texturing](https://us
+![07-texturing](https://user-images.githubuse
