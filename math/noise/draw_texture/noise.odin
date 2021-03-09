@@ -33,3 +33,29 @@ create_vertices :: proc(x, y, width, height: f32) -> Vertices {
 	0 - x,y
 	1 - x, y + height
 	2 - x + width, y
+	3 - x + width, y + height
+
+	0      2
+	|-----/|
+	|   /  |
+	|  /   |
+	|/-----|
+	1      3
+
+	**/
+
+	vertices: Vertices = {
+		x, y,                   0.0, 1.0,
+		x, y + height,          0.0, 0.0,
+		x + width, y,           1.0, 1.0,
+		x + width, y + height,  1.0, 0.0,
+	}
+
+	return vertices
+}
+
+
+WAVELENGTH :: 120
+Pixel :: [4]u8
+
+noise_at :: proc(seed: i64, x, y: int) -> f32 {
