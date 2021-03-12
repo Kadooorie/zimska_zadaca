@@ -59,3 +59,33 @@ WAVELENGTH :: 120
 Pixel :: [4]u8
 
 noise_at :: proc(seed: i64, x, y: int) -> f32 {
+	return (noise.noise_2d(seed, {f64(x) / 120, f64(y) / 120}) + 1.0) / 2.0
+}
+
+create_texture_noise :: proc(texture_id: u32, adjust_noise: Adjust_Noise) {
+
+	texture_data := make([]u8, WIDTH * HEIGHT * 4)
+	defer delete(texture_data)
+
+	gl.BindTexture(gl.TEXTURE_2D, texture_id)
+	gl.ActiveTexture(gl.TEXTURE0)
+
+	gradient_location: glsl.vec2 = {f32(WIDTH / 2), f32(HEIGHT / 2)}
+
+	pixels := mem.slice_data_cast([]Pixel, texture_data)
+
+	for x := 0; x < WIDTH; x += 1 {
+
+		for y := 0; y < HEIGHT; y += 1 {
+
+			using adjust_noise := adjust_noise
+
+			noise_val: f32
+
+			{
+
+				for i := 0; i < int(octaves); i += 1 {
+					noise_val += 0.4 * ((noise.noise_2d(seed, {f64(x) / frequency / 2, f64(y) / frequency / 2}) + 1.0) / 2.0)
+					noise_val += 0.6 * ((noise.noise_2d(seed, {f64(x) / frequency * 2 ,f64(y) / frequency * 2}) + 1.0) / 2.0)
+					frequency *= glsl.exp(frequency)
+				}
