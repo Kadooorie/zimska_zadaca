@@ -89,3 +89,23 @@ create_texture_noise :: proc(texture_id: u32, adjust_noise: Adjust_Noise) {
 					noise_val += 0.6 * ((noise.noise_2d(seed, {f64(x) / frequency * 2 ,f64(y) / frequency * 2}) + 1.0) / 2.0)
 					frequency *= glsl.exp(frequency)
 				}
+				noise_val /= f32(octaves)
+			}
+
+			val := glsl.distance_vec2({f32(x), f32(y)}, gradient_location)
+			val /= f32(HEIGHT / 2)
+
+			noise_val = noise_val - val
+
+			if noise_val < 0.0 {
+				noise_val = 0
+			}
+
+			val = glsl.clamp(val, 0.0, 1.0)
+			color := u8((noise_val) * 255.0)
+
+			switch {
+			case color <  20:
+				// Water
+				noise_val =  0.75 + 0.25 * noise_at(seed, x, y)
+				pixels[0] = {u8( 51 * noise_val), u8( 81 * noise_val), u8(251 * noise_val), 255}
