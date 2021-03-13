@@ -109,3 +109,48 @@ create_texture_noise :: proc(texture_id: u32, adjust_noise: Adjust_Noise) {
 				// Water
 				noise_val =  0.75 + 0.25 * noise_at(seed, x, y)
 				pixels[0] = {u8( 51 * noise_val), u8( 81 * noise_val), u8(251 * noise_val), 255}
+
+			case color <  30:
+				// Sand
+				noise_val = 0.75 + 0.25 * noise_at(seed, x, y)
+				pixels[0] = {u8(251 * noise_val), u8(244 * noise_val), u8(189 * noise_val), 255}
+
+			case color <  60:
+				// Grass
+				noise_val = 0.75 + 0.25 * noise_at(seed, x, y)
+				pixels[0] = {u8(124 * noise_val), u8(200 * noise_val), u8( 65 * noise_val), 255}
+
+			case color <  90:
+				// The forest
+				noise_val = 0.75 + 0.25 * noise_at(seed, x, y)
+				pixels[0] = {u8(124 * noise_val), u8(150 * noise_val), u8( 65 * noise_val), 255}
+
+			case color < 120:
+				// The Mountain
+				noise_val = 0.7 + 0.2 * noise_at(seed, x, y)
+				noise_val = glsl.pow(noise_val, 2)
+
+				pixels[0] = {u8(143 * noise_val), u8(143 * noise_val), u8(143 * noise_val), 255}
+
+			case:
+				// The peak of the mountain
+				noise_val = 0.7 + 0.2 * noise_at(seed, x, y)
+				noise_val = glsl.pow(noise_val, 2)
+
+				pixels[0] = {u8(205 * noise_val), u8(221 * noise_val), u8(246 * noise_val), 255}
+			}
+			pixels = pixels[1:]
+		}
+	}
+
+	gl.TexImage2D(gl.TEXTURE_2D, 0, gl.RGBA, i32(WIDTH), i32(HEIGHT), 0, gl.RGBA, gl.UNSIGNED_BYTE, &texture_data[0])
+}
+
+main :: proc() {
+
+	if !bool(glfw.Init()) {
+		fmt.println("GLFW has failed to load.")
+		return
+	}
+
+	glfw.SetErrorCallback(proc "c" (error: c.int, description: cstring) {
