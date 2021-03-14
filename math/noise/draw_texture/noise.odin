@@ -154,3 +154,31 @@ main :: proc() {
 	}
 
 	glfw.SetErrorCallback(proc "c" (error: c.int, description: cstring) {
+		context = runtime.default_context()
+		fmt.println(description)
+	})
+
+	glfw.WindowHint(glfw.CONTEXT_VERSION_MAJOR, GL_MAJOR_VERSION)
+	glfw.WindowHint(glfw.CONTEXT_VERSION_MINOR, GL_MINOR_VERSION)
+	glfw.WindowHint(glfw.OPENGL_PROFILE, glfw.OPENGL_CORE_PROFILE)
+	glfw.WindowHint(glfw.OPENGL_FORWARD_COMPAT, 1)
+
+	window_handle := glfw.CreateWindow(WIDTH, HEIGHT, TITLE, nil, nil)
+
+	defer glfw.Terminate()
+	defer glfw.DestroyWindow(window_handle)
+
+	if window_handle == nil {
+		fmt.println("GLFW has failed to load the window.")
+		return
+	}
+
+	// Load OpenGL context or the "state" of OpenGL.
+	glfw.MakeContextCurrent(window_handle)
+	// Load OpenGL function pointers with the specficed OpenGL major and minor version.
+	gl.load_up_to(GL_MAJOR_VERSION, GL_MINOR_VERSION, glfw.gl_set_proc_address)
+
+	// Disable Vsync
+	glfw.SwapInterval(0)
+
+	vao: u32
