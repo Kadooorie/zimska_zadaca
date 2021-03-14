@@ -182,3 +182,34 @@ main :: proc() {
 	glfw.SwapInterval(0)
 
 	vao: u32
+	vbo: u32
+	ebo: u32
+
+	gl.GenVertexArrays(1, &vao)
+	defer gl.DeleteVertexArrays(1, &vao)
+
+	gl.GenBuffers(1, &vbo)
+	gl.GenBuffers(1, &ebo)
+	defer gl.DeleteBuffers(1, &vbo)
+	defer gl.DeleteBuffers(1, &ebo)
+
+	gl.BindVertexArray(vao)
+	gl.BindBuffer(gl.ARRAY_BUFFER, vbo)
+	gl.BindBuffer(gl.ELEMENT_ARRAY_BUFFER, ebo)
+
+	vertices := create_vertices(x = 0, y = 0, width = WIDTH, height = HEIGHT)
+
+	/**
+
+	0      2
+	|-----/|
+	|   /  |
+	|  /   |
+	|/-----|
+	1      3
+
+	**/
+
+	indices: [6]u32 = {
+		0, 1, 2,
+		2, 1, 3,
