@@ -213,3 +213,39 @@ main :: proc() {
 	indices: [6]u32 = {
 		0, 1, 2,
 		2, 1, 3,
+	}
+
+	gl.EnableVertexAttribArray(0)
+	gl.VertexAttribPointer(0, 2, gl.FLOAT, false, 4 * size_of(f32), 0)
+
+	gl.EnableVertexAttribArray(1)
+	gl.VertexAttribPointer(1, 2, gl.FLOAT, false, 4 * size_of(f32), size_of(f32) * 2)
+
+	gl.BufferData(gl.ARRAY_BUFFER,         len(vertices) * size_of(f32), raw_data(vertices[:]), gl.STATIC_DRAW)
+	gl.BufferData(gl.ELEMENT_ARRAY_BUFFER, len(indices)  * size_of(u32), raw_data(indices[:]),  gl.STATIC_DRAW)
+
+	program_id: u32; ok: bool
+	if program_id, ok = gl.load_shaders("./shader.vert", "./shader.frag"); !ok {
+		fmt.println("Failed to load shaders.")
+		return
+	}
+	defer gl.DeleteProgram(program_id)
+
+	texture_id : u32
+	gl.GenTextures(1, &texture_id)
+	defer gl.DeleteTextures(1, &texture_id)
+
+	gl.BindTexture(gl.TEXTURE_2D, texture_id)
+	gl.ActiveTexture(gl.TEXTURE0)
+
+	gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
+	gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
+	gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST)
+	gl.TexParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST)
+
+	ortho := glsl.mat4Ortho3d(0.0, f32(WIDTH), f32(HEIGHT), 0.0, 1.0, 100.0)
+
+	adjust_noise: Adjust_Noise
+	adjust_noise.frequency = WIDTH / 2
+	adjust_noise.octaves = 1
+	adjust_noise.seed = 360000
