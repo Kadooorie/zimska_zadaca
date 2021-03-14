@@ -249,3 +249,32 @@ main :: proc() {
 	adjust_noise.frequency = WIDTH / 2
 	adjust_noise.octaves = 1
 	adjust_noise.seed = 360000
+
+	create_texture_noise(texture_id, adjust_noise)
+
+
+	for !glfw.WindowShouldClose(window_handle) {
+
+		// Process all incoming events like keyboard press, window resize, and etc.
+		glfw.PollEvents()
+
+		if glfw.GetKey(window_handle, glfw.KEY_COMMA) == glfw.PRESS && glfw.GetKey(window_handle, glfw.KEY_LEFT_SHIFT) == glfw.PRESS {
+			adjust_noise.frequency -= 5.0
+			adjust_noise.frequency = glsl.clamp(adjust_noise.frequency, 1, 9000)
+			create_texture_noise(texture_id, adjust_noise)
+		} else if glfw.GetKey(window_handle, glfw.KEY_COMMA) == glfw.PRESS {
+			adjust_noise.frequency += 5.0
+			create_texture_noise(texture_id, adjust_noise)
+		}
+
+		if glfw.GetKey(window_handle, glfw.KEY_PERIOD) == glfw.PRESS && glfw.GetKey(window_handle, glfw.KEY_LEFT_SHIFT) == glfw.PRESS {
+			adjust_noise.octaves -= 1.0
+			adjust_noise.octaves = glsl.clamp(adjust_noise.octaves, 1, 100)
+			create_texture_noise(texture_id, adjust_noise)
+		} else if glfw.GetKey(window_handle, glfw.KEY_PERIOD) == glfw.PRESS {
+			adjust_noise.octaves += 1.0
+			create_texture_noise(texture_id, adjust_noise)
+		}
+
+		gl.ClearColor(0.5, 0.0, 1.0, 1.0)
+		gl.Clear(gl.COLOR_BUFFER_BIT)
