@@ -278,3 +278,17 @@ main :: proc() {
 
 		gl.ClearColor(0.5, 0.0, 1.0, 1.0)
 		gl.Clear(gl.COLOR_BUFFER_BIT)
+
+		gl.UseProgram(program_id)
+		gl.BindVertexArray(vao)
+		gl.BindTexture(gl.TEXTURE_2D, texture_id)
+		gl.ActiveTexture(gl.TEXTURE0)
+		gl.Uniform1i(gl.GetUniformLocation(program_id, "u_texture"), 0)
+		gl.UniformMatrix4fv(gl.GetUniformLocation(program_id, "u_projection"), 1, gl.FALSE, &ortho[0][0])
+
+		gl.DrawElements(gl.TRIANGLES, i32(len(indices)), gl.UNSIGNED_INT, nil)
+
+		glfw.SwapBuffers(window_handle)
+
+	}
+}
