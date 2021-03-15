@@ -8,4 +8,4 @@ out vec2 texture_coords;
 
 void main() {
         // Get rid of the z dimension.
-    
+        vec4 xy_copy = u_project
