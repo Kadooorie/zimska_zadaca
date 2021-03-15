@@ -2,4 +2,5 @@
 
 layout(location = 0) out vec4 color;
 		
-in vec2 tex
+in vec2 texture_coords;
+uniform sampler2D u_
