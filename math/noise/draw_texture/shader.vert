@@ -1,3 +1,4 @@
 #version 330 core
 
-layout(loca
+layout(location = 0) in vec2 xy;
+lay
