@@ -6,4 +6,5 @@ layout(location = 1) in vec2 passed_texture_coords;
 uniform mat4 u_projection;
 out vec2 texture_coords;
 
-voi
+void main() {
+        
