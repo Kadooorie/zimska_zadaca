@@ -7,4 +7,5 @@ uniform mat4 u_projection;
 out vec2 texture_coords;
 
 void main() {
-        
+        // Get rid of the z dimension.
+    
