@@ -8,4 +8,6 @@ package main
 *   Sample game developed by Marc Palau and Ramon Santamaria
 *
 *   This game has been created using raylib v1.3 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for detail
+*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
+*
+*  Translation from https://g
