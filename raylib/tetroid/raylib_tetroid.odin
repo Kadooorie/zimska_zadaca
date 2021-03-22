@@ -10,4 +10,6 @@ package main
 *   This game has been created using raylib v1.3 (www.raylib.com)
 *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
 *
-*  Translation from https://github.com/raysan5/raylib-games/blob/master/classics/sr
+*  Translation from https://github.com/raysan5/raylib-games/blob/master/classics/src/tetris.c to Odin
+*
+*   Co
