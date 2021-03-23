@@ -35,4 +35,7 @@ FADING_TIME             :: 33
 SCREEN_WIDTH  :: 800
 SCREEN_HEIGHT :: 450
 
-Grid_Squ
+Grid_Square :: enum u8 {
+	Empty,
+	Moving,
+	Fu
