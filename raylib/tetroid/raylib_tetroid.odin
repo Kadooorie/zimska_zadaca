@@ -38,4 +38,9 @@ SCREEN_HEIGHT :: 450
 Grid_Square :: enum u8 {
 	Empty,
 	Moving,
-	Fu
+	Full,
+	Block,
+	Fading,
+}
+
+g
