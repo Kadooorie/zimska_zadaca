@@ -26,4 +26,6 @@ SQUARE_SIZE             :: 20
 GRID_HORIZONTAL_SIZE    :: 12
 GRID_VERTICAL_SIZE      :: 20
 
-LATERAL_SPEED           :: 
+LATERAL_SPEED           :: 10
+TURNING_SPEED           :: 12
+F
