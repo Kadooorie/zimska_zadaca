@@ -12,4 +12,5 @@ package main
 *
 *  Translation from https://github.com/raysan5/raylib-games/blob/master/classics/src/tetris.c to Odin
 *
-*   Copyright (c) 2015 Ramon 
+*   Copyright (c) 2015 Ramon Santamaria (@raysan5)
+*   Copyright
