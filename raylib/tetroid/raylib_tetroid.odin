@@ -23,4 +23,5 @@ import rl "vendor:raylib"
 
 SQUARE_SIZE             :: 20
 
-GRID_HORIZONTAL_SIZE 
+GRID_HORIZONTAL_SIZE    :: 12
+GRID_VERTICAL_SIZE      :: 20
