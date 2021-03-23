@@ -43,4 +43,5 @@ Grid_Square :: enum u8 {
 	Fading,
 }
 
-g
+game_over := false
+pause := fa
