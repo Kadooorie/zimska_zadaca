@@ -19,4 +19,6 @@ package main
 
 
 
-import rl "
+import rl "vendor:raylib"
+
+SQUARE_SIZE       
