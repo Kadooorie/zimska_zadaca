@@ -21,4 +21,6 @@ package main
 
 import rl "vendor:raylib"
 
-SQUARE_SIZE       
+SQUARE_SIZE             :: 20
+
+GRID_HORIZONTAL_SIZE 
