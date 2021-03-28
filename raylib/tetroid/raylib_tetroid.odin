@@ -44,4 +44,6 @@ Grid_Square :: enum u8 {
 }
 
 game_over := false
-pause := fa
+pause := false
+
+grid:           [GRID_H
