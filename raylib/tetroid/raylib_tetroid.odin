@@ -46,4 +46,5 @@ Grid_Square :: enum u8 {
 game_over := false
 pause := false
 
-grid:           [GRID_HORIZONTAL_SIZE][GRID_VERTICAL_SIZE]Gri
+grid:           [GRID_HORIZONTAL_SIZE][GRID_VERTICAL_SIZE]Grid_Square
+piece:          [4][4]Gr
