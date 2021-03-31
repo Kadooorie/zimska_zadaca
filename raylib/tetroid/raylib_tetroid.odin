@@ -50,4 +50,6 @@ grid:           [GRID_HORIZONTAL_SIZE][GRID_VERTICAL_SIZE]Grid_Square
 piece:          [4][4]Grid_Square
 incoming_piece: [4][4]Grid_Square
 
-pie
+piece_position: [2]i32
+
+fading_c
