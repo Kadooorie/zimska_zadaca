@@ -47,4 +47,5 @@ game_over := false
 pause := false
 
 grid:           [GRID_HORIZONTAL_SIZE][GRID_VERTICAL_SIZE]Grid_Square
-piece:          [4][4]Gr
+piece:          [4][4]Grid_Square
+incoming_pie
