@@ -52,4 +52,7 @@ incoming_piece: [4][4]Grid_Square
 
 piece_position: [2]i32
 
-fading_c
+fading_color: rl.Color
+
+begin_play := true
+piece_active := fal
