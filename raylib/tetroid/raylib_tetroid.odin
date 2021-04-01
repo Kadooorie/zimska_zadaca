@@ -57,4 +57,6 @@ fading_color: rl.Color
 begin_play := true
 piece_active := false
 detection := false
-line_to_
+line_to_delete := false
+
+level := 1
