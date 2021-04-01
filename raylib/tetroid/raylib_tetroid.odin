@@ -79,4 +79,6 @@ main :: proc() {
 	
 	init_game()
 
-	r
+	rl.SetTargetFPS(60)      
+
+	for !rl.WindowSho
