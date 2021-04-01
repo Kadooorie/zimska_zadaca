@@ -63,4 +63,5 @@ level := 1
 lines := 0
 
 gravity_movement_counter := 0
-lateral_movement_c
+lateral_movement_counter := 0
+turn_movement_c
