@@ -69,4 +69,9 @@ fast_fall_movement_counter := 0
 
 fade_line_counter := 0
 
-inverse_gravity_sp
+inverse_gravity_speed := 30
+
+
+
+main :: proc() {
+	rl
