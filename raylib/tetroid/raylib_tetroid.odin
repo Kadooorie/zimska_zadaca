@@ -64,4 +64,5 @@ lines := 0
 
 gravity_movement_counter := 0
 lateral_movement_counter := 0
-turn_movement_c
+turn_movement_counter := 0
+fast_fall_movemen
