@@ -74,4 +74,4 @@ inverse_gravity_speed := 30
 
 
 main :: proc() {
-	rl
+	rl.InitWindow(SCREEN_WIDTH, SCREEN_
