@@ -62,4 +62,5 @@ line_to_delete := false
 level := 1
 lines := 0
 
-gravity_movement_counter 
+gravity_movement_counter := 0
+lateral_movement_c
