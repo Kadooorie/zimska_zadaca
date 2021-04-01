@@ -81,4 +81,4 @@ main :: proc() {
 
 	rl.SetTargetFPS(60)      
 
-	for !rl.WindowSho
+	for !rl.WindowShouldClose() { // Detect window close bu
