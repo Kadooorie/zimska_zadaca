@@ -67,4 +67,6 @@ lateral_movement_counter := 0
 turn_movement_counter := 0
 fast_fall_movement_counter := 0
 
-fade_line_co
+fade_line_counter := 0
+
+inverse_gravity_sp
