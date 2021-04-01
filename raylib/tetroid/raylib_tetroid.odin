@@ -75,4 +75,8 @@ inverse_gravity_speed := 30
 
 main :: proc() {
 	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Tetroid")
-	defer rl.C
+	defer rl.CloseWindow()   
+	
+	init_game()
+
+	r
