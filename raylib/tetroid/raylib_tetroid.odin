@@ -55,4 +55,6 @@ piece_position: [2]i32
 fading_color: rl.Color
 
 begin_play := true
-piece_active := fal
+piece_active := false
+detection := false
+line_to_
