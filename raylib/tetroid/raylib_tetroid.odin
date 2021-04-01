@@ -60,3 +60,6 @@ detection := false
 line_to_delete := false
 
 level := 1
+lines := 0
+
+gravity_movement_counter 
