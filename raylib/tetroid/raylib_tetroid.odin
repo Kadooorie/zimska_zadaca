@@ -88,4 +88,5 @@ main :: proc() {
 }
 
 
-init_game 
+init_game :: proc() {
+	level = 1
