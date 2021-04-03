@@ -83,3 +83,9 @@ main :: proc() {
 
 	for !rl.WindowShouldClose() { // Detect window close button or ESC key
 		update_game()
+		draw_game()
+	}
+}
+
+
+init_game 
