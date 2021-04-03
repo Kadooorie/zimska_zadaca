@@ -81,4 +81,5 @@ main :: proc() {
 
 	rl.SetTargetFPS(60)      
 
-	for !rl.WindowShouldClose() { // Detect window close bu
+	for !rl.WindowShouldClose() { // Detect window close button or ESC key
+		update_game()
