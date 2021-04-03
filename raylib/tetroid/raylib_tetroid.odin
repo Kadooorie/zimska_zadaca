@@ -92,4 +92,6 @@ init_game :: proc() {
 	level = 1
 	lines = 0
 
-	fading_colo
+	fading_color = rl.GRAY
+
+	piece_position =
