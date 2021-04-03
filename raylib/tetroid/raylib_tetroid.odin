@@ -90,3 +90,6 @@ main :: proc() {
 
 init_game :: proc() {
 	level = 1
+	lines = 0
+
+	fading_colo
