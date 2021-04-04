@@ -94,4 +94,8 @@ init_game :: proc() {
 
 	fading_color = rl.GRAY
 
-	piece_position =
+	piece_position = {0, 0}
+
+	pause = false
+
+	begi
