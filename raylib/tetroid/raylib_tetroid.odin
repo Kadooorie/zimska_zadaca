@@ -99,4 +99,5 @@ init_game :: proc() {
 	pause = false
 
 	begin_play     = true
-	piece_activ
+	piece_active   = false
+	detection      = fal
