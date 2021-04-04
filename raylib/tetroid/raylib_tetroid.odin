@@ -98,4 +98,5 @@ init_game :: proc() {
 
 	pause = false
 
-	begi
+	begin_play     = true
+	piece_activ
