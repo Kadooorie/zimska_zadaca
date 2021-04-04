@@ -100,4 +100,5 @@ init_game :: proc() {
 
 	begin_play     = true
 	piece_active   = false
-	detection      = fal
+	detection      = false
+	line_to_delete = f
