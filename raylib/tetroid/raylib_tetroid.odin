@@ -117,4 +117,6 @@ init_game :: proc() {
 
 	// Initialize grid matrices
 	for i in 0..<GRID_HORIZONTAL_SIZE {
-		for j in 0..<GRID
+		for j in 0..<GRID_VERTICAL_SIZE {
+			switch {
+			
