@@ -113,4 +113,6 @@ init_game :: proc() {
 	inverse_gravity_speed = 30
 
 	grid = {}
-	incoming_piece 
+	incoming_piece = {}
+
+	// Initialize grid
