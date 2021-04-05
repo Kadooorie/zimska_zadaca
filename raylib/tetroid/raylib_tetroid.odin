@@ -104,4 +104,5 @@ init_game :: proc() {
 	line_to_delete = false
 
 	// Counters
-	gravity_mov
+	gravity_movement_counter = 0
+	lateral_mo
