@@ -112,3 +112,5 @@ init_game :: proc() {
 	fade_line_counter = 0
 	inverse_gravity_speed = 30
 
+	grid = {}
+	incoming_piece 
