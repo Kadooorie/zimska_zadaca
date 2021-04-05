@@ -106,4 +106,5 @@ init_game :: proc() {
 	// Counters
 	gravity_movement_counter = 0
 	lateral_movement_counter = 0
-	turn_movement_cou
+	turn_movement_counter = 0
+	fast_fall_movement_co
