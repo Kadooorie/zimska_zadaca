@@ -116,4 +116,5 @@ init_game :: proc() {
 	incoming_piece = {}
 
 	// Initialize grid matrices
-	for i in 0..<GRID_HORI
+	for i in 0..<GRID_HORIZONTAL_SIZE {
+		for j in 0..<GRID
