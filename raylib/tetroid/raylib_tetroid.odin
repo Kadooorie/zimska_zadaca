@@ -154,4 +154,4 @@ update_game :: proc() {
 			fading_color = rl.GRAY
 		}
 		
-		if 
+		if fade_line_counter >= FADING_
