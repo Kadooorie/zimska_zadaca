@@ -120,4 +120,6 @@ init_game :: proc() {
 		for j in 0..<GRID_VERTICAL_SIZE {
 			switch {
 			case j == GRID_VERTICAL_SIZE - 1,
-			     i == GRID_HORIZONTAL_
+			     i == GRID_HORIZONTAL_SIZE - 1,
+			     i == 0:
+				g
