@@ -141,4 +141,8 @@ update_game :: proc() {
 		pause = !pause
 	}
 	
-	if pause
+	if pause {
+		return
+	}
+	
+	if line_to_
