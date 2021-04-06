@@ -138,3 +138,7 @@ update_game :: proc() {
 	}
 	
 	if rl.IsKeyPressed(.P) {
+		pause = !pause
+	}
+	
+	if pause
