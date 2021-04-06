@@ -132,3 +132,6 @@ update_game :: proc() {
 	if game_over {
 		if rl.IsKeyPressed(.ENTER) {
 			init_game()
+			game_over = false
+		}
+		re
