@@ -130,4 +130,5 @@ init_game :: proc() {
 
 update_game :: proc() {
 	if game_over {
-		if rl.IsKeyPressed(.
+		if rl.IsKeyPressed(.ENTER) {
+			init_game()
