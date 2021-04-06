@@ -148,4 +148,5 @@ update_game :: proc() {
 	if line_to_delete {
 		fade_line_counter += 1
 		
-		if fade_line_counter 
+		if fade_line_counter % 8 < 4 {
+			fading_color = rl.
