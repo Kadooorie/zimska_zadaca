@@ -134,4 +134,7 @@ update_game :: proc() {
 			init_game()
 			game_over = false
 		}
-		re
+		return
+	}
+	
+	if rl.IsKeyPressed(.P) {
