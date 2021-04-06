@@ -145,4 +145,5 @@ update_game :: proc() {
 		return
 	}
 	
-	if line_to_
+	if line_to_delete {
+		fade_line_counter +
