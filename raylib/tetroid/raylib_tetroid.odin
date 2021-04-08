@@ -155,4 +155,5 @@ update_game :: proc() {
 		}
 		
 		if fade_line_counter >= FADING_TIME {
-			delete_complete_
+			delete_complete_lines()
+			fade_line_counter
