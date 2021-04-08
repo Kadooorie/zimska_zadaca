@@ -154,4 +154,5 @@ update_game :: proc() {
 			fading_color = rl.GRAY
 		}
 		
-		if fade_line_counter >= FADING_
+		if fade_line_counter >= FADING_TIME {
+			delete_complete_
