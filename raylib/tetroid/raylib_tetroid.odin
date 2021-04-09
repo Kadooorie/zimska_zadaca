@@ -166,4 +166,5 @@ update_game :: proc() {
 	
 	
 	if !piece_active {
-		piece_active = create_piec
+		piece_active = create_piece()
+		fast_fall_movement_counter
