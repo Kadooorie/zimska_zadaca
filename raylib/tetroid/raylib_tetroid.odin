@@ -169,4 +169,4 @@ update_game :: proc() {
 		piece_active = create_piece()
 		fast_fall_movement_counter = 0
 	} else {
-		fast_fa
+		fast_fall_movement_counter += 1
