@@ -170,4 +170,5 @@ update_game :: proc() {
 		fast_fall_movement_counter = 0
 	} else {
 		fast_fall_movement_counter += 1
-		gravity_movement_co
+		gravity_movement_counter   += 1
+		lateral_movemen
