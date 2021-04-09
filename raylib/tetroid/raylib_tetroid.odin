@@ -161,3 +161,8 @@ update_game :: proc() {
 			
 			lines += 1
 		}
+		return
+	}
+	
+	
+	if !piece_active
