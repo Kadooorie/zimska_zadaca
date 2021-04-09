@@ -165,4 +165,5 @@ update_game :: proc() {
 	}
 	
 	
-	if !piece_active
+	if !piece_active {
+		piece_active = create_piec
