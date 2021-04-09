@@ -171,4 +171,5 @@ update_game :: proc() {
 	} else {
 		fast_fall_movement_counter += 1
 		gravity_movement_counter   += 1
-		lateral_movemen
+		lateral_movement_counter   += 1
+		turn
