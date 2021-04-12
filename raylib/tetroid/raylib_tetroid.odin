@@ -174,4 +174,5 @@ update_game :: proc() {
 		lateral_movement_counter   += 1
 		turn_movement_counter      += 1
 		
-		// We make sure to move if we've pres
+		// We make sure to move if we've pressed the key this frame
+		if 
