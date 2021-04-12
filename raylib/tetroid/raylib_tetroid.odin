@@ -175,4 +175,5 @@ update_game :: proc() {
 		turn_movement_counter      += 1
 		
 		// We make sure to move if we've pressed the key this frame
-		if rl.IsKeyPressed(.LEFT) || rl.IsKey
+		if rl.IsKeyPressed(.LEFT) || rl.IsKeyPressed(.RIGHT) {
+			lateral_mo
