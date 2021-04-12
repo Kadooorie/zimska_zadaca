@@ -176,4 +176,4 @@ update_game :: proc() {
 		
 		// We make sure to move if we've pressed the key this frame
 		if rl.IsKeyPressed(.LEFT) || rl.IsKeyPressed(.RIGHT) {
-			lateral_mo
+			lateral_movement_counter = LATERAL_SPE
