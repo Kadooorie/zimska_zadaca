@@ -178,4 +178,5 @@ update_game :: proc() {
 		if rl.IsKeyPressed(.LEFT) || rl.IsKeyPressed(.RIGHT) {
 			lateral_movement_counter = LATERAL_SPEED
 		}
-		if rl.IsKeyPressed(.UP) 
+		if rl.IsKeyPressed(.UP) {
+			turn_movement_counter = TURNIN
