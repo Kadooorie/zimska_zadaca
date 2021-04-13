@@ -179,4 +179,7 @@ update_game :: proc() {
 			lateral_movement_counter = LATERAL_SPEED
 		}
 		if rl.IsKeyPressed(.UP) {
-			turn_movement_counter = TURNIN
+			turn_movement_counter = TURNING_SPEED
+		}
+		
+		// Fall d
