@@ -184,4 +184,4 @@ update_game :: proc() {
 		
 		// Fall down
 		if rl.IsKeyDown(.DOWN) && fast_fall_movement_counter >= FAST_FALL_AWAIT_COUNTER {
-			// We make sure t
+			// We make sure the piece is going to
