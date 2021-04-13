@@ -182,4 +182,5 @@ update_game :: proc() {
 			turn_movement_counter = TURNING_SPEED
 		}
 		
-		// Fall d
+		// Fall down
+		if rl.IsKeyDown(.DOWN) && 
