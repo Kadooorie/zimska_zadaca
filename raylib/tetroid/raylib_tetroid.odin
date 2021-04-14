@@ -185,4 +185,7 @@ update_game :: proc() {
 		// Fall down
 		if rl.IsKeyDown(.DOWN) && fast_fall_movement_counter >= FAST_FALL_AWAIT_COUNTER {
 			// We make sure the piece is going to fall this frame
-			gravity_movement_counter += inverse_gravity_s
+			gravity_movement_counter += inverse_gravity_speed
+		}
+
+		if gravity_movem
