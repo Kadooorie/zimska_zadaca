@@ -192,4 +192,4 @@ update_game :: proc() {
 			// Basic falling movement
 			check_detection(&detection)
 
-			// Check i
+			// Check if the piece has collided with
