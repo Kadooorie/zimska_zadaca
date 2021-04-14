@@ -188,4 +188,4 @@ update_game :: proc() {
 			gravity_movement_counter += inverse_gravity_speed
 		}
 
-		if gravity_movem
+		if gravity_movement_counter >= inverse_gr
