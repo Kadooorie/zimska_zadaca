@@ -189,4 +189,5 @@ update_game :: proc() {
 		}
 
 		if gravity_movement_counter >= inverse_gravity_speed {
-			// Basic fa
+			// Basic falling movement
+			check_dete
