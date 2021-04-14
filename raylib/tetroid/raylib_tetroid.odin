@@ -188,4 +188,5 @@ update_game :: proc() {
 			gravity_movement_counter += inverse_gravity_speed
 		}
 
-		if gravity_movement_counter >= inverse_gr
+		if gravity_movement_counter >= inverse_gravity_speed {
+			// Basic fa
