@@ -192,4 +192,5 @@ update_game :: proc() {
 			// Basic falling movement
 			check_detection(&detection)
 
-			// Check if the piece has collided with another piece or with the b
+			// Check if the piece has collided with another piece or with the boundings
+			resolve_falling_mov
