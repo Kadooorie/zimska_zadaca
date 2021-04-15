@@ -193,4 +193,4 @@ update_game :: proc() {
 			check_detection(&detection)
 
 			// Check if the piece has collided with another piece or with the boundings
-			resolve_falling_mov
+			resolve_falling_movement(&detection, &piece_activ
