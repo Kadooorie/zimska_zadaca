@@ -195,4 +195,5 @@ update_game :: proc() {
 			// Check if the piece has collided with another piece or with the boundings
 			resolve_falling_movement(&detection, &piece_active)
 
-			// Check if we fullfilled a line and if so, erase the lin
+			// Check if we fullfilled a line and if so, erase the line and pull down the the lines above
+	
