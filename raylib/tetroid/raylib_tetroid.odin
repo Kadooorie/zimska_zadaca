@@ -198,4 +198,7 @@ update_game :: proc() {
 			// Check if we fullfilled a line and if so, erase the line and pull down the the lines above
 			check_completion(&line_to_delete)
 
-			gravity_movement_counter = 
+			gravity_movement_counter = 0
+		}
+
+		// Move laterally at p
