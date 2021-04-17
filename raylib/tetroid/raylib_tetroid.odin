@@ -196,4 +196,6 @@ update_game :: proc() {
 			resolve_falling_movement(&detection, &piece_active)
 
 			// Check if we fullfilled a line and if so, erase the line and pull down the the lines above
-			check_completion(&line_t
+			check_completion(&line_to_delete)
+
+			gravity_
