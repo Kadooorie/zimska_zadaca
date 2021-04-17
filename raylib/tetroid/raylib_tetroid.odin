@@ -201,4 +201,5 @@ update_game :: proc() {
 			gravity_movement_counter = 0
 		}
 
-		// Move laterally at p
+		// Move laterally at player's will
+		if lateral_moveme
