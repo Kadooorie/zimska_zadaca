@@ -202,4 +202,5 @@ update_game :: proc() {
 		}
 
 		// Move laterally at player's will
-		if lateral_moveme
+		if lateral_movement_counter >= LATERAL_SPEED {
+			/
