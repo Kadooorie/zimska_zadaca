@@ -209,4 +209,5 @@ update_game :: proc() {
 			}
 		}
 
-		
+		// Turn the piece at player's will
+		if turn_mov
