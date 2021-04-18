@@ -210,4 +210,4 @@ update_game :: proc() {
 		}
 
 		// Turn the piece at player's will
-		if turn_mov
+		if turn_movement_counter >= TURNING_SP
