@@ -203,4 +203,5 @@ update_game :: proc() {
 
 		// Move laterally at player's will
 		if lateral_movement_counter >= LATERAL_SPEED {
-			// Update the lateral movement and if success, reset the lateral 
+			// Update the lateral movement and if success, reset the lateral counter
+			if !resolve
