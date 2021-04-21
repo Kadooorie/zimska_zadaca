@@ -212,4 +212,5 @@ update_game :: proc() {
 		// Turn the piece at player's will
 		if turn_movement_counter >= TURNING_SPEED {
 			// Update the turning movement and reset the turning counter
-			if resolve_turn_m
+			if resolve_turn_movement() {
+				turn_mov
