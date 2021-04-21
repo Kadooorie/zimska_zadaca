@@ -217,4 +217,5 @@ update_game :: proc() {
 			}
 		}
 		
-		for 
+		for j in 0..<2 {
+			for i in 1..<G
