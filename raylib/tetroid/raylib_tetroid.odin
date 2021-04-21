@@ -213,4 +213,8 @@ update_game :: proc() {
 		if turn_movement_counter >= TURNING_SPEED {
 			// Update the turning movement and reset the turning counter
 			if resolve_turn_movement() {
-				turn_mov
+				turn_movement_counter = 0
+			}
+		}
+		
+		for 
