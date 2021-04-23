@@ -222,4 +222,9 @@ update_game :: proc() {
 				if grid[i][j] == .Full {
 					game_over = true
 				}
-	
+			}
+		}
+	}
+}
+
+draw
