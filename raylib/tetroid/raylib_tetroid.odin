@@ -227,4 +227,6 @@ update_game :: proc() {
 	}
 }
 
-draw
+draw_game :: proc() {
+	rl.BeginDrawing()
+	
