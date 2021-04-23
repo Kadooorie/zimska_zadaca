@@ -220,4 +220,6 @@ update_game :: proc() {
 		for j in 0..<2 {
 			for i in 1..<GRID_HORIZONTAL_SIZE-1 {
 				if grid[i][j] == .Full {
-				
+					game_over = true
+				}
+	
