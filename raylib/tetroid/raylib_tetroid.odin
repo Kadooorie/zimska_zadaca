@@ -231,4 +231,4 @@ draw_game :: proc() {
 	rl.BeginDrawing()
 	defer rl.EndDrawing()
 	
-	rl.
+	rl.ClearBackground(rl.RAYWHIT
