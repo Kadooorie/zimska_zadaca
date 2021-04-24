@@ -229,4 +229,6 @@ update_game :: proc() {
 
 draw_game :: proc() {
 	rl.BeginDrawing()
+	defer rl.EndDrawing()
 	
+	rl.
