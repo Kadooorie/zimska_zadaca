@@ -239,4 +239,5 @@ draw_game :: proc() {
 		return
 	}
 	
-	offset := [2]i3
+	offset := [2]i32{
+		SCREEN_WIDTH/2 - (GRID_HORIZONTAL_S
