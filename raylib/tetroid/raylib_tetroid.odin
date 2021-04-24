@@ -236,3 +236,7 @@ draw_game :: proc() {
 	if game_over {
 		text :: "PRESS [ENTER] TO PLAY AGAIN"
 		rl.DrawText(text, rl.GetScreenWidth()/2 - rl.MeasureText(text, 20)/2, rl.GetScreenHeight()/2 - 50, 20, rl.GRAY)
+		return
+	}
+	
+	offset := [2]i3
