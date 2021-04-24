@@ -234,4 +234,5 @@ draw_game :: proc() {
 	rl.ClearBackground(rl.RAYWHITE)
 	
 	if game_over {
-		text :: "PRES
+		text :: "PRESS [ENTER] TO PLAY AGAIN"
+		rl.Dr
