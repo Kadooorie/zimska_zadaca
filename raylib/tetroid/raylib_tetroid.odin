@@ -231,4 +231,7 @@ draw_game :: proc() {
 	rl.BeginDrawing()
 	defer rl.EndDrawing()
 	
-	rl.ClearBackground(rl.RAYWHIT
+	rl.ClearBackground(rl.RAYWHITE)
+	
+	if game_over {
+		text :: "PRES
