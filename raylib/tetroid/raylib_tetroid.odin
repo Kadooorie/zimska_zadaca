@@ -235,4 +235,4 @@ draw_game :: proc() {
 	
 	if game_over {
 		text :: "PRESS [ENTER] TO PLAY AGAIN"
-		rl.Dr
+		rl.DrawText(text, rl.GetScreenWidth()
