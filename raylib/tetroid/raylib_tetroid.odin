@@ -246,4 +246,6 @@ draw_game :: proc() {
 	
 	offset.y -= 50
 	
-	controller := off
+	controller := offset.x
+	
+	for j in 0..<GRID_VERT
