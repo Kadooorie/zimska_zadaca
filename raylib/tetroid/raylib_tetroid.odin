@@ -240,4 +240,5 @@ draw_game :: proc() {
 	}
 	
 	offset := [2]i32{
-		SCREEN_WIDTH/2 - (GRID_HORIZONTAL_S
+		SCREEN_WIDTH/2 - (GRID_HORIZONTAL_SIZE*SQUARE_SIZE/2) - 50,
+		SCRE
