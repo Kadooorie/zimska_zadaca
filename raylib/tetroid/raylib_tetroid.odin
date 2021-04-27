@@ -245,3 +245,5 @@ draw_game :: proc() {
 	}
 	
 	offset.y -= 50
+	
+	controller := off
