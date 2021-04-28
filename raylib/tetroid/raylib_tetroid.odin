@@ -249,4 +249,6 @@ draw_game :: proc() {
 	controller := offset.x
 	
 	for j in 0..<GRID_VERTICAL_SIZE {
-		for i in 0..<GRID_HOR
+		for i in 0..<GRID_HORIZONTAL_SIZE {
+			switch grid[i][j] {
+			cas
