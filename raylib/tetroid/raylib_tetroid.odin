@@ -251,4 +251,5 @@ draw_game :: proc() {
 	for j in 0..<GRID_VERTICAL_SIZE {
 		for i in 0..<GRID_HORIZONTAL_SIZE {
 			switch grid[i][j] {
-			cas
+			case .Empty:
+				rl.DrawLine(offset
