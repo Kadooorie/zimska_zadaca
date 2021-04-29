@@ -253,4 +253,5 @@ draw_game :: proc() {
 			switch grid[i][j] {
 			case .Empty:
 				rl.DrawLine(offset.x, offset.y, offset.x + SQUARE_SIZE, offset.y, rl.LIGHTGRAY)
-				rl.DrawLine(offset.x, offset.y, offset.x, offset.y + SQUARE
+				rl.DrawLine(offset.x, offset.y, offset.x, offset.y + SQUARE_SIZE, rl.LIGHTGRAY)
+				rl.DrawLi
