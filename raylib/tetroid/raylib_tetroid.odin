@@ -266,3 +266,7 @@ draw_game :: proc() {
 				rl.DrawRectangle(offset.x, offset.y, SQUARE_SIZE, SQUARE_SIZE, fading_color)
 			}
 			offset.x += SQUARE_SIZE
+		}
+		
+		offset.x = controller
+		of
