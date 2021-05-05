@@ -263,4 +263,4 @@ draw_game :: proc() {
 			case .Block:
 				rl.DrawRectangle(offset.x, offset.y, SQUARE_SIZE, SQUARE_SIZE, rl.LIGHTGRAY)
 			case .Fading:
-				rl.DrawRectangle(offs
+				rl.DrawRectangle(offset.x, offset.y, SQUARE_SIZE, SQUA
