@@ -274,4 +274,6 @@ draw_game :: proc() {
 	
 	offset = {500, 45}
 	
-	controller = off
+	controller = offset.x
+	
+	for j in 0..<4
