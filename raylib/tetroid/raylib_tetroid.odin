@@ -272,4 +272,6 @@ draw_game :: proc() {
 		offset.y += SQUARE_SIZE
 	}
 	
-	off
+	offset = {500, 45}
+	
+	controller = off
