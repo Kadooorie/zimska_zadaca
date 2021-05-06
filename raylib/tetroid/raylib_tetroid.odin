@@ -269,4 +269,7 @@ draw_game :: proc() {
 		}
 		
 		offset.x = controller
-		of
+		offset.y += SQUARE_SIZE
+	}
+	
+	off
