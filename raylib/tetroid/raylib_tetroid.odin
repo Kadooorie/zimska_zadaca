@@ -278,4 +278,4 @@ draw_game :: proc() {
 	
 	for j in 0..<4 {
 		for i in 0..<4 {
-			#par
+			#partial switch incoming_piece[i][
