@@ -280,4 +280,4 @@ draw_game :: proc() {
 		for i in 0..<4 {
 			#partial switch incoming_piece[i][j] {
 			case .Empty:
-				rl.DrawLine(offset.x, offset.y, offset.
+				rl.DrawLine(offset.x, offset.y, offset.x + SQUARE_SIZE, offset.y,
