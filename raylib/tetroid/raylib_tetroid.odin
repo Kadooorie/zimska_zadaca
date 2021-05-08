@@ -278,4 +278,5 @@ draw_game :: proc() {
 	
 	for j in 0..<4 {
 		for i in 0..<4 {
-			#partial switch incoming_piece[i][
+			#partial switch incoming_piece[i][j] {
+			case .Em
