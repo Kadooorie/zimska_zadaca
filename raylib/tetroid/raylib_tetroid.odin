@@ -283,4 +283,4 @@ draw_game :: proc() {
 				rl.DrawLine(offset.x, offset.y, offset.x + SQUARE_SIZE, offset.y, rl.LIGHTGRAY)
 				rl.DrawLine(offset.x, offset.y, offset.x, offset.y + SQUARE_SIZE, rl.LIGHTGRAY)
 				rl.DrawLine(offset.x + SQUARE_SIZE, offset.y, offset.x + SQUARE_SIZE, offset.y + SQUARE_SIZE, rl.LIGHTGRAY)
-				rl.DrawLine(offse
+				rl.DrawLine(offset.x, offset.y + SQUARE_SIZE, offse
