@@ -295,4 +295,4 @@ draw_game :: proc() {
 		offset.y += SQUARE_SIZE
 	}
 	
-	rl.Draw
+	rl.DrawText("INCOMING:", offset.x, offset.
