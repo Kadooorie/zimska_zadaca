@@ -287,4 +287,8 @@ draw_game :: proc() {
 				offset.x += SQUARE_SIZE
 			case .Moving:
 				rl.DrawRectangle(offset.x, offset.y, SQUARE_SIZE, SQUARE_SIZE, rl.GRAY)
-				offset.x += SQUAR
+				offset.x += SQUARE_SIZE
+			}
+		}
+		
+		offs
