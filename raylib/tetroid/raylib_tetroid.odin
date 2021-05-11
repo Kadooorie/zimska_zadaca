@@ -291,4 +291,5 @@ draw_game :: proc() {
 			}
 		}
 		
-		offs
+		offset.x = controller
+		offset.y +=
