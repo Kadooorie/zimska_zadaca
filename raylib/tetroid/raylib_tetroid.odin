@@ -296,4 +296,6 @@ draw_game :: proc() {
 	}
 	
 	rl.DrawText("INCOMING:", offset.x, offset.y - 100, 10, rl.GRAY)
-	rl.DrawText(rl.TextFormat("LINES:      %04i", lines), offset.x, 
+	rl.DrawText(rl.TextFormat("LINES:      %04i", lines), offset.x, offset.y + 20, 10, rl.GRAY)
+	
+	if pau
