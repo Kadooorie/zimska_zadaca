@@ -299,4 +299,5 @@ draw_game :: proc() {
 	rl.DrawText(rl.TextFormat("LINES:      %04i", lines), offset.x, offset.y + 20, 10, rl.GRAY)
 	
 	if pause {
-		text :: "GAME PAUS
+		text :: "GAME PAUSED"
+		rl.DrawText(text, SCREEN
