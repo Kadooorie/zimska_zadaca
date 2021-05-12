@@ -305,4 +305,5 @@ draw_game :: proc() {
 }
 
 
-create_piece :: proc(
+create_piece :: proc() -> bool {
+	piece_position
