@@ -300,4 +300,4 @@ draw_game :: proc() {
 	
 	if pause {
 		text :: "GAME PAUSED"
-		rl.DrawText(text, SCREEN
+		rl.DrawText(text, SCREEN_WIDTH/2 - rl.MeasureText(text,
