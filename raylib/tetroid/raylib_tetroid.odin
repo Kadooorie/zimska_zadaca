@@ -309,4 +309,4 @@ create_piece :: proc() -> bool {
 	piece_position.x = (GRID_HORIZONTAL_SIZE - 4)/2
 	piece_position.y = 0
 
-	// If the g
+	// If the game is starting and you are going 
