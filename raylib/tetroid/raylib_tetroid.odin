@@ -306,4 +306,5 @@ draw_game :: proc() {
 
 
 create_piece :: proc() -> bool {
-	piece_position
+	piece_position.x = (GRID_HORIZONTAL_SIZE - 4)/2
+	pie
