@@ -319,4 +319,6 @@ create_piece :: proc() -> bool {
 	piece = incoming_piece
 
 	// We assign a random piece to the incoming one
-	get
+	get_random_piece()
+
+	// Assign the piece to the gr
