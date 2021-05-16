@@ -311,4 +311,5 @@ create_piece :: proc() -> bool {
 
 	// If the game is starting and you are going to create the first piece, we create an extra one
 	if (begin_play) {
-		get_r
+		get_random_piece()
+		begin_play = fal
