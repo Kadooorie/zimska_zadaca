@@ -321,4 +321,5 @@ create_piece :: proc() -> bool {
 	// We assign a random piece to the incoming one
 	get_random_piece()
 
-	// Assign the piece to the gr
+	// Assign the piece to the grid
+	for i in piece_position.x ..< pie
