@@ -315,4 +315,5 @@ create_piece :: proc() -> bool {
 		begin_play = false
 	}
 
-	// We assign the incoming piece to
+	// We assign the incoming piece to the actual piece
+	piece = i
