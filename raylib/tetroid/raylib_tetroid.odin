@@ -316,4 +316,6 @@ create_piece :: proc() -> bool {
 	}
 
 	// We assign the incoming piece to the actual piece
-	piece = i
+	piece = incoming_piece
+
+	// We assign a ra
