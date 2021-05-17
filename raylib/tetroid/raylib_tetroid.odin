@@ -324,4 +324,5 @@ create_piece :: proc() -> bool {
 	// Assign the piece to the grid
 	for i in piece_position.x ..< piece_position.x+4 {
 		for j in 0 ..< 4 {
-			if piece[i - piece_positi
+			if piece[i - piece_position.x][j] == .Moving {
+				grid[
