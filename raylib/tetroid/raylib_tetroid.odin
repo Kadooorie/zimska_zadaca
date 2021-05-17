@@ -334,4 +334,8 @@ create_piece :: proc() -> bool {
 }
 
 get_random_piece :: proc() {
-	random := rl.GetRandomValue(0,
+	random := rl.GetRandomValue(0, 6)
+	
+	incoming_piece = {}
+	
+	
