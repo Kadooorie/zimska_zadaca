@@ -339,4 +339,5 @@ get_random_piece :: proc() {
 	incoming_piece = {}
 	
 	switch random {
-	case 0: incoming_piece[1][1] = .Moving; incoming_piece[2][1] = .Moving; incoming_piece[1][2] = .Moving; incoming_piece[2][2] = .Movi
+	case 0: incoming_piece[1][1] = .Moving; incoming_piece[2][1] = .Moving; incoming_piece[1][2] = .Moving; incoming_piece[2][2] = .Moving //Cube
+	case 1: incoming_piece[1][0] = .M
