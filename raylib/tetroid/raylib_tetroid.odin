@@ -330,4 +330,7 @@ create_piece :: proc() -> bool {
 		}
 	}
 
-	retu
+	return true
+}
+
+get_random_piece :: proc() {
