@@ -339,4 +339,4 @@ get_random_piece :: proc() {
 	incoming_piece = {}
 	
 	switch random {
-	case 0: 
+	case 0: incoming_piece[1][1] = .
