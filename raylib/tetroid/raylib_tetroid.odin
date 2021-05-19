@@ -343,4 +343,5 @@ get_random_piece :: proc() {
 	case 1: incoming_piece[1][0] = .Moving; incoming_piece[1][1] = .Moving; incoming_piece[1][2] = .Moving; incoming_piece[2][2] = .Moving //L
 	case 2: incoming_piece[1][2] = .Moving; incoming_piece[2][0] = .Moving; incoming_piece[2][1] = .Moving; incoming_piece[2][2] = .Moving //L inversa
 	case 3: incoming_piece[0][1] = .Moving; incoming_piece[1][1] = .Moving; incoming_piece[2][1] = .Moving; incoming_piece[3][1] = .Moving //Recta
-	case 4: incoming_piece[1][0] = .Moving; incoming_piece[1][1] = .Moving; incoming_piece[1][2] = .Moving; incoming_piece[2][1] = .Moving //Creu t
+	case 4: incoming_piece[1][0] = .Moving; incoming_piece[1][1] = .Moving; incoming_piece[1][2] = .Moving; incoming_piece[2][1] = .Moving //Creu tallada
+	case 5: incoming_piece[1][1] = .
