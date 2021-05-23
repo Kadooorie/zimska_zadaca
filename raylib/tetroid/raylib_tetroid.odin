@@ -352,4 +352,5 @@ get_random_piece :: proc() {
 
 
 delete_complete_lines :: proc() {
-	for j := GRID_VERTICAL_
+	for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
+		for gr
