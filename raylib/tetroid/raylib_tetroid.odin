@@ -359,4 +359,4 @@ delete_complete_lines :: proc() {
 			}
 			
 			for j2 := j-1; j2 >= 0; j2 -= 1 {
-				for i2 
+				for i2 := 1; i2 < GRID_HORIZONTAL_SIZE-1
