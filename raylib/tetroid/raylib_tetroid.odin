@@ -358,4 +358,5 @@ delete_complete_lines :: proc() {
 				grid[i][j] = .Empty
 			}
 			
-			for j2 := 
+			for j2 := j-1; j2 >= 0; j2 -= 1 {
+				for i2 
