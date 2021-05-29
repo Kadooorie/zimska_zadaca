@@ -375,4 +375,4 @@ delete_complete_lines :: proc() {
 	}
 }
 
-check_det
+check_detection :: proc(detection: ^bo
