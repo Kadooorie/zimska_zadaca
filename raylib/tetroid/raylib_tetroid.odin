@@ -365,4 +365,6 @@ delete_complete_lines :: proc() {
 						grid[i2][j2+1] = .Full
 						grid[i2][j2] = .Empty
 					case .Fading:
-						grid[i2][j2+1] = .
+						grid[i2][j2+1] = .Fading
+						grid[i2][j2] = .Empty
+			
