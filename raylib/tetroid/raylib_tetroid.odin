@@ -367,4 +367,12 @@ delete_complete_lines :: proc() {
 					case .Fading:
 						grid[i2][j2+1] = .Fading
 						grid[i2][j2] = .Empty
-			
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+check_det
