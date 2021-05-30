@@ -378,4 +378,4 @@ delete_complete_lines :: proc() {
 check_detection :: proc(detection: ^bool) {
 	for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
 		for i := 1; i < GRID_HORIZONTAL_SIZE-1; i += 1 {
-			if (grid[i][j] == .Moving) && ((grid[i
+			if (grid[i][j] == .Moving) && ((grid[i][j+1] == .Full) || (grid[i][j+1
