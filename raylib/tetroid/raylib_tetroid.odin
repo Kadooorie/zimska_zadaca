@@ -376,4 +376,5 @@ delete_complete_lines :: proc() {
 }
 
 check_detection :: proc(detection: ^bool) {
-	for j := GRID_VERTICAL_SIZE-2
+	for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
+		for i :=
