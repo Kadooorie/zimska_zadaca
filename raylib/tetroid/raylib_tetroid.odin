@@ -385,4 +385,4 @@ check_detection :: proc(detection: ^bool) {
 	}
 }
 
-resolve
+resolve_falling_movement :: proc(detection:
