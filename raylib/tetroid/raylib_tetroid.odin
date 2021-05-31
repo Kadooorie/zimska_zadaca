@@ -393,4 +393,8 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 					grid[i][j] = .Full
 					detection^ = false
 					piece_active^ = false
-			
+				}
+			}
+		}
+	} else {
+		for j := GRID
