@@ -387,3 +387,4 @@ check_detection :: proc(detection: ^bool) {
 
 resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 	if detection^ {
+		for j := GRID_VERTICAL_S
