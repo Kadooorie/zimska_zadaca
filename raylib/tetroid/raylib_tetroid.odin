@@ -397,4 +397,4 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 			}
 		}
 	} else {
-		for j := GRID
+		for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
