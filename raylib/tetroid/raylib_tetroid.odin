@@ -401,4 +401,7 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 			for i := 1; i < GRID_HORIZONTAL_SIZE-1; i += 1 {
 				if grid[i][j] == .Moving {
 					grid[i][j+1] = .Moving
-					gr
+					grid[i][j] = .Empty
+				}
+			}
+		
