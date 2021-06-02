@@ -404,4 +404,9 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 					grid[i][j] = .Empty
 				}
 			}
+		}
 		
+		piece_position.y += 1
+	}
+}
+
