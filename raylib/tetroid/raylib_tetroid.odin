@@ -410,3 +410,4 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 	}
 }
 
+check_completion :: pr
