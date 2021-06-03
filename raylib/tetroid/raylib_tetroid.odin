@@ -410,4 +410,5 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 	}
 }
 
-check_completion :: proc(line_to_delete: ^bo
+check_completion :: proc(line_to_delete: ^bool) {
+	for j := GRID_VERTI
