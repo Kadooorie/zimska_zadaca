@@ -412,3 +412,5 @@ resolve_falling_movement :: proc(detection: ^bool, piece_active: ^bool) {
 
 check_completion :: proc(line_to_delete: ^bool) {
 	for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
+		calculator := 0
+		for i := 1; i 
