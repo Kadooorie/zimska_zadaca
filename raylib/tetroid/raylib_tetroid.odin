@@ -418,4 +418,4 @@ check_completion :: proc(line_to_delete: ^bool) {
 				calculator += 1
 			}
 			
-			i
+			if calculator == GRID_HORIZONTA
