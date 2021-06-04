@@ -419,4 +419,5 @@ check_completion :: proc(line_to_delete: ^bool) {
 			}
 			
 			if calculator == GRID_HORIZONTAL_SIZE-2 {
-				line_to_dele
+				line_to_delete^ = true
+				calculator = 0
