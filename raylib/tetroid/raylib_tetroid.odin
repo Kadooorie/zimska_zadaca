@@ -415,3 +415,7 @@ check_completion :: proc(line_to_delete: ^bool) {
 		calculator := 0
 		for i := 1; i < GRID_HORIZONTAL_SIZE-1; i += 1 {
 			if grid[i][j] == .Full {
+				calculator += 1
+			}
+			
+			i
