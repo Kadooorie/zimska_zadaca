@@ -426,4 +426,8 @@ check_completion :: proc(line_to_delete: ^bool) {
 					grid[z][j] = .Fading
 				}
 			}
-	
+		}
+	}
+}
+
+resolve_lateral
