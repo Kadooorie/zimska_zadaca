@@ -422,4 +422,5 @@ check_completion :: proc(line_to_delete: ^bool) {
 				line_to_delete^ = true
 				calculator = 0
 				
-				for z in 1..<
+				for z in 1..<GRID_HORIZONTAL_SIZE-1 {
+					gr
