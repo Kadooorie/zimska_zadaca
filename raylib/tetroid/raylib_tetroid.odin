@@ -423,4 +423,7 @@ check_completion :: proc(line_to_delete: ^bool) {
 				calculator = 0
 				
 				for z in 1..<GRID_HORIZONTAL_SIZE-1 {
-					gr
+					grid[z][j] = .Fading
+				}
+			}
+	
