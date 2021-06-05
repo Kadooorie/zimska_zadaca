@@ -430,4 +430,6 @@ check_completion :: proc(line_to_delete: ^bool) {
 	}
 }
 
-resolve_lateral_movement :: proc() -> (collision
+resolve_lateral_movement :: proc() -> (collision: bool) {
+	switch {
+	case rl.IsK
