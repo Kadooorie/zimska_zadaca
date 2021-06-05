@@ -432,4 +432,5 @@ check_completion :: proc(line_to_delete: ^bool) {
 
 resolve_lateral_movement :: proc() -> (collision: bool) {
 	switch {
-	case rl.IsK
+	case rl.IsKeyDown(.LEFT):
+		left_collision_loop: 
