@@ -433,4 +433,4 @@ check_completion :: proc(line_to_delete: ^bool) {
 resolve_lateral_movement :: proc() -> (collision: bool) {
 	switch {
 	case rl.IsKeyDown(.LEFT):
-		left_collision_loop: 
+		left_collision_loop: for j := GRID_VERTICAL_SIZE-2; j >= 0;
