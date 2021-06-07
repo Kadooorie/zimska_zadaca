@@ -444,4 +444,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 			}
 		}
 		
-		if !collisio
+		if !collision {
+			 for j := GRID_VERTICAL_SIZE-2
