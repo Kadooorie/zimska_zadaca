@@ -441,3 +441,7 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 						break left_collision_loop
 					}
 				}
+			}
+		}
+		
+		if !collisio
