@@ -438,4 +438,6 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 				if grid[i][j] == .Moving {
 					if i-1 == 0 || grid[i-1][j] == .Full {
 						collision = true
-						break lef
+						break left_collision_loop
+					}
+				}
