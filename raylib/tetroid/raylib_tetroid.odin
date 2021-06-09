@@ -460,4 +460,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 		}
 		
 		
-	case rl.IsKeyDown(.RIGHT)
+	case rl.IsKeyDown(.RIGHT):
+		right_collision_l
