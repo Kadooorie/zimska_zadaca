@@ -461,4 +461,4 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 		
 		
 	case rl.IsKeyDown(.RIGHT):
-		right_collision_loop: for j := GRID_VERTICA
+		right_collision_loop: for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
