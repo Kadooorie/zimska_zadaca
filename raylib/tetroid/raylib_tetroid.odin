@@ -466,4 +466,8 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 				if grid[i][j] == .Moving {
 					if i+1 == GRID_HORIZONTAL_SIZE-1 || grid[i+1][j] == .Full {
 						collision = true
-						break right_collisio
+						break right_collision_loop
+					}
+				}
+			}
+		}
