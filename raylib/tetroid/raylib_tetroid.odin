@@ -471,3 +471,7 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 				}
 			}
 		}
+		
+		
+		if !collision {
+			 for
