@@ -464,4 +464,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 		right_collision_loop: for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
 			for i := 1; i < GRID_HORIZONTAL_SIZE-1; i += 1 {
 				if grid[i][j] == .Moving {
-					if i+1 == GRID_HORIZONTAL_SIZE-1 || g
+					if i+1 == GRID_HORIZONTAL_SIZE-1 || grid[i+1][j] == .Full {
+						collision 
