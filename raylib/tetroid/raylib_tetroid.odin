@@ -475,4 +475,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 		
 		if !collision {
 			 for j := GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
-			 	for i := GRID_HORIZONTAL_SIZE-1; i >= 1;
+			 	for i := GRID_HORIZONTAL_SIZE-1; i >= 1; i -= 1 {
+					if grid[i][j] == .M
