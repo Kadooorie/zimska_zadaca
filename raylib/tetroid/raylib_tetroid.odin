@@ -479,4 +479,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 					if grid[i][j] == .Moving {
 						if grid[i][j] == .Moving {
 							grid[i+1][j] = .Moving
-							gr
+							grid[i][j] = .Empty
+						}
