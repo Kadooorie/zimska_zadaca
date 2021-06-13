@@ -481,3 +481,9 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 							grid[i+1][j] = .Moving
 							grid[i][j] = .Empty
 						}
+					}
+				}
+			}
+			
+			
+			piec
