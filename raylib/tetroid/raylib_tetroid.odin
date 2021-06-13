@@ -478,4 +478,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 			 	for i := GRID_HORIZONTAL_SIZE-1; i >= 1; i -= 1 {
 					if grid[i][j] == .Moving {
 						if grid[i][j] == .Moving {
-							grid[i+1][
+							grid[i+1][j] = .Moving
+							gr
