@@ -499,4 +499,5 @@ resolve_turn_movement :: proc() -> bool {
 	if rl.IsKeyDown(.UP) {
 		checker := false
 
-		// Check all turn
+		// Check all turning possibilities
+		if ((grid[piece_
