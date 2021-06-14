@@ -486,4 +486,6 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 			}
 			
 			
-			piec
+			piece_position.x += 1
+		}
+		
