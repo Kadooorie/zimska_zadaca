@@ -489,3 +489,9 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 			piece_position.x += 1
 		}
 		
+	}
+	
+	return
+}
+
+resolve_turn_movement
