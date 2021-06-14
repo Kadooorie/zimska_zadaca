@@ -494,4 +494,5 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 	return
 }
 
-resolve_turn_movement
+resolve_turn_movement :: proc() -> bool {
+	// Input 
