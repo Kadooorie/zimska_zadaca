@@ -497,4 +497,6 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 resolve_turn_movement :: proc() -> bool {
 	// Input for turning the piece
 	if rl.IsKeyDown(.UP) {
-	
+		checker := false
+
+		// Check all turn
