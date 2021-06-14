@@ -495,4 +495,4 @@ resolve_lateral_movement :: proc() -> (collision: bool) {
 }
 
 resolve_turn_movement :: proc() -> bool {
-	// Input 
+	// Input for turning the pi
