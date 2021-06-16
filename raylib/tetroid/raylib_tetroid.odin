@@ -500,4 +500,5 @@ resolve_turn_movement :: proc() -> bool {
 		checker := false
 
 		// Check all turning possibilities
-		if ((grid[piece_position.x + 3][piece_position.y
+		if ((grid[piece_position.x + 3][piece_position.y] == .Moving) &&
+		   
