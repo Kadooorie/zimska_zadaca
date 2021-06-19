@@ -510,4 +510,5 @@ resolve_turn_movement :: proc() -> bool {
 			checker = true
 		} else if ((grid[piece_position.x][piece_position.y + 3] == .Moving) &&
 		           (grid[piece_position.x + 3][piece_position.y + 3] != .Empty) &&
-		           (grid[piece_position.x + 3][piece_position
+		           (grid[piece_position.x + 3][piece_position.y + 3] != .Moving)) {
+			checker 
