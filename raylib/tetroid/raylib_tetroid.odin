@@ -566,4 +566,5 @@ resolve_turn_movement :: proc() -> bool {
 			checker = true
 		}
 
-		if !check
+		if !checker {
+			piece[0][0], piece[3][0], 
