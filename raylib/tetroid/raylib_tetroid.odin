@@ -571,4 +571,6 @@ resolve_turn_movement :: proc() -> bool {
 			piece[3][0], piece[3][3], piece[0][3], piece[0][0]
 			
 			piece[1][0], piece[3][1], piece[2][3], piece[0][2] = \
-			piece[3][1], piece[2][3], 
+			piece[3][1], piece[2][3], piece[0][2], piece[1][0]
+
+	
