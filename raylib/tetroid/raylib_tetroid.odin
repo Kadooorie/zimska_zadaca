@@ -580,4 +580,4 @@ resolve_turn_movement :: proc() -> bool {
 			piece[2][1], piece[2][2], piece[1][2], piece[1][1]
 		}
 
-	
+		for j: i32 = GRID_VERTICAL
