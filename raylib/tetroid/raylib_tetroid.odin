@@ -588,4 +588,6 @@ resolve_turn_movement :: proc() -> bool {
 			}
 		}
 
-		for i in i32(0)..<4 
+		for i in i32(0)..<4 {
+			for j in i32(0)..<4 {
+		
