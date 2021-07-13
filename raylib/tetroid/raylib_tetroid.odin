@@ -585,3 +585,7 @@ resolve_turn_movement :: proc() -> bool {
 				if grid[i][j] == .Moving {
 					grid[i][j] = .Empty
 				}
+			}
+		}
+
+		for i in i32(0)..<4 
