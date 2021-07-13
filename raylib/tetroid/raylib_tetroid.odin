@@ -583,4 +583,5 @@ resolve_turn_movement :: proc() -> bool {
 		for j: i32 = GRID_VERTICAL_SIZE-2; j >= 0; j -= 1 {
 			for i: i32 = 1; i < GRID_HORIZONTAL_SIZE-1; i += 1 {
 				if grid[i][j] == .Moving {
-				
+					grid[i][j] = .Empty
+				}
