@@ -599,4 +599,5 @@ resolve_turn_movement :: proc() -> bool {
 		return true
 	}
 
-	r
+	return false
+}
