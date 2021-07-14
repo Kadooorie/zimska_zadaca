@@ -125,3 +125,27 @@ update_entity :: proc(entity: ^Entity, game: ^Game) {
 			entity.reload_counter -= dt
 		}
 	case .PROJECTILE:
+		entity.pos += entity.vel * dt
+		entity.bullet_decay -= 1.0 * dt
+		if entity.bullet_decay < 0 {
+			entity.hp = 0
+		} else {
+			player := find_entity(.PLAYER, game)
+			if player == nil do return
+			if player.pos.x < entity.pos.x && entity.pos.x < player.pos.x + 10 && player.pos.y < entity.pos.y &&
+			   entity.pos.y < player.pos.y + 10 {
+				player.hp -= 1
+				fmt.printf("HIT (HP: {})\n", player.hp)
+				entity.hp = 0
+			}
+		}
+	}
+}
+
+get_time :: proc() -> f64 {
+	return f64(sdl2.GetPerformanceCounter()) * 1000 / f64(sdl2.GetPerformanceFrequency())
+}
+
+main :: proc() {
+	assert(sdl2.Init(sdl2.INIT_VIDEO) == 0, sdl2.GetErrorString())
+	defer sdl2.Quit()
