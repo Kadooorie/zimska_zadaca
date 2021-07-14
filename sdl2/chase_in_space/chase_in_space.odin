@@ -149,3 +149,35 @@ get_time :: proc() -> f64 {
 main :: proc() {
 	assert(sdl2.Init(sdl2.INIT_VIDEO) == 0, sdl2.GetErrorString())
 	defer sdl2.Quit()
+
+	window := sdl2.CreateWindow(
+		"Odin Game",
+		sdl2.WINDOWPOS_CENTERED,
+		sdl2.WINDOWPOS_CENTERED,
+		640,
+		480,
+		sdl2.WINDOW_SHOWN,
+	)
+	assert(window != nil, sdl2.GetErrorString())
+	defer sdl2.DestroyWindow(window)
+
+	// Must not do VSync because we run the tick loop on the same thread as rendering.
+	renderer := sdl2.CreateRenderer(window, -1, sdl2.RENDERER_ACCELERATED)
+	assert(renderer != nil, sdl2.GetErrorString())
+	defer sdl2.DestroyRenderer(renderer)
+
+	tickrate := 240.0
+	ticktime := 1000.0 / tickrate
+
+	game := Game {
+		renderer = renderer,
+		time     = get_time(),
+		dt       = ticktime,
+		entities = make([dynamic]Entity),
+	}
+	defer delete(game.entities)
+
+	append(&game.entities, Entity{type = .PLAYER, pos = { 50.0, 400.0}, hp = 10})
+	append(&game.entities, Entity{type = .ENEMY , pos = { 50.0,  50.0}, hp =  1})
+	append(&game.entities, Entity{type = .ENEMY , pos = {100.0, 100.0}, hp =  1})
+	append(&game.entities, Entity{type = .ENEMY , pos = {200.0, 200.0}, hp =  1})
