@@ -32,3 +32,28 @@ EntityType :: enum {
 Entity :: struct {
 	type:           EntityType,
 	hp:             int,
+	pos:            [2]f32,
+	vel:            [2]f32,
+	reload_counter: f32,
+	bullet_decay:   f32,
+	dash_counter:   f32,
+}
+
+render_entity :: proc(entity: ^Entity, game: ^Game) {
+	switch entity.type {
+	case .PLAYER:
+		sdl2.SetRenderDrawColor(game.renderer, 255, 0, 255, 0)
+		sdl2.RenderDrawRectF(
+			game.renderer,
+			&sdl2.FRect{x = entity.pos.x, y = entity.pos.y, w = 10, h = 10},
+		)
+	case .ENEMY:
+		sdl2.SetRenderDrawColor(game.renderer, 0, 255, 255, 0)
+		sdl2.RenderDrawRectF(
+			game.renderer,
+			&sdl2.FRect{x = entity.pos.x, y = entity.pos.y, w = 10, h = 10},
+		)
+	case .PROJECTILE:
+		sdl2.SetRenderDrawColor(game.renderer, 0, 255, 255, 0)
+		sdl2.RenderDrawPointF(game.renderer, entity.pos.x, entity.pos.y)
+	}
