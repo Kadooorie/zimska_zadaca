@@ -181,3 +181,28 @@ main :: proc() {
 	append(&game.entities, Entity{type = .ENEMY , pos = { 50.0,  50.0}, hp =  1})
 	append(&game.entities, Entity{type = .ENEMY , pos = {100.0, 100.0}, hp =  1})
 	append(&game.entities, Entity{type = .ENEMY , pos = {200.0, 200.0}, hp =  1})
+
+	dt := 0.0
+
+	for {
+		event: sdl2.Event
+		for sdl2.PollEvent(&event) {
+			#partial switch event.type {
+			case .QUIT:
+				return
+			case .KEYDOWN:
+				if event.key.keysym.scancode == sdl2.SCANCODE_ESCAPE {
+					return
+				}
+			}
+		}
+
+		time := get_time()
+		dt += time - game.time
+
+		game.keyboard = sdl2.GetKeyboardStateAsSlice()
+		game.time = time
+
+		// Running on the same thread as rendering so in the end still limited by the rendering FPS.
+		for dt >= ticktime {
+			dt -= ticktime
