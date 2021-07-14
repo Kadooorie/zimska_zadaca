@@ -206,3 +206,25 @@ main :: proc() {
 		// Running on the same thread as rendering so in the end still limited by the rendering FPS.
 		for dt >= ticktime {
 			dt -= ticktime
+
+			for _, i in game.entities {
+				update_entity(&game.entities[i], &game)
+			}
+
+			for i := 0; i < len(game.entities); {
+				if game.entities[i].hp <= 0 {
+					ordered_remove(&game.entities, i)
+				} else {
+					i += 1
+				}
+			}
+		}
+
+		sdl2.SetRenderDrawColor(renderer, 0, 0, 0, 0)
+		sdl2.RenderClear(renderer)
+		for _, i in game.entities {
+			render_entity(&game.entities[i], &game)
+		}
+		sdl2.RenderPresent(renderer)
+	}
+}
