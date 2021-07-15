@@ -6,4 +6,4 @@ import D3D "vendor:directx/d3d_compiler"
 import SDL "vendor:sdl2"
 import glm "core:math/linalg/glsl"
 
-// B
+// Based off https://gist.github.c
