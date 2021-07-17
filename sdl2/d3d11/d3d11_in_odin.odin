@@ -12,4 +12,5 @@ main :: proc() {
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
 
-	SDL.SetHintWithPriority(SDL.HINT_RENDER_DRI
+	SDL.SetHintWithPriority(SDL.HINT_RENDER_DRIVER, "direct3d11", .OVERRIDE)
+	window
