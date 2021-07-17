@@ -12,4 +12,4 @@ main :: proc() {
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
 
-	SDL.SetHintWith
+	SDL.SetHintWithPriority(SDL.HINT_RENDER_DRI
