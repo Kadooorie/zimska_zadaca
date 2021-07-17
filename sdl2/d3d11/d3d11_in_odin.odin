@@ -10,3 +10,6 @@ import glm "core:math/linalg/glsl"
 
 main :: proc() {
 	SDL.Init({.VIDEO})
+	defer SDL.Quit()
+
+	SDL.SetHintWith
