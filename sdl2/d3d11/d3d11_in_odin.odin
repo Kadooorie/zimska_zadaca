@@ -13,4 +13,4 @@ main :: proc() {
 	defer SDL.Quit()
 
 	SDL.SetHintWithPriority(SDL.HINT_RENDER_DRIVER, "direct3d11", .OVERRIDE)
-	window
+	window := SDL.CreateWindow("D3D11 in Odin",
