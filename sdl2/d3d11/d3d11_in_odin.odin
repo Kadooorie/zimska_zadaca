@@ -16,3 +16,5 @@ main :: proc() {
 	window := SDL.CreateWindow("D3D11 in Odin",
 		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
 		854, 480,
+		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
+	
