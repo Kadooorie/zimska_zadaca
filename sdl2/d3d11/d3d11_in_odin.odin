@@ -20,4 +20,5 @@ main :: proc() {
 	)
 	defer SDL.DestroyWindow(window)
 
-	wind
+	window_system_info: SDL.SysWMinfo
+	SDL.Ge
