@@ -17,4 +17,7 @@ main :: proc() {
 		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CENTERED,
 		854, 480,
 		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE},
-	
+	)
+	defer SDL.DestroyWindow(window)
+
+	wind
