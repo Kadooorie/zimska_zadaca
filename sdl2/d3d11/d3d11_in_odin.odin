@@ -32,4 +32,4 @@ main :: proc() {
 	base_device: ^D3D11.IDevice
 	base_device_context: ^D3D11.IDeviceContext
 
-	D3D11.CreateDevice(nil, .HARDWARE, 
+	D3D11.CreateDevice(nil, .HARDWARE, nil, {.BGRA_SUPPORT}, &feat
