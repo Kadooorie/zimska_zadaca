@@ -29,4 +29,5 @@ main :: proc() {
 
 	feature_levels := [?]D3D11.FEATURE_LEVEL{._11_0}
 
-	base_device: ^D3
+	base_device: ^D3D11.IDevice
+	base_device_context
