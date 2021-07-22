@@ -27,4 +27,4 @@ main :: proc() {
 
 	native_window := DXGI.HWND(window_system_info.info.win.window)
 
-	fea
+	feature_levels := [?]D3D11.FEATURE_LEVEL
