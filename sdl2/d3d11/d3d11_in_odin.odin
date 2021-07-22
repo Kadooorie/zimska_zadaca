@@ -25,4 +25,4 @@ main :: proc() {
 	SDL.GetWindowWMInfo(window, &window_system_info)
 	assert(window_system_info.subsystem == .WINDOWS)
 
-	native_window 
+	native_window := DXGI.HWND(window_system
