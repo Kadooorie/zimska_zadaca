@@ -37,4 +37,5 @@ main :: proc() {
 	device: ^D3D11.IDevice
 	base_device->QueryInterface(D3D11.IDevice_UUID, (^rawptr)(&device))
 
-	device_context: ^
+	device_context: ^D3D11.IDeviceContext
+	base_device_co
