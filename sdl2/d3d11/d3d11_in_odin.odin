@@ -34,4 +34,5 @@ main :: proc() {
 
 	D3D11.CreateDevice(nil, .HARDWARE, nil, {.BGRA_SUPPORT}, &feature_levels[0], len(feature_levels), D3D11.SDK_VERSION, &base_device, nil, &base_device_context)
 
-	device: ^D3D11.IDevic
+	device: ^D3D11.IDevice
+	base_device->QueryInterface(D
