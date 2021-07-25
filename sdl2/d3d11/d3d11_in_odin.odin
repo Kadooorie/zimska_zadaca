@@ -41,4 +41,6 @@ main :: proc() {
 	base_device_context->QueryInterface(D3D11.IDeviceContext_UUID, (^rawptr)(&device_context))
 
 	dxgi_device: ^DXGI.IDevice
-	device->QueryInterface(DXGI.IDevice_UUID, (^raw
+	device->QueryInterface(DXGI.IDevice_UUID, (^rawptr)(&dxgi_device))
+
+	dxgi_ad
