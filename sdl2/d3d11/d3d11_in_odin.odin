@@ -43,4 +43,4 @@ main :: proc() {
 	dxgi_device: ^DXGI.IDevice
 	device->QueryInterface(DXGI.IDevice_UUID, (^rawptr)(&dxgi_device))
 
-	dxgi_ad
+	dxgi_adapter: ^DXGI.IAdapter
