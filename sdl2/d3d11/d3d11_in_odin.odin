@@ -47,4 +47,4 @@ main :: proc() {
 	dxgi_device->GetAdapter(&dxgi_adapter)
 
 	dxgi_factory: ^DXGI.IFactory2
-	dxgi_adapter->GetParent
+	dxgi_adapter->GetParent(DXGI.IFactory2_UUID, (^rawptr)(&
