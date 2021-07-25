@@ -46,4 +46,5 @@ main :: proc() {
 	dxgi_adapter: ^DXGI.IAdapter
 	dxgi_device->GetAdapter(&dxgi_adapter)
 
-	dxgi_factory: ^DXGI.
+	dxgi_factory: ^DXGI.IFactory2
+	dxgi_adapter->GetParent
