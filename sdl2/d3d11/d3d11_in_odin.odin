@@ -49,4 +49,4 @@ main :: proc() {
 	dxgi_factory: ^DXGI.IFactory2
 	dxgi_adapter->GetParent(DXGI.IFactory2_UUID, (^rawptr)(&dxgi_factory))
 
-	///////////////////
+	/////////////////////////////////////////////////////////
