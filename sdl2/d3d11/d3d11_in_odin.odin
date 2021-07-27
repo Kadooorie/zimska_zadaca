@@ -54,4 +54,5 @@ main :: proc() {
 	swapchain_desc := DXGI.SWAP_CHAIN_DESC1{
 		Width  = 0,
 		Height = 0,
-		Format = .B8G8R8A8_
+		Format = .B8G8R8A8_UNORM_SRGB,
+		Stereo = fal
