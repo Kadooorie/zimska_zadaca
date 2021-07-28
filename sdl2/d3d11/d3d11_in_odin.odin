@@ -55,4 +55,7 @@ main :: proc() {
 		Width  = 0,
 		Height = 0,
 		Format = .B8G8R8A8_UNORM_SRGB,
-		Stereo = fal
+		Stereo = false,
+		SampleDesc = {
+			Count   = 1,
+		
