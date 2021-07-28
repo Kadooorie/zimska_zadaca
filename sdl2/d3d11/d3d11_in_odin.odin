@@ -58,4 +58,6 @@ main :: proc() {
 		Stereo = false,
 		SampleDesc = {
 			Count   = 1,
-		
+			Quality = 0,
+		},
+		BufferUsage 
