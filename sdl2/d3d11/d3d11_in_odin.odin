@@ -60,4 +60,5 @@ main :: proc() {
 			Count   = 1,
 			Quality = 0,
 		},
-		BufferUsage 
+		BufferUsage = {.RENDER_TARGET_OUTPUT},
+		BufferCount
