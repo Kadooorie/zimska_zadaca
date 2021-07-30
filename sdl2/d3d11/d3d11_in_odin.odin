@@ -67,3 +67,5 @@ main :: proc() {
 		AlphaMode   = .UNSPECIFIED,
 		Flags       = 0,
 	}
+
+	swapchain: ^DXGI.ISwa
