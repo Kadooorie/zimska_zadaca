@@ -61,4 +61,5 @@ main :: proc() {
 			Quality = 0,
 		},
 		BufferUsage = {.RENDER_TARGET_OUTPUT},
-		BufferCount
+		BufferCount = 2,
+		Scaling     = .STRETCH
