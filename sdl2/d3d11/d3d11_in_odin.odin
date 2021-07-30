@@ -62,4 +62,6 @@ main :: proc() {
 		},
 		BufferUsage = {.RENDER_TARGET_OUTPUT},
 		BufferCount = 2,
-		Scaling     = .STRETCH
+		Scaling     = .STRETCH,
+		SwapEffect  = .DISCARD,
+		A
