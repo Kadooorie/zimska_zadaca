@@ -64,4 +64,4 @@ main :: proc() {
 		BufferCount = 2,
 		Scaling     = .STRETCH,
 		SwapEffect  = .DISCARD,
-		A
+		AlphaMode   = .UNSPECIFIE
