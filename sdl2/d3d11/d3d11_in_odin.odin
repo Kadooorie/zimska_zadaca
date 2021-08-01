@@ -68,4 +68,5 @@ main :: proc() {
 		Flags       = 0,
 	}
 
-	swapchain: ^DXGI.ISwa
+	swapchain: ^DXGI.ISwapChain1
+	dxgi_factory-
