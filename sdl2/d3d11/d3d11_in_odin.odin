@@ -69,4 +69,4 @@ main :: proc() {
 	}
 
 	swapchain: ^DXGI.ISwapChain1
-	dxgi_factory->CreateSwapChainForHwnd(device, nati
+	dxgi_factory->CreateSwapChainForHwnd(device, native_window, &swapchain
