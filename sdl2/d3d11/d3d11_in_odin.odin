@@ -69,4 +69,6 @@ main :: proc() {
 	}
 
 	swapchain: ^DXGI.ISwapChain1
-	dxgi_factory->CreateSwapChainForHwnd(device, native_window, &swapchain_desc, nil, nil, &swapcha
+	dxgi_factory->CreateSwapChainForHwnd(device, native_window, &swapchain_desc, nil, nil, &swapchain)
+
+	framebuffer: ^D3D11.ITex
