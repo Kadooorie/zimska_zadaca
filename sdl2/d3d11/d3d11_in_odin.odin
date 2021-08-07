@@ -72,4 +72,4 @@ main :: proc() {
 	dxgi_factory->CreateSwapChainForHwnd(device, native_window, &swapchain_desc, nil, nil, &swapchain)
 
 	framebuffer: ^D3D11.ITexture2D
-	swapchain->GetBuffer(0
+	swapchain->GetBuffer(0, D3D11.ITexture2D_UUID, (^raw
