@@ -77,4 +77,5 @@ main :: proc() {
 	framebuffer_view: ^D3D11.IRenderTargetView
 	device->CreateRenderTargetView(framebuffer, nil, &framebuffer_view)
 
-	depth_buffer_desc: D3D11
+	depth_buffer_desc: D3D11.TEXTURE2D_DESC
+	frameb
