@@ -75,3 +75,4 @@ main :: proc() {
 	swapchain->GetBuffer(0, D3D11.ITexture2D_UUID, (^rawptr)(&framebuffer))
 
 	framebuffer_view: ^D3D11.IRenderTargetView
+	device->CreateRenderTargetView(fr
