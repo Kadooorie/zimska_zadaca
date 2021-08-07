@@ -78,4 +78,5 @@ main :: proc() {
 	device->CreateRenderTargetView(framebuffer, nil, &framebuffer_view)
 
 	depth_buffer_desc: D3D11.TEXTURE2D_DESC
-	framebuffer->GetDesc(&depth_b
+	framebuffer->GetDesc(&depth_buffer_desc)
+	depth_buffer_desc.Forma
