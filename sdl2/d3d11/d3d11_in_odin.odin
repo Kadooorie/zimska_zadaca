@@ -82,4 +82,5 @@ main :: proc() {
 	depth_buffer_desc.Format = .D24_UNORM_S8_UINT
 	depth_buffer_desc.BindFlags = {.DEPTH_STENCIL}
 
-	depth_buffer: ^D3D1
+	depth_buffer: ^D3D11.ITexture2D
+	device->CreateTextur
