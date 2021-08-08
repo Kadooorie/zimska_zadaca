@@ -80,4 +80,6 @@ main :: proc() {
 	depth_buffer_desc: D3D11.TEXTURE2D_DESC
 	framebuffer->GetDesc(&depth_buffer_desc)
 	depth_buffer_desc.Format = .D24_UNORM_S8_UINT
-	depth_buffer_desc.BindFlags = {.D
+	depth_buffer_desc.BindFlags = {.DEPTH_STENCIL}
+
+	depth_buffer: ^D3D1
