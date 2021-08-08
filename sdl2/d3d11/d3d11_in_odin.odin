@@ -86,4 +86,6 @@ main :: proc() {
 	device->CreateTexture2D(&depth_buffer_desc, nil, &depth_buffer)
 
 	depth_buffer_view: ^D3D11.IDepthStencilView
-	device->CreateDepthStencilView(
+	device->CreateDepthStencilView(depth_buffer, nil, &depth_buffer_view)
+
+	//
