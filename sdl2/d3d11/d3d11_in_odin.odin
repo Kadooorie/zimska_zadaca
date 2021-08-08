@@ -83,4 +83,6 @@ main :: proc() {
 	depth_buffer_desc.BindFlags = {.DEPTH_STENCIL}
 
 	depth_buffer: ^D3D11.ITexture2D
-	device->CreateTexture2D(&depth_buffer_desc, nil, 
+	device->CreateTexture2D(&depth_buffer_desc, nil, &depth_buffer)
+
+	depth_buffer_view: 
