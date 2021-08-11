@@ -91,4 +91,4 @@ main :: proc() {
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
 	vs_blob: ^D3D11.IBlob
-	D3D.Compile(raw_data(shaders_hlsl), len(shader
+	D3D.Compile(raw_data(shaders_hlsl), len(shaders_hlsl), "shaders.hlsl", n
