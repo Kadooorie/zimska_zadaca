@@ -95,4 +95,4 @@ main :: proc() {
 	assert(vs_blob != nil)
 
 	vertex_shader: ^D3D11.IVertexShader
-	device->CreateVertexShader(vs_blob->GetBuff
+	device->CreateVertexShader(vs_blob->GetBufferPointer(), vs_blob->GetBu
