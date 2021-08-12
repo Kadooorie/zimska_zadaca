@@ -94,4 +94,4 @@ main :: proc() {
 	D3D.Compile(raw_data(shaders_hlsl), len(shaders_hlsl), "shaders.hlsl", nil, nil, "vs_main", "vs_5_0", 0, 0, &vs_blob, nil)
 	assert(vs_blob != nil)
 
-	vertex
+	vertex_shader: ^D3D11.IVer
