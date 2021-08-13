@@ -105,4 +105,4 @@ main :: proc() {
 	}
 
 	input_layout: ^D3D11.IInputLayout
-	devi
+	device->CreateInputLayout(&input_element_
