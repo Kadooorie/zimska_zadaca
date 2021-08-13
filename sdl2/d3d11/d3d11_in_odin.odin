@@ -96,3 +96,5 @@ main :: proc() {
 
 	vertex_shader: ^D3D11.IVertexShader
 	device->CreateVertexShader(vs_blob->GetBufferPointer(), vs_blob->GetBufferSize(), nil, &vertex_shader)
+
+	input_element_desc := [?]D3D
