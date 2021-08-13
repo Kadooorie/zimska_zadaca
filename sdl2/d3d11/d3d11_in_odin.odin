@@ -104,4 +104,5 @@ main :: proc() {
 		{ "COL", 0, .R32G32B32_FLOAT, 0, D3D11.APPEND_ALIGNED_ELEMENT, .VERTEX_DATA, 0 },
 	}
 
-	input_layou
+	input_layout: ^D3D11.IInputLayout
+	devi
