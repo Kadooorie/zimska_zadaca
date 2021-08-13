@@ -98,4 +98,4 @@ main :: proc() {
 	device->CreateVertexShader(vs_blob->GetBufferPointer(), vs_blob->GetBufferSize(), nil, &vertex_shader)
 
 	input_element_desc := [?]D3D11.INPUT_ELEMENT_DESC{
-		{ "POS", 0, .R
+		{ "POS", 0, .R32G32B32_FLOAT, 0,        
