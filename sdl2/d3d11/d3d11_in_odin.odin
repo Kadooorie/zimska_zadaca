@@ -105,4 +105,4 @@ main :: proc() {
 	}
 
 	input_layout: ^D3D11.IInputLayout
-	device->CreateInputLayout(&input_element_
+	device->CreateInputLayout(&input_element_desc[0], len(input_element_de
