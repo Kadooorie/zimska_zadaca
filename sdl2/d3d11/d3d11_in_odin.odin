@@ -105,4 +105,6 @@ main :: proc() {
 	}
 
 	input_layout: ^D3D11.IInputLayout
-	device->CreateInputLayout(&input_element_desc[0], len(input_element_desc), vs_blob->GetBufferPointer(), vs_blob->GetBufferSize(), &inpu
+	device->CreateInputLayout(&input_element_desc[0], len(input_element_desc), vs_blob->GetBufferPointer(), vs_blob->GetBufferSize(), &input_layout)
+
+	ps_blob: ^D3D11.IBlob
