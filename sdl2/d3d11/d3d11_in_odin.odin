@@ -108,4 +108,4 @@ main :: proc() {
 	device->CreateInputLayout(&input_element_desc[0], len(input_element_desc), vs_blob->GetBufferPointer(), vs_blob->GetBufferSize(), &input_layout)
 
 	ps_blob: ^D3D11.IBlob
-	D3D.Compile(raw_data(shaders_h
+	D3D.Compile(raw_data(shaders_hlsl), len(shaders_hlsl), "shade
