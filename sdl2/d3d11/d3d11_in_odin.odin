@@ -110,4 +110,5 @@ main :: proc() {
 	ps_blob: ^D3D11.IBlob
 	D3D.Compile(raw_data(shaders_hlsl), len(shaders_hlsl), "shaders.hlsl", nil, nil, "ps_main", "ps_5_0", 0, 0, &ps_blob, nil)
 
-	pixe
+	pixel_shader: ^D3D11.IPixelShader
+	
