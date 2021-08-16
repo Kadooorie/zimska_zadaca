@@ -113,4 +113,4 @@ main :: proc() {
 	pixel_shader: ^D3D11.IPixelShader
 	device->CreatePixelShader(ps_blob->GetBufferPointer(), ps_blob->GetBufferSize(), nil, &pixel_shader)
 
-	//////////////
+	//////////////////////////////////////////////////////
