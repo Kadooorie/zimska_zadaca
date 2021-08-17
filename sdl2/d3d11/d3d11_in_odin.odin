@@ -117,4 +117,6 @@ main :: proc() {
 
 	rasterizer_desc := D3D11.RASTERIZER_DESC{
 		FillMode = .SOLID,
-		CullMode = .
+		CullMode = .BACK,
+	}
+	rasterizer_state: ^D3D11
