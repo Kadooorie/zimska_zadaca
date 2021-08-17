@@ -124,4 +124,5 @@ main :: proc() {
 
 	sampler_desc := D3D11.SAMPLER_DESC{
 		Filter         = .MIN_MAG_MIP_POINT,
-		AddressU       = 
+		AddressU       = .WRAP,
+		AddressV       = .WR
