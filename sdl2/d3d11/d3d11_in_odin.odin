@@ -123,4 +123,5 @@ main :: proc() {
 	device->CreateRasterizerState(&rasterizer_desc, &rasterizer_state)
 
 	sampler_desc := D3D11.SAMPLER_DESC{
-		Filter         = .MIN
+		Filter         = .MIN_MAG_MIP_POINT,
+		AddressU       = 
