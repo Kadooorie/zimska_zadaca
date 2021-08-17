@@ -120,4 +120,6 @@ main :: proc() {
 		CullMode = .BACK,
 	}
 	rasterizer_state: ^D3D11.IRasterizerState
-	device->CreateRasterizerState(&rasteri
+	device->CreateRasterizerState(&rasterizer_desc, &rasterizer_state)
+
+	s
