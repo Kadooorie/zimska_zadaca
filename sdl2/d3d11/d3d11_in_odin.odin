@@ -119,4 +119,5 @@ main :: proc() {
 		FillMode = .SOLID,
 		CullMode = .BACK,
 	}
-	rasterizer_state: ^D3D11
+	rasterizer_state: ^D3D11.IRasterizerState
+	device->Creat
