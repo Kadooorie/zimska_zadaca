@@ -122,4 +122,4 @@ main :: proc() {
 	rasterizer_state: ^D3D11.IRasterizerState
 	device->CreateRasterizerState(&rasterizer_desc, &rasterizer_state)
 
-	s
+	sampler_desc := D3D11.SAMPLER
