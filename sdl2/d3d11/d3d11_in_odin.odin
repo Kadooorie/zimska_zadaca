@@ -129,4 +129,5 @@ main :: proc() {
 		AddressW       = .WRAP,
 		ComparisonFunc = .NEVER,
 	}
-	sampler_
+	sampler_state: ^D3D11.ISamplerState
+	device->Cre
