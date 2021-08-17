@@ -127,4 +127,6 @@ main :: proc() {
 		AddressU       = .WRAP,
 		AddressV       = .WRAP,
 		AddressW       = .WRAP,
-		Compariso
+		ComparisonFunc = .NEVER,
+	}
+	sampler_
