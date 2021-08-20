@@ -138,4 +138,5 @@ main :: proc() {
 		DepthWriteMask = .ALL,
 		DepthFunc      = .LESS,
 	}
-	depth_stencil_state: ^D3D11.IDepthStenci
+	depth_stencil_state: ^D3D11.IDepthStencilState
+	device->CreateDept
