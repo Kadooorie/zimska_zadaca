@@ -141,4 +141,4 @@ main :: proc() {
 	depth_stencil_state: ^D3D11.IDepthStencilState
 	device->CreateDepthStencilState(&depth_stencil_desc, &depth_stencil_state)
 
-	//////////////////////
+	/////////////////////////////////////////////////////
