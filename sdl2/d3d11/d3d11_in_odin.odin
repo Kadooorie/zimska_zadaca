@@ -145,4 +145,5 @@ main :: proc() {
 
 	Constants :: struct #align 16 {
 		transform:    glm.mat4,
-		projectio
+		projection:   glm.mat4,
+		light_vector: glm.vec
