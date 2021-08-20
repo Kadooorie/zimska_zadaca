@@ -136,4 +136,6 @@ main :: proc() {
 	depth_stencil_desc := D3D11.DEPTH_STENCIL_DESC{
 		DepthEnable    = true,
 		DepthWriteMask = .ALL,
-		DepthFunc
+		DepthFunc      = .LESS,
+	}
+	depth_sten
