@@ -130,4 +130,4 @@ main :: proc() {
 		ComparisonFunc = .NEVER,
 	}
 	sampler_state: ^D3D11.ISamplerState
-	device->CreateSamplerState(&sa
+	device->CreateSamplerState(&sampler_desc, &sampler_state)
