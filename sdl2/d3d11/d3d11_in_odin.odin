@@ -133,4 +133,5 @@ main :: proc() {
 	device->CreateSamplerState(&sampler_desc, &sampler_state)
 
 
-	depth_stencil_desc 
+	depth_stencil_desc := D3D11.DEPTH_STENCIL_DESC{
+		De
