@@ -138,4 +138,4 @@ main :: proc() {
 		DepthWriteMask = .ALL,
 		DepthFunc      = .LESS,
 	}
-	depth_sten
+	depth_stencil_state: ^D3D11.IDepthStenci
