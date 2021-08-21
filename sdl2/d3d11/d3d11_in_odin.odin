@@ -153,4 +153,6 @@ main :: proc() {
 		ByteWidth      = size_of(Constants),
 		Usage          = .DYNAMIC,
 		BindFlags      = {.CONSTANT_BUFFER},
-		CPU
+		CPUAccessFlags = {.WRITE},
+	}
+	const
