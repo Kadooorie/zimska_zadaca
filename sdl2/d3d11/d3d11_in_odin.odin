@@ -156,4 +156,6 @@ main :: proc() {
 		CPUAccessFlags = {.WRITE},
 	}
 	constant_buffer: ^D3D11.IBuffer
-	device->CreateBuffer(&constant_buffer_desc, nil, &const
+	device->CreateBuffer(&constant_buffer_desc, nil, &constant_buffer)
+
+	vertex_buffe
