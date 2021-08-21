@@ -149,4 +149,5 @@ main :: proc() {
 		light_vector: glm.vec3,
 	}
 
-	constant_buffer_desc := D3D11.BUFFE
+	constant_buffer_desc := D3D11.BUFFER_DESC{
+		ByteWidth     
