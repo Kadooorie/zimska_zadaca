@@ -158,4 +158,4 @@ main :: proc() {
 	constant_buffer: ^D3D11.IBuffer
 	device->CreateBuffer(&constant_buffer_desc, nil, &constant_buffer)
 
-	vertex_buffe
+	vertex_buffer_desc := D3D11.BUFFER_DESC
