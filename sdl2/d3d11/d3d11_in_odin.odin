@@ -155,4 +155,5 @@ main :: proc() {
 		BindFlags      = {.CONSTANT_BUFFER},
 		CPUAccessFlags = {.WRITE},
 	}
-	const
+	constant_buffer: ^D3D11.IBuffer
+	d
