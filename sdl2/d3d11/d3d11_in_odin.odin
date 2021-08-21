@@ -156,4 +156,4 @@ main :: proc() {
 		CPUAccessFlags = {.WRITE},
 	}
 	constant_buffer: ^D3D11.IBuffer
-	d
+	device->CreateBuffer(&cons
