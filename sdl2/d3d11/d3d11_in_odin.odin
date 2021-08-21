@@ -152,4 +152,5 @@ main :: proc() {
 	constant_buffer_desc := D3D11.BUFFER_DESC{
 		ByteWidth      = size_of(Constants),
 		Usage          = .DYNAMIC,
-		BindFla
+		BindFlags      = {.CONSTANT_BUFFER},
+		CPU
