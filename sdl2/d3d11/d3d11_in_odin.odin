@@ -163,4 +163,5 @@ main :: proc() {
 		Usage     = .IMMUTABLE,
 		BindFlags = {.VERTEX_BUFFER},
 	}
-	vertex_buffer:
+	vertex_buffer: ^D3D11.IBuffer
+	device->CreateBuffer
