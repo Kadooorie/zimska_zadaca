@@ -150,4 +150,4 @@ main :: proc() {
 	}
 
 	constant_buffer_desc := D3D11.BUFFER_DESC{
-		ByteWidth     
+		ByteWidth      = size_of(Constants),
