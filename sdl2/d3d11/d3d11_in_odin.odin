@@ -161,4 +161,6 @@ main :: proc() {
 	vertex_buffer_desc := D3D11.BUFFER_DESC{
 		ByteWidth = size_of(vertex_data),
 		Usage     = .IMMUTABLE,
-		BindFlags = {
+		BindFlags = {.VERTEX_BUFFER},
+	}
+	vertex_buffer:
