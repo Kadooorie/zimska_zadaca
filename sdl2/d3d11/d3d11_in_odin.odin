@@ -146,4 +146,7 @@ main :: proc() {
 	Constants :: struct #align 16 {
 		transform:    glm.mat4,
 		projection:   glm.mat4,
-		light_vector: glm.vec
+		light_vector: glm.vec3,
+	}
+
+	constant_buffer_desc := D3D11.BUFFE
