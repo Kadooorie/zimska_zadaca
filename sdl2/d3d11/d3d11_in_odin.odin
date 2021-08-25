@@ -164,4 +164,4 @@ main :: proc() {
 		BindFlags = {.VERTEX_BUFFER},
 	}
 	vertex_buffer: ^D3D11.IBuffer
-	device->CreateBuffer(&vertex_buffer_desc, &D3D11.S
+	device->CreateBuffer(&vertex_buffer_desc, &D3D11.SUBRESOURCE_DATA{pSysMem = &vertex_data
