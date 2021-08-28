@@ -171,4 +171,5 @@ main :: proc() {
 		Usage     = .IMMUTABLE,
 		BindFlags = {.INDEX_BUFFER},
 	}
-	index_buffer: ^D3D11.IBuf
+	index_buffer: ^D3D11.IBuffer
+	device->CreateBuffe
