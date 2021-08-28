@@ -172,4 +172,4 @@ main :: proc() {
 		BindFlags = {.INDEX_BUFFER},
 	}
 	index_buffer: ^D3D11.IBuffer
-	device->CreateBuffe
+	device->CreateBuffer(&index_buffer_desc, 
