@@ -167,4 +167,5 @@ main :: proc() {
 	device->CreateBuffer(&vertex_buffer_desc, &D3D11.SUBRESOURCE_DATA{pSysMem = &vertex_data[0], SysMemPitch = size_of(vertex_data)}, &vertex_buffer)
 
 	index_buffer_desc := D3D11.BUFFER_DESC{
-		ByteWidth = 
+		ByteWidth = size_of(index_data),
+		Usage     =
