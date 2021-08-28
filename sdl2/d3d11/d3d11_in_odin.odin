@@ -169,4 +169,6 @@ main :: proc() {
 	index_buffer_desc := D3D11.BUFFER_DESC{
 		ByteWidth = size_of(index_data),
 		Usage     = .IMMUTABLE,
-		BindFlags = {.IND
+		BindFlags = {.INDEX_BUFFER},
+	}
+	index_buffer: ^D3D11.IBuf
