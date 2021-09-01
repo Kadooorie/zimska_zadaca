@@ -172,4 +172,4 @@ main :: proc() {
 		BindFlags = {.INDEX_BUFFER},
 	}
 	index_buffer: ^D3D11.IBuffer
-	device->CreateBuffer(&index_buffer_desc, &D3D11.SUBRESOURCE_DATA{pSysMem = &index_data[0], SysMemPitch = size_of(index_
+	device->CreateBuffer(&index_buffer_desc, &D3D11.SUBRESOURCE_DATA{pSysMem = &index_data[0], SysMemPitch = size_of(index_data)}, &index_buffer)
