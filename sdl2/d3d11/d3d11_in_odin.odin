@@ -178,4 +178,5 @@ main :: proc() {
 
 	texture_desc := D3D11.TEXTURE2D_DESC{
 		Width      = TEXTURE_WIDTH,
-		Hei
+		Height     = TEXTURE_HEIGHT,
+		
