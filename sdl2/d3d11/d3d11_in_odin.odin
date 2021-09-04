@@ -180,4 +180,5 @@ main :: proc() {
 		Width      = TEXTURE_WIDTH,
 		Height     = TEXTURE_HEIGHT,
 		MipLevels  = 1,
-		Array
+		ArraySize  = 1,
+		Format     = .R8G8B8A8
