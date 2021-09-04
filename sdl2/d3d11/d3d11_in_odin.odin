@@ -179,4 +179,5 @@ main :: proc() {
 	texture_desc := D3D11.TEXTURE2D_DESC{
 		Width      = TEXTURE_WIDTH,
 		Height     = TEXTURE_HEIGHT,
-		
+		MipLevels  = 1,
+		Array
