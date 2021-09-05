@@ -182,4 +182,5 @@ main :: proc() {
 		MipLevels  = 1,
 		ArraySize  = 1,
 		Format     = .R8G8B8A8_UNORM_SRGB,
-		SampleDesc = {Co
+		SampleDesc = {Count = 1},
+		Usage      = .IMMUTABL
