@@ -183,4 +183,5 @@ main :: proc() {
 		ArraySize  = 1,
 		Format     = .R8G8B8A8_UNORM_SRGB,
 		SampleDesc = {Count = 1},
-		Usage      = .IMMUTABL
+		Usage      = .IMMUTABLE,
+		BindFlags  = {.SH
