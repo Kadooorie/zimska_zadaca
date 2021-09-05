@@ -181,4 +181,5 @@ main :: proc() {
 		Height     = TEXTURE_HEIGHT,
 		MipLevels  = 1,
 		ArraySize  = 1,
-		Format     = .R8G8B8A8
+		Format     = .R8G8B8A8_UNORM_SRGB,
+		SampleDesc = {Co
