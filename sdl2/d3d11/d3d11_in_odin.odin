@@ -184,4 +184,7 @@ main :: proc() {
 		Format     = .R8G8B8A8_UNORM_SRGB,
 		SampleDesc = {Count = 1},
 		Usage      = .IMMUTABLE,
-		BindFlags  = {.SH
+		BindFlags  = {.SHADER_RESOURCE},
+	}
+
+	texture_da
