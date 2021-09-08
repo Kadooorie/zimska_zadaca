@@ -187,4 +187,5 @@ main :: proc() {
 		BindFlags  = {.SHADER_RESOURCE},
 	}
 
-	texture_da
+	texture_data := D3D11.SUBRESOURCE_DATA{
+		pS
