@@ -188,4 +188,4 @@ main :: proc() {
 	}
 
 	texture_data := D3D11.SUBRESOURCE_DATA{
-		pS
+		pSysMem     = &texture_data[0],
