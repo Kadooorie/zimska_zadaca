@@ -189,4 +189,8 @@ main :: proc() {
 
 	texture_data := D3D11.SUBRESOURCE_DATA{
 		pSysMem     = &texture_data[0],
-		SysMemPitch = TEXTURE_WIDTH *
+		SysMemPitch = TEXTURE_WIDTH * 4,
+	}
+
+	texture: ^D3D11.ITexture2D
+	
