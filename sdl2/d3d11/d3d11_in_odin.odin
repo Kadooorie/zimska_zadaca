@@ -189,3 +189,4 @@ main :: proc() {
 
 	texture_data := D3D11.SUBRESOURCE_DATA{
 		pSysMem     = &texture_data[0],
+		SysMemPitch = TEXTURE_WIDTH *
