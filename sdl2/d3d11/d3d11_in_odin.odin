@@ -195,4 +195,4 @@ main :: proc() {
 	texture: ^D3D11.ITexture2D
 	device->CreateTexture2D(&texture_desc, &texture_data, &texture)
 
-	text
+	texture_view: ^D3D11.IShaderResourceView
