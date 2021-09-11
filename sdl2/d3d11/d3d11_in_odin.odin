@@ -193,4 +193,6 @@ main :: proc() {
 	}
 
 	texture: ^D3D11.ITexture2D
-	device->CreateTexture2D(&texture_desc, &te
+	device->CreateTexture2D(&texture_desc, &texture_data, &texture)
+
+	text
