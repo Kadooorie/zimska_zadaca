@@ -196,3 +196,4 @@ main :: proc() {
 	device->CreateTexture2D(&texture_desc, &texture_data, &texture)
 
 	texture_view: ^D3D11.IShaderResourceView
+	device->CreateShaderResou
