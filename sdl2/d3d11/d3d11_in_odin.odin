@@ -201,4 +201,6 @@ main :: proc() {
 	///////////////////////////////////////////////////////////////////////////////////////////////
 
 	vertex_buffer_stride := u32(11 * 4)
-	vertex_buffer
+	vertex_buffer_offset := u32(0)
+
+	model_rotatio
