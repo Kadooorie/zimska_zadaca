@@ -203,4 +203,5 @@ main :: proc() {
 	vertex_buffer_stride := u32(11 * 4)
 	vertex_buffer_offset := u32(0)
 
-	model_rotation    := glm.vec3{0.0, 0.0, 0
+	model_rotation    := glm.vec3{0.0, 0.0, 0.0}
+	model_translation := glm.vec
