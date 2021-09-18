@@ -208,4 +208,5 @@ main :: proc() {
 
 	SDL.ShowWindow(window)
 	for quit := false; !quit; {
-		for e: SDL.Event; SDL.PollEvent(&e); 
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch e.typ
