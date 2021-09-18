@@ -212,3 +212,5 @@ main :: proc() {
 			#partial switch e.type {
 			case .QUIT:
 				quit = true
+			case .KEYDOWN:
+				if e.key.key
