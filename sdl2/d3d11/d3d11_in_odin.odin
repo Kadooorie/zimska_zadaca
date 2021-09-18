@@ -206,4 +206,6 @@ main :: proc() {
 	model_rotation    := glm.vec3{0.0, 0.0, 0.0}
 	model_translation := glm.vec3{0.0, 0.0, 4.0}
 
-	SDL.ShowWindow(window
+	SDL.ShowWindow(window)
+	for quit := false; !quit; {
+	
