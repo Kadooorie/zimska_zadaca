@@ -213,4 +213,6 @@ main :: proc() {
 			case .QUIT:
 				quit = true
 			case .KEYDOWN:
-				if e.key.key
+				if e.key.keysym.sym == .ESCAPE {
+					quit = true
+				}
