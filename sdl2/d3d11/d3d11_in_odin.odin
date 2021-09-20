@@ -221,4 +221,5 @@ main :: proc() {
 
 		viewport := D3D11.VIEWPORT{
 			0, 0,
-			f32(depth_buffer_desc.Width), f32(depth_bu
+			f32(depth_buffer_desc.Width), f32(depth_buffer_desc.Height),
+			0, 1,
