@@ -219,4 +219,6 @@ main :: proc() {
 			}
 		}
 
-		viewpor
+		viewport := D3D11.VIEWPORT{
+			0, 0,
+			f32(d
