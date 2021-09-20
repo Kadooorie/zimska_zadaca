@@ -216,3 +216,7 @@ main :: proc() {
 				if e.key.keysym.sym == .ESCAPE {
 					quit = true
 				}
+			}
+		}
+
+		viewpor
