@@ -231,3 +231,4 @@ main :: proc() {
 		f := f32(9)
 
 		rotate_x := glm.mat4Rotate({1, 0, 0}, model_rotation.x)
+		rotate_y := glm.mat4Rotat
