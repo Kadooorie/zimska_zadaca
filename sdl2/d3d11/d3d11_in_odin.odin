@@ -225,4 +225,6 @@ main :: proc() {
 			0, 1,
 		}
 
-		w := viewport.Width / view
+		w := viewport.Width / viewport.Height
+		h := f32(1)
+		n := f
