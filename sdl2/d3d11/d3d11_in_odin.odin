@@ -235,4 +235,4 @@ main :: proc() {
 		rotate_z := glm.mat4Rotate({0, 0, 1}, model_rotation.z)
 		translate := glm.mat4Translate(model_translation)
 
-	
+		model_rotation.x += 0
