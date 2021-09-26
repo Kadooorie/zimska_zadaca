@@ -237,4 +237,6 @@ main :: proc() {
 
 		model_rotation.x += 0.005
 		model_rotation.y += 0.009
-		model_rotation.z += 0.0
+		model_rotation.z += 0.001
+
+		mapped_subresource: D
