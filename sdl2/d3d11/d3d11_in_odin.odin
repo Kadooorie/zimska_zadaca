@@ -240,4 +240,4 @@ main :: proc() {
 		model_rotation.z += 0.001
 
 		mapped_subresource: D3D11.MAPPED_SUBRESOURCE
-		devic
+		device_context->Map(constant_bu
