@@ -242,4 +242,4 @@ main :: proc() {
 		mapped_subresource: D3D11.MAPPED_SUBRESOURCE
 		device_context->Map(constant_buffer, 0, .WRITE_DISCARD, {}, &mapped_subresource)
 		{
-			constants :
+			constants := (^Constants)(mapped_subresourc
