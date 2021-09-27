@@ -239,4 +239,5 @@ main :: proc() {
 		model_rotation.y += 0.009
 		model_rotation.z += 0.001
 
-		mapped_subresource: D
+		mapped_subresource: D3D11.MAPPED_SUBRESOURCE
+		devic
