@@ -240,4 +240,6 @@ main :: proc() {
 		model_rotation.z += 0.001
 
 		mapped_subresource: D3D11.MAPPED_SUBRESOURCE
-		device_context->Map(constant_buffer, 0, .WRITE_DISCARD, {}, &mapped_su
+		device_context->Map(constant_buffer, 0, .WRITE_DISCARD, {}, &mapped_subresource)
+		{
+			constants :
