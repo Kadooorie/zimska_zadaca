@@ -243,4 +243,4 @@ main :: proc() {
 		device_context->Map(constant_buffer, 0, .WRITE_DISCARD, {}, &mapped_subresource)
 		{
 			constants := (^Constants)(mapped_subresource.pData)
-			constants.tra
+			constants.transform = translate * rotate_z * r
