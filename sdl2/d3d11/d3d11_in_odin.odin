@@ -244,4 +244,4 @@ main :: proc() {
 		{
 			constants := (^Constants)(mapped_subresource.pData)
 			constants.transform = translate * rotate_z * rotate_y * rotate_x
-			con
+			constants.light_vector = {+1, -1, +1
