@@ -246,4 +246,5 @@ main :: proc() {
 			constants.transform = translate * rotate_z * rotate_y * rotate_x
 			constants.light_vector = {+1, -1, +1}
 
-			constants.proj
+			constants.projection = {
+				2 * n / w, 0, 
