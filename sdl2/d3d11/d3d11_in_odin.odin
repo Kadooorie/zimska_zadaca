@@ -249,4 +249,4 @@ main :: proc() {
 			constants.projection = {
 				2 * n / w, 0,         0,           0,
 				0,         2 * n / h, 0,           0,
-	
+				0,         0,         f / 
