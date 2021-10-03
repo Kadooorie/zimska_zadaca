@@ -247,4 +247,5 @@ main :: proc() {
 			constants.light_vector = {+1, -1, +1}
 
 			constants.projection = {
-				2 * n / w, 0, 
+				2 * n / w, 0,         0,           0,
+				0,     
