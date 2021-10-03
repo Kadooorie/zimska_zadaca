@@ -253,4 +253,4 @@ main :: proc() {
 				0,         0,         1,           0,
 			}
 		}
-		dev
+		device_context->Unmap(constant_buffer
