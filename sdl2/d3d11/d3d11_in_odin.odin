@@ -257,4 +257,5 @@ main :: proc() {
 
 		///////////////////////////////////////////////////////////////////////////////////////////////
 
-		device_context->ClearRenderTargetView(framebuffer_view, &[4]f32{0.2
+		device_context->ClearRenderTargetView(framebuffer_view, &[4]f32{0.25, 0.5, 1.0, 1.0})
+		device_context->Cl
