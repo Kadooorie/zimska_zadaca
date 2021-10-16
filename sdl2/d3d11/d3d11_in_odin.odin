@@ -261,4 +261,5 @@ main :: proc() {
 		device_context->ClearDepthStencilView(depth_buffer_view, {.DEPTH}, 1, 0)
 
 		device_context->IASetPrimitiveTopology(.TRIANGLELIST)
-		device_cont
+		device_context->IASetInputLayout(input_layout)
+		
