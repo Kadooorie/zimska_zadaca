@@ -262,4 +262,4 @@ main :: proc() {
 
 		device_context->IASetPrimitiveTopology(.TRIANGLELIST)
 		device_context->IASetInputLayout(input_layout)
-		
+		device_context->IASetVertexBuffe
