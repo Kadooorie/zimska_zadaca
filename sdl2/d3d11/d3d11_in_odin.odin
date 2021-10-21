@@ -265,4 +265,5 @@ main :: proc() {
 		device_context->IASetVertexBuffers(0, 1, &vertex_buffer, &vertex_buffer_stride, &vertex_buffer_offset)
 		device_context->IASetIndexBuffer(index_buffer, .R32_UINT, 0)
 
-		device_context->VSSetShader(vertex_shader, n
+		device_context->VSSetShader(vertex_shader, nil, 0)
+		device_context->VS
