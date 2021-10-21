@@ -262,4 +262,5 @@ main :: proc() {
 
 		device_context->IASetPrimitiveTopology(.TRIANGLELIST)
 		device_context->IASetInputLayout(input_layout)
-		device_context->IASetVertexBuffers(0, 1, &vertex_buffer, &vertex_buffer_stride, &vertex_
+		device_context->IASetVertexBuffers(0, 1, &vertex_buffer, &vertex_buffer_stride, &vertex_buffer_offset)
+		device_context->IA
