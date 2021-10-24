@@ -269,3 +269,4 @@ main :: proc() {
 		device_context->VSSetConstantBuffers(0, 1, &constant_buffer)
 
 		device_context->RSSetViewports(1, &viewport)
+		device_context->RS
