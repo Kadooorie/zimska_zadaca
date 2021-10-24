@@ -268,4 +268,4 @@ main :: proc() {
 		device_context->VSSetShader(vertex_shader, nil, 0)
 		device_context->VSSetConstantBuffers(0, 1, &constant_buffer)
 
-		device_co
+		device_context->RSSetViewports(1, &viewport)
