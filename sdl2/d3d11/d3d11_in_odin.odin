@@ -271,4 +271,5 @@ main :: proc() {
 		device_context->RSSetViewports(1, &viewport)
 		device_context->RSSetState(rasterizer_state)
 
-		device_context->PSSetShader(pix
+		device_context->PSSetShader(pixel_shader, nil, 0)
+		device_context
