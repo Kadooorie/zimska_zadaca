@@ -272,4 +272,5 @@ main :: proc() {
 		device_context->RSSetState(rasterizer_state)
 
 		device_context->PSSetShader(pixel_shader, nil, 0)
-		device_context->PSSetShaderResources(
+		device_context->PSSetShaderResources(0, 1, &texture_view)
+		device_
