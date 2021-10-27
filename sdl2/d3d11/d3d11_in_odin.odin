@@ -272,4 +272,4 @@ main :: proc() {
 		device_context->RSSetState(rasterizer_state)
 
 		device_context->PSSetShader(pixel_shader, nil, 0)
-		device_context
+		device_context->PSSetShaderResources(
