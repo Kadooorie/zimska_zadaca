@@ -275,4 +275,5 @@ main :: proc() {
 		device_context->PSSetShaderResources(0, 1, &texture_view)
 		device_context->PSSetSamplers(0, 1, &sampler_state)
 
-		device_context->OMSetRenderTargets(1, &framebuffer_view, dep
+		device_context->OMSetRenderTargets(1, &framebuffer_view, depth_buffer_view)
+		device_cont
