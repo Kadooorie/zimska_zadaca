@@ -273,4 +273,4 @@ main :: proc() {
 
 		device_context->PSSetShader(pixel_shader, nil, 0)
 		device_context->PSSetShaderResources(0, 1, &texture_view)
-		device_
+		device_context->PSSetSamplers(0, 1, &samp
