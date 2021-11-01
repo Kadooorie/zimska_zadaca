@@ -276,4 +276,5 @@ main :: proc() {
 		device_context->PSSetSamplers(0, 1, &sampler_state)
 
 		device_context->OMSetRenderTargets(1, &framebuffer_view, depth_buffer_view)
-		device_context->OMSetDepthStencilState(depth
+		device_context->OMSetDepthStencilState(depth_stencil_state, 0)
+		device
