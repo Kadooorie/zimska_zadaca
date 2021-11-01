@@ -277,4 +277,4 @@ main :: proc() {
 
 		device_context->OMSetRenderTargets(1, &framebuffer_view, depth_buffer_view)
 		device_context->OMSetDepthStencilState(depth_stencil_state, 0)
-		device
+		device_context->OMSetBlendState(nil,
