@@ -295,3 +295,5 @@ cbuffer constants : register(b0) {
 }
 struct vs_in {
 	float3 position : POS;
+	float3 normal   : NOR;
+	float2 
