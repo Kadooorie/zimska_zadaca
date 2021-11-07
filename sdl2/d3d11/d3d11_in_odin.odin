@@ -293,4 +293,5 @@ cbuffer constants : register(b0) {
 	float4x4 projection;
 	float3 light_vector;
 }
-struc
+struct vs_in {
+	float3 position : POS;
