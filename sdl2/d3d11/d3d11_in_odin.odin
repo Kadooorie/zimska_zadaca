@@ -283,4 +283,9 @@ main :: proc() {
 
 		device_context->DrawIndexed(len(index_data), 0, 0)
 
-		swapchain->Present(1
+		swapchain->Present(1, 0)
+	}
+}
+
+shaders_hlsl := `
+cbuffe
