@@ -283,3 +283,4 @@ main :: proc() {
 
 		device_context->DrawIndexed(len(index_data), 0, 0)
 
+		swapchain->Present(1
