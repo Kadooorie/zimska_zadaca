@@ -288,4 +288,5 @@ main :: proc() {
 }
 
 shaders_hlsl := `
-cbuffe
+cbuffer constants : register(b0) {
+	f
