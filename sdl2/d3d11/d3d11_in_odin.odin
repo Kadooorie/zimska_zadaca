@@ -289,4 +289,5 @@ main :: proc() {
 
 shaders_hlsl := `
 cbuffer constants : register(b0) {
-	f
+	float4x4 transform;
+	float4x4 projecti
