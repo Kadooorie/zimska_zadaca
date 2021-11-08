@@ -297,4 +297,7 @@ struct vs_in {
 	float3 position : POS;
 	float3 normal   : NOR;
 	float2 texcoord : TEX;
-	float3 color  
+	float3 color    : COL;
+};
+struct vs_out {
+	float4 posi
