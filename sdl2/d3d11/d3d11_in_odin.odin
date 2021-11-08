@@ -300,4 +300,5 @@ struct vs_in {
 	float3 color    : COL;
 };
 struct vs_out {
-	float4 posi
+	float4 position : SV_POSITION;
+	float2 texcoor
