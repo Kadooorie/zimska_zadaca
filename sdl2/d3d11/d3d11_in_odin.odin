@@ -306,4 +306,5 @@ struct vs_out {
 };
 Texture2D    mytexture : register(t0);
 SamplerState mysampler : register(s0);
-vs_out vs_ma
+vs_out vs_main(vs_in input) {
+	float light
