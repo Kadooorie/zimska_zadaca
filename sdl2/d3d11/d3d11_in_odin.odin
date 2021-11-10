@@ -301,4 +301,7 @@ struct vs_in {
 };
 struct vs_out {
 	float4 position : SV_POSITION;
-	float2 texcoor
+	float2 texcoord : TEX;
+	float4 color    : COL;
+};
+Te
