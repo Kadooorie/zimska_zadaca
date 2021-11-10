@@ -304,4 +304,4 @@ struct vs_out {
 	float2 texcoord : TEX;
 	float4 color    : COL;
 };
-Te
+Texture2D    mytexture : registe
