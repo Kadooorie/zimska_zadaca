@@ -307,4 +307,4 @@ struct vs_out {
 Texture2D    mytexture : register(t0);
 SamplerState mysampler : register(s0);
 vs_out vs_main(vs_in input) {
-	float light = clamp(dot(normalize(mul(transform, float4(input.normal, 0.0f)).x
+	float light = clamp(dot(normalize(mul(transform, float4(input.normal, 0.0f)).xyz), normalize(-light_vect
