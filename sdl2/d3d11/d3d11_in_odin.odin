@@ -311,4 +311,4 @@ vs_out vs_main(vs_in input) {
 	vs_out output;
 	output.position = mul(projection, mul(transform, float4(input.position, 1.0f)));
 	output.texcoord = input.texcoord;
-	outpu
+	output.color    = float4(input.co
