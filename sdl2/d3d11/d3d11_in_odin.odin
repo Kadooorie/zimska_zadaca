@@ -314,4 +314,5 @@ vs_out vs_main(vs_in input) {
 	output.color    = float4(input.color * light, 1.0f);
 	return output;
 }
-float4 ps_main(vs_out input) : SV
+float4 ps_main(vs_out input) : SV_TARGET {
+	return mytexture.Samp
