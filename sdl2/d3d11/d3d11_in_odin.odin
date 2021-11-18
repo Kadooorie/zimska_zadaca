@@ -312,4 +312,6 @@ vs_out vs_main(vs_in input) {
 	output.position = mul(projection, mul(transform, float4(input.position, 1.0f)));
 	output.texcoord = input.texcoord;
 	output.color    = float4(input.color * light, 1.0f);
-	retur
+	return output;
+}
+float4 ps_main(vs_out input) : SV
