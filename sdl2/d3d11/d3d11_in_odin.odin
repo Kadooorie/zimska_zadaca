@@ -315,4 +315,4 @@ vs_out vs_main(vs_in input) {
 	return output;
 }
 float4 ps_main(vs_out input) : SV_TARGET {
-	return mytexture.Samp
+	return mytexture.Sample(mysampler, input.texco
