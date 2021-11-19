@@ -327,4 +327,4 @@ texture_data := [TEXTURE_WIDTH*TEXTURE_HEIGHT]u32{
 	0xff7f7f7f, 0xffffffff,
 }
 
-// position: f
+// position: float3, normal: float3, texc
