@@ -319,4 +319,7 @@ float4 ps_main(vs_out input) : SV_TARGET {
 }
 `
 
-TEXTU
+TEXTURE_WIDTH  :: 2
+TEXTURE_HEIGHT :: 2
+
+texture
