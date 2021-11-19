@@ -323,4 +323,5 @@ TEXTURE_WIDTH  :: 2
 TEXTURE_HEIGHT :: 2
 
 texture_data := [TEXTURE_WIDTH*TEXTURE_HEIGHT]u32{
-	0xffffffff,
+	0xffffffff, 0xff7f7f7f,
+	0xff7f7f7f, 0
