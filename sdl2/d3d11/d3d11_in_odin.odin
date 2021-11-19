@@ -327,4 +327,5 @@ texture_data := [TEXTURE_WIDTH*TEXTURE_HEIGHT]u32{
 	0xff7f7f7f, 0xffffffff,
 }
 
-// position: float3, normal: float3, texc
+// position: float3, normal: float3, texcoord: float2, color: float3
+vertex_data := [?
