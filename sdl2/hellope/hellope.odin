@@ -53,3 +53,39 @@ Texture_Asset :: struct {
 
 	scale: f32,
 	pivot: struct {
+		x: f32,
+		y: f32,
+	},
+}
+
+Surface :: struct {
+	surf: ^sdl2.Surface,
+	/*
+		If using `core:image/png`, `img` will hold the pointer to the `Image` returned by `png.load`.
+		Unused when `USE_SDL2_IMAGE` is enabled.
+	*/
+	img:  ^core_img.Image,
+}
+
+CTX :: struct {
+	window:        ^sdl2.Window,
+	surface:       ^sdl2.Surface,
+	renderer:      ^sdl2.Renderer,
+	textures:      [dynamic]Texture_Asset, 
+
+	should_close:  bool,
+	app_start:     f64,
+
+	frame_start:   f64,
+	frame_end:     f64,
+	frame_elapsed: f64,
+
+}
+
+ctx := CTX{}
+
+init_sdl :: proc() -> (ok: bool) {
+	if sdl_res := sdl2.Init(sdl2.INIT_VIDEO); sdl_res < 0 {
+		log.errorf("sdl2.init returned %v.", sdl_res)
+		return false
+	}
