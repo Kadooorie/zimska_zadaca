@@ -89,3 +89,31 @@ init_sdl :: proc() -> (ok: bool) {
 		log.errorf("sdl2.init returned %v.", sdl_res)
 		return false
 	}
+
+	when USE_SDL2_IMAGE {
+		img_init_flags := sdl_img.INIT_PNG
+		img_res        := sdl_img.InitFlags(sdl_img.Init(img_init_flags))
+		if img_init_flags != img_res {
+			log.errorf("sdl2_image.init returned %v.", img_res)
+		}
+	}
+
+	if CENTER_WINDOW {
+		/*
+			Get desktop bounds for primary adapter
+		*/
+		bounds := sdl2.Rect{}
+		if e := sdl2.GetDisplayBounds(0, &bounds); e != 0 {
+			log.errorf("Unable to get desktop bounds.")
+			return false
+		}
+
+		WINDOW_X = ((bounds.w - bounds.x) / 2) - (WINDOW_WIDTH  / 2) + bounds.x
+		WINDOW_Y = ((bounds.h - bounds.y) / 2) - (WINDOW_HEIGHT / 2) + bounds.y
+	}
+
+	ctx.window = sdl2.CreateWindow(WINDOW_TITLE, WINDOW_X, WINDOW_Y, WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_FLAGS)
+	if ctx.window == nil {
+		log.errorf("sdl2.CreateWindow failed.")
+		return false
+	}
