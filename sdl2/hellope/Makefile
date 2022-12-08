@@ -1,4 +1,4 @@
 all: run
 
 run:
-	odin run . -s
+	odin run . -show-timings -vet -out:hellop
