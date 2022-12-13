@@ -186,3 +186,36 @@ destroy_surface :: proc(surface: ^Surface) {
 
 init_resources :: proc() -> (ok: bool) {
 	logo_surface: ^Surface
+
+	if logo_surface = load_surface_from_image_file(ODIN_LOGO_PATH); logo_surface == nil {
+		log.errorf("Couldn't load image %v.", ODIN_LOGO_PATH)
+	}
+
+	tex := sdl2.CreateTextureFromSurface(ctx.renderer, logo_surface.surf)
+	if tex == nil {
+		log.errorf("Couldn't convert image to texture.")
+		return false
+	}
+	odin_logo := Texture_Asset{
+		tex = tex,
+		w = logo_surface.surf.w,
+		h = logo_surface.surf.h,
+
+		/*
+			By default the image is at scale 1, with the pivot in the middle of the image.
+		*/
+		scale = 1.00,
+		pivot = { 0.5, 0.5, },
+	}
+
+	destroy_surface(logo_surface)
+	append(&ctx.textures, odin_logo)
+
+	return true
+}
+
+draw :: proc() {
+  	sdl2.SetRenderDrawColor(ctx.renderer, 255, 142, 27, 0xff)
+  	sdl2.RenderClear(ctx.renderer)
+
+  	tex := ctx.textures[0]
