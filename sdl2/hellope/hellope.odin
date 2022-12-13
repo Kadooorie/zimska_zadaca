@@ -219,3 +219,26 @@ draw :: proc() {
   	sdl2.RenderClear(ctx.renderer)
 
   	tex := ctx.textures[0]
+	r := sdl2.Rect{
+		x = (WINDOW_WIDTH  / 2) - i32(f32(tex.w) * tex.scale * tex.pivot.x),
+		y = (WINDOW_HEIGHT / 2) - i32(f32(tex.h) * tex.scale * tex.pivot.y),
+		w = i32(f32(tex.w) * tex.scale),
+		h = i32(f32(tex.h) * tex.scale),
+	}
+    sdl2.RenderCopy(ctx.renderer, tex.tex, nil, &r)
+  	sdl2.RenderPresent(ctx.renderer)
+}
+
+cleanup :: proc() {
+	defer delete(ctx.textures)
+	sdl2.DestroyWindow(ctx.window)
+	sdl2.Quit()
+}
+
+process_input :: proc() {
+	e: sdl2.Event
+
+	for sdl2.PollEvent(&e) {
+		#partial switch(e.type) {
+		case .QUIT:
+			ctx.should_close = true
