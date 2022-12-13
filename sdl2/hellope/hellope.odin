@@ -117,3 +117,40 @@ init_sdl :: proc() -> (ok: bool) {
 		log.errorf("sdl2.CreateWindow failed.")
 		return false
 	}
+
+	ctx.renderer = sdl2.CreateRenderer(ctx.window, -1, {.ACCELERATED, .PRESENTVSYNC})
+	if ctx.renderer == nil {
+		log.errorf("sdl2.CreateRenderer failed.")
+		return false
+	}
+
+	return true
+}
+
+when USE_SDL2_IMAGE { 
+	load_surface_from_image_file :: proc(image_path: string) -> (surface: ^Surface) {
+		path := strings.clone_to_cstring(image_path, context.temp_allocator)
+
+		surface = new(Surface)
+		surface.surf = sdl_img.Load(path)
+		if surface.surf == nil {
+			log.errorf("Couldn't load %v.", ODIN_LOGO_PATH)
+		}
+		return
+	}
+} else {
+	load_surface_from_image_file :: proc(image_path: string) -> (surface: ^Surface) {
+
+		/*
+			Load PNG using `core:image/png`.
+		*/
+		res_img, res_error := png.load(image_path)
+		if res_error != nil {
+			log.errorf("Couldn't load %v.", ODIN_LOGO_PATH)
+			return nil
+		}
+
+		surface = new(Surface)
+		surface.img = res_img
+
+		/*
