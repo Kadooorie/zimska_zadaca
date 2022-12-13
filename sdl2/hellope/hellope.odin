@@ -154,3 +154,35 @@ when USE_SDL2_IMAGE {
 		surface.img = res_img
 
 		/*
+			Convert it into an SDL2 Surface.
+		*/
+  		rmask := u32(0x000000ff)
+  		gmask := u32(0x0000ff00)
+  		bmask := u32(0x00ff0000)
+  		amask := u32(0xff000000) if res_img.channels == 4 else u32(0x0)
+
+  		depth := i32(res_img.depth) * i32(res_img.channels)
+  		pitch := i32(res_img.width) * i32(res_img.channels)
+
+  		surface.surf = sdl2.CreateRGBSurfaceFrom(
+  			raw_data(res_img.pixels.buf),
+  			i32(res_img.width), i32(res_img.height), depth, pitch,
+  			rmask, gmask, bmask, amask,
+  		)
+
+  		return
+	}
+}
+
+destroy_surface :: proc(surface: ^Surface) {
+	assert(surface != nil)
+
+	when !USE_SDL2_IMAGE {
+		png.destroy(surface.img)
+	}
+	sdl2.FreeSurface(surface.surf)
+	free(surface)
+}
+
+init_resources :: proc() -> (ok: bool) {
+	logo_surface: ^Surface
