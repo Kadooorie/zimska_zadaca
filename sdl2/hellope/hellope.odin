@@ -242,3 +242,37 @@ process_input :: proc() {
 		#partial switch(e.type) {
 		case .QUIT:
 			ctx.should_close = true
+		case .KEYDOWN:
+			#partial switch(e.key.keysym.sym) {
+			case .ESCAPE:
+				ctx.should_close = true
+			}
+		}
+	}
+}
+
+update :: proc() {
+	breathe_speed := math.PI * 0.35
+	time_running  := ctx.frame_start - ctx.app_start
+	angle         := breathe_speed * time_running
+
+	ctx.textures[0].scale = 0.75 + f32(math.sin(angle)) * 0.5
+	ctx.textures[0].pivot = { 0.5 + f32(math.cos(angle)), 0.5 + f32(math.sin(angle)) }
+}
+
+loop :: proc() {
+	ctx.frame_start   = ctx.app_start
+	ctx.frame_elapsed = 0.001 // Set frame time to 1ms for the first frame to avoid problems.
+
+	for !ctx.should_close {
+		process_input()
+		update()
+		draw()
+
+		ctx.frame_end     = f64(sdl2.GetPerformanceCounter()) / f64(sdl2.GetPerformanceFrequency())
+		ctx.frame_elapsed = ctx.frame_end - ctx.frame_start
+		ctx.frame_start   = ctx.frame_end
+	}
+}
+
+main :: proc() {
