@@ -276,3 +276,27 @@ loop :: proc() {
 }
 
 main :: proc() {
+	context.logger = log.create_console_logger()
+
+	if res := init_sdl(); !res {
+		log.errorf("Initialization failed.")
+		os.exit(1)
+	}
+
+	if res := init_resources(); !res {
+		log.errorf("Couldn't initialize resources.")
+		os.exit(1)
+	}
+	defer cleanup()
+
+	/*
+		Global start time.
+	*/
+	ctx.app_start = f64(sdl2.GetPerformanceCounter()) / f64(sdl2.GetPerformanceFrequency())
+
+	loop()
+
+	now     := f64(sdl2.GetPerformanceCounter()) / f64(sdl2.GetPerformanceFrequency())
+	elapsed := now - ctx.app_start
+	log.infof("Finished in %v seconds!\n", elapsed)
+}
