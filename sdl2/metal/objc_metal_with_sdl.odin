@@ -9,4 +9,4 @@ import SDL "vendor:sdl2"
 import "core:fmt"
 
 main :: proc() {
-	
+	SDL.SetHint(SDL.HINT_RENDER_
