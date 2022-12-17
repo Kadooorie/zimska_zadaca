@@ -9,4 +9,5 @@ import SDL "vendor:sdl2"
 import "core:fmt"
 
 main :: proc() {
-	SDL.SetHint(SDL.HINT_RENDER_
+	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "metal")
+	SDL.setenv
