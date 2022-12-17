@@ -2,4 +2,6 @@ package objc_test
 
 import NS "core:sys/darwin/Foundation"
 import MTL "core:sys/darwin/Metal"
-import CA
+import CA "core:sys/darwin/QuartzCore"
+	
+impo
