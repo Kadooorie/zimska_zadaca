@@ -6,4 +6,7 @@ import CA "core:sys/darwin/QuartzCore"
 	
 import SDL "vendor:sdl2"
 
-import "
+import "core:fmt"
+
+main :: proc() {
+	
