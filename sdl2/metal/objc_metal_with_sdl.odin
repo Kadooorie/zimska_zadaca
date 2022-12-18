@@ -15,4 +15,4 @@ main :: proc() {
 	defer SDL.Quit()
 
 	window := SDL.CreateWindow("SDL Metal", 
-		SDL.WIND
+		SDL.WINDOWPOS_CENTERED, SDL.WINDOWPOS_CE
