@@ -14,4 +14,5 @@ main :: proc() {
 	SDL.Init({.VIDEO})
 	defer SDL.Quit()
 
-	window := SDL.CreateWindo
+	window := SDL.CreateWindow("SDL Metal", 
+		SDL.WIND
