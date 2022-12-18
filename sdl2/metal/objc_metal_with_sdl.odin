@@ -10,4 +10,4 @@ import "core:fmt"
 
 main :: proc() {
 	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "metal")
-	SDL.setenv
+	SDL.setenv("METAL_DEVICE_WRAPPER_TYPE", "
