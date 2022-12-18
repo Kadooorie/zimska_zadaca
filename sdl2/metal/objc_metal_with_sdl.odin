@@ -12,4 +12,6 @@ main :: proc() {
 	SDL.SetHint(SDL.HINT_RENDER_DRIVER, "metal")
 	SDL.setenv("METAL_DEVICE_WRAPPER_TYPE", "1", 0)
 	SDL.Init({.VIDEO})
-	defer S
+	defer SDL.Quit()
+
+	window := SDL.CreateWindo
