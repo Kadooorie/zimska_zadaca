@@ -19,4 +19,4 @@ main :: proc() {
 		854, 480, 
 		SDL.WINDOW_ALLOW_HIGHDPI|SDL.WINDOW_HIDDEN,
 	)
-	d
+	defer SDL.DestroyWindow(window)
