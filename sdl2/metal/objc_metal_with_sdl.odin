@@ -20,3 +20,5 @@ main :: proc() {
 		SDL.WINDOW_ALLOW_HIGHDPI|SDL.WINDOW_HIDDEN,
 	)
 	defer SDL.DestroyWindow(window)
+
+	window_system_info: SD
