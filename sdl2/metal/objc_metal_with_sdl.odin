@@ -21,4 +21,5 @@ main :: proc() {
 	)
 	defer SDL.DestroyWindow(window)
 
-	window_system_info: SD
+	window_system_info: SDL.SysWMinfo
+	SDL.GetVersion(&wi
