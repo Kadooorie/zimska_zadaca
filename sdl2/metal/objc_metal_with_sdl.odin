@@ -23,4 +23,4 @@ main :: proc() {
 
 	window_system_info: SDL.SysWMinfo
 	SDL.GetVersion(&window_system_info.version)
-	SDL.Get
+	SDL.GetWindowWMInfo(window, &window_syste
