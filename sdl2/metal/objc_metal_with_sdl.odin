@@ -28,4 +28,6 @@ main :: proc() {
 	fmt.println(window_system_info)
 
 	swapchain: ^CA.MetalLayer
-	devi
+	device: ^MTL.Device
+	when true {
+		n
