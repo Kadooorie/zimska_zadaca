@@ -27,4 +27,5 @@ main :: proc() {
 	assert(window_system_info.subsystem == .COCOA)
 	fmt.println(window_system_info)
 
-	sw
+	swapchain: ^CA.MetalLayer
+	devi
