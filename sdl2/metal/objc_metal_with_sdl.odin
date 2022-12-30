@@ -24,4 +24,5 @@ main :: proc() {
 	window_system_info: SDL.SysWMinfo
 	SDL.GetVersion(&window_system_info.version)
 	SDL.GetWindowWMInfo(window, &window_system_info)
-	assert(window_system
+	assert(window_system_info.subsystem == .COCOA)
+	fmt.prin
