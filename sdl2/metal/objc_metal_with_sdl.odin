@@ -30,4 +30,6 @@ main :: proc() {
 	swapchain: ^CA.MetalLayer
 	device: ^MTL.Device
 	when true {
-		native_window := (^NS.Window)(window_system_info.info.cocoa.w
+		native_window := (^NS.Window)(window_system_info.info.cocoa.window)
+
+		device = MTL.C
