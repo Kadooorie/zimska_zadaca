@@ -35,3 +35,6 @@ main :: proc() {
 		device = MTL.CreateSystemDefaultDevice()
 
 		name := device->name()->OdinString()
+		fmt.println(name)
+
+		swapchain 
