@@ -30,4 +30,4 @@ main :: proc() {
 	swapchain: ^CA.MetalLayer
 	device: ^MTL.Device
 	when true {
-		n
+		native_window := (^NS.Window)(
