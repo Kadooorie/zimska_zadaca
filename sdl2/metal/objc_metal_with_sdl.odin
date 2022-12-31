@@ -34,4 +34,4 @@ main :: proc() {
 
 		device = MTL.CreateSystemDefaultDevice()
 
-		name :=
+		name := device->name()->OdinString()
