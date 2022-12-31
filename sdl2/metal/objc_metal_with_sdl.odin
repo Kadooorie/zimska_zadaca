@@ -37,4 +37,5 @@ main :: proc() {
 		name := device->name()->OdinString()
 		fmt.println(name)
 
-		swapchain 
+		swapchain = CA.MetalLayer.layer()
+		swapchain-
