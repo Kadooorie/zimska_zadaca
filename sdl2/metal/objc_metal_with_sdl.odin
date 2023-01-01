@@ -38,4 +38,5 @@ main :: proc() {
 		fmt.println(name)
 
 		swapchain = CA.MetalLayer.layer()
+		swapchain->setDevice(device)
 		swapchain-
