@@ -41,4 +41,4 @@ main :: proc() {
 		swapchain->setDevice(device)
 		swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
 		swapchain->setFramebufferOnly(true)
-		swapchai
+		swapchain->setFrame(native_window->frame())
