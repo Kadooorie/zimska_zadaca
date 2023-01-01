@@ -39,4 +39,4 @@ main :: proc() {
 
 		swapchain = CA.MetalLayer.layer()
 		swapchain->setDevice(device)
-		swapchain-
+		swapchain->setPixelFormat(.BGRA8Unorm_sR
