@@ -40,4 +40,5 @@ main :: proc() {
 		swapchain = CA.MetalLayer.layer()
 		swapchain->setDevice(device)
 		swapchain->setPixelFormat(.BGRA8Unorm_sRGB)
-		swapchain->setFram
+		swapchain->setFramebufferOnly(true)
+		swapchai
