@@ -43,4 +43,5 @@ main :: proc() {
 		swapchain->setFramebufferOnly(true)
 		swapchain->setFrame(native_window->frame())
 
-		// native_window->addSu
+		// native_window->addSublayer(swapchain)
+		native_wind
