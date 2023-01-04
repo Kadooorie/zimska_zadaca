@@ -44,4 +44,5 @@ main :: proc() {
 		swapchain->setFrame(native_window->frame())
 
 		// native_window->addSublayer(swapchain)
-		native_window->contentView()->setLayer(swapc
+		native_window->contentView()->setLayer(swapchain)
+		native_window->s
