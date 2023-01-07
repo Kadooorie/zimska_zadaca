@@ -45,4 +45,5 @@ main :: proc() {
 
 		// native_window->addSublayer(swapchain)
 		native_window->contentView()->setLayer(swapchain)
-		native_window->s
+		native_window->setOpaque(true)
+		native_win
