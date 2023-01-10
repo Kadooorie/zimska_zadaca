@@ -49,4 +49,4 @@ main :: proc() {
 		native_window->setBackgroundColor(nil)
 	} else {
 		renderer := SDL.CreateRenderer(window, -1, SDL.RENDERER_PRESENTVSYNC)
-		def
+		defer SDL.DestroyRenderer(renderer
