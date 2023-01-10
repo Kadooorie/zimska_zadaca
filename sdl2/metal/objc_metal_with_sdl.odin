@@ -48,4 +48,5 @@ main :: proc() {
 		native_window->setOpaque(true)
 		native_window->setBackgroundColor(nil)
 	} else {
-		renderer := SDL.CreateRenderer(window, -1, 
+		renderer := SDL.CreateRenderer(window, -1, SDL.RENDERER_PRESENTVSYNC)
+		def
