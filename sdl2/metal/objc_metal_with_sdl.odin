@@ -49,4 +49,6 @@ main :: proc() {
 		native_window->setBackgroundColor(nil)
 	} else {
 		renderer := SDL.CreateRenderer(window, -1, SDL.RENDERER_PRESENTVSYNC)
-		defer SDL.DestroyRenderer(renderer
+		defer SDL.DestroyRenderer(renderer)
+
+		swapchain = (^CA.MetalLaye
