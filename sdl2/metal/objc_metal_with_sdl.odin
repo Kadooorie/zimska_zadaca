@@ -55,4 +55,6 @@ main :: proc() {
 		device = swapchain->device()
 	}
 
-	command_queue := d
+	command_queue := device->newCommandQueue()
+
+	SDL.
