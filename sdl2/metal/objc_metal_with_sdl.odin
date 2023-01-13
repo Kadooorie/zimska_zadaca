@@ -51,4 +51,5 @@ main :: proc() {
 		renderer := SDL.CreateRenderer(window, -1, SDL.RENDERER_PRESENTVSYNC)
 		defer SDL.DestroyRenderer(renderer)
 
-		swapchain = (^CA.MetalLayer)(SDL.RenderGetMetalLayer(re
+		swapchain = (^CA.MetalLayer)(SDL.RenderGetMetalLayer(renderer))
+		device = swapchain->de
