@@ -52,4 +52,7 @@ main :: proc() {
 		defer SDL.DestroyRenderer(renderer)
 
 		swapchain = (^CA.MetalLayer)(SDL.RenderGetMetalLayer(renderer))
-		device = swapchain->de
+		device = swapchain->device()
+	}
+
+	command_queue := d
