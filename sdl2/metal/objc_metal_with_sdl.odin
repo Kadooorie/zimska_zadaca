@@ -59,4 +59,4 @@ main :: proc() {
 
 	SDL.ShowWindow(window)
 
-	color :
+	color := MTL.ClearColor{0.5, 0.7, 1.0, 
