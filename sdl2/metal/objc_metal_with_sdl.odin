@@ -57,4 +57,6 @@ main :: proc() {
 
 	command_queue := device->newCommandQueue()
 
-	SDL.
+	SDL.ShowWindow(window)
+
+	color :
