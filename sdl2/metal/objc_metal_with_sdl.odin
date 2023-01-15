@@ -64,4 +64,5 @@ main :: proc() {
 	quit := false
 
 	for !quit {
-		for e: SDL.Event; SDL.PollEv
+		for e: SDL.Event; SDL.PollEvent(&e); {
+			#partial switch 
