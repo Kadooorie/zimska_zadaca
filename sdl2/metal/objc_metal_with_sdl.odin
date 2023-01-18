@@ -79,4 +79,5 @@ main :: proc() {
 		drawable := swapchain->nextDrawable()
 		assert(drawable != nil)
 
-		pass := MTL.RenderPassDes
+		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
+		colo
