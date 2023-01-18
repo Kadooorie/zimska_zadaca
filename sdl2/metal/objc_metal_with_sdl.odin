@@ -68,4 +68,5 @@ main :: proc() {
 			#partial switch e.type {
 			case .QUIT: quit = true
 			case .KEYDOWN:
-				if e.k
+				if e.key.keysym.sym == .ESCAPE {
+					quit =
