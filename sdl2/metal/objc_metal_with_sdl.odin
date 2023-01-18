@@ -76,4 +76,5 @@ main :: proc() {
 
 		NS.scoped_autoreleasepool()
 
-		drawable := swapchain->nextDrawab
+		drawable := swapchain->nextDrawable()
+		assert(drawable != nil)
