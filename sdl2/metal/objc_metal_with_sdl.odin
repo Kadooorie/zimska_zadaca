@@ -74,4 +74,6 @@ main :: proc() {
 			}
 		}
 
-		NS.sco
+		NS.scoped_autoreleasepool()
+
+		dra
