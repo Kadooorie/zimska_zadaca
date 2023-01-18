@@ -76,4 +76,4 @@ main :: proc() {
 
 		NS.scoped_autoreleasepool()
 
-		dra
+		drawable := swapchain->nextDrawab
