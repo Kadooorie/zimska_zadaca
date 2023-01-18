@@ -69,4 +69,9 @@ main :: proc() {
 			case .QUIT: quit = true
 			case .KEYDOWN:
 				if e.key.keysym.sym == .ESCAPE {
-					quit =
+					quit = true
+				}
+			}
+		}
+
+		NS.sco
