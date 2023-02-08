@@ -83,4 +83,5 @@ main :: proc() {
 		color_attachment := pass->colorAttachments()->object(0)
 		assert(color_attachment != nil)
 		color_attachment->setClearColor(color)
-		color_attachment
+		color_attachment->setLoadAction(.Clear)
+		colo
