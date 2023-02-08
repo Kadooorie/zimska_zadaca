@@ -81,4 +81,4 @@ main :: proc() {
 
 		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
 		color_attachment := pass->colorAttachments()->object(0)
-		assert(
+		assert(color_attachment != nil
