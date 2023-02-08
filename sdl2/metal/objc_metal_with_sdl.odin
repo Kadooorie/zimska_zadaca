@@ -80,4 +80,5 @@ main :: proc() {
 		assert(drawable != nil)
 
 		pass := MTL.RenderPassDescriptor.renderPassDescriptor()
-		color_attachment := pass->colorAttachm
+		color_attachment := pass->colorAttachments()->object(0)
+		assert(
