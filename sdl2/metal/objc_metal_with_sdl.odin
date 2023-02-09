@@ -84,4 +84,5 @@ main :: proc() {
 		assert(color_attachment != nil)
 		color_attachment->setClearColor(color)
 		color_attachment->setLoadAction(.Clear)
-		color_attachment->setStoreAc
+		color_attachment->setStoreAction(.Store)
+		color_attac
