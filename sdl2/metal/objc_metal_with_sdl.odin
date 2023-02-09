@@ -88,4 +88,5 @@ main :: proc() {
 		color_attachment->setTexture(drawable->texture())
 
 		
-		command_buffer := 
+		command_buffer := command_queue->commandBuffer()
+		enco
