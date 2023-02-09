@@ -85,4 +85,7 @@ main :: proc() {
 		color_attachment->setClearColor(color)
 		color_attachment->setLoadAction(.Clear)
 		color_attachment->setStoreAction(.Store)
-		color_attachment->setTexture(drawable->textur
+		color_attachment->setTexture(drawable->texture())
+
+		
+		command_buffer := 
