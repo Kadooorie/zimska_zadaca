@@ -94,4 +94,6 @@ main :: proc() {
 		encoder->endEncoding()
 
 		command_buffer->presentDrawable(drawable)
-		command_buffer->
+		command_buffer->commit()
+	}
+}
