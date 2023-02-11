@@ -89,4 +89,4 @@ main :: proc() {
 
 		
 		command_buffer := command_queue->commandBuffer()
-		enco
+		encoder := command_buffer->rende
