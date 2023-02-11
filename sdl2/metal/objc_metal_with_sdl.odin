@@ -93,4 +93,5 @@ main :: proc() {
 		// ...
 		encoder->endEncoding()
 
-		command_buffer->prese
+		command_buffer->presentDrawable(drawable)
+		command_buffer->
