@@ -91,4 +91,6 @@ main :: proc() {
 		command_buffer := command_queue->commandBuffer()
 		encoder := command_buffer->renderCommandEncoderWithDescriptor(pass)
 		// ...
-		encoder->endEnc
+		encoder->endEncoding()
+
+		command_buffer->prese
