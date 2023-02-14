@@ -109,3 +109,31 @@ main :: proc() {
 
 				#partial switch e.key.keysym.sym {
 				case .LSHIFT:    fn(ctx, .SHIFT)
+				case .RSHIFT:    fn(ctx, .SHIFT)
+				case .LCTRL:     fn(ctx, .CTRL)
+				case .RCTRL:     fn(ctx, .CTRL)
+				case .LALT:      fn(ctx, .ALT)
+				case .RALT:      fn(ctx, .ALT)
+				case .RETURN:    fn(ctx, .RETURN)
+				case .KP_ENTER:  fn(ctx, .RETURN)
+				case .BACKSPACE: fn(ctx, .BACKSPACE)
+				}
+			}
+		}
+
+		mu.begin(ctx)
+		all_windows(ctx)
+		mu.end(ctx)
+
+		render(ctx, renderer)
+	}
+}
+
+render :: proc(ctx: ^mu.Context, renderer: ^SDL.Renderer) {
+	render_texture :: proc(renderer: ^SDL.Renderer, dst: ^SDL.Rect, src: mu.Rect, color: mu.Color) {
+		dst.w = src.w
+		dst.h = src.h
+
+		SDL.SetTextureAlphaMod(state.atlas_texture, color.a)
+		SDL.SetTextureColorMod(state.atlas_texture, color.r, color.g, color.b)
+		SDL.RenderCopy(renderer, state.atlas_texture, &SDL.Rect{src.x, src.y, src.w, src.h}, dst)
