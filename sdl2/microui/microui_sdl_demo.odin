@@ -137,3 +137,33 @@ render :: proc(ctx: ^mu.Context, renderer: ^SDL.Renderer) {
 		SDL.SetTextureAlphaMod(state.atlas_texture, color.a)
 		SDL.SetTextureColorMod(state.atlas_texture, color.r, color.g, color.b)
 		SDL.RenderCopy(renderer, state.atlas_texture, &SDL.Rect{src.x, src.y, src.w, src.h}, dst)
+	}
+
+	viewport_rect := &SDL.Rect{}
+	SDL.GetRendererOutputSize(renderer, &viewport_rect.w, &viewport_rect.h)
+	SDL.RenderSetViewport(renderer, viewport_rect)
+	SDL.RenderSetClipRect(renderer, viewport_rect)
+	SDL.SetRenderDrawColor(renderer, state.bg.r, state.bg.g, state.bg.b, state.bg.a)
+	SDL.RenderClear(renderer)
+
+	command_backing: ^mu.Command
+	for variant in mu.next_command_iterator(ctx, &command_backing) {
+		switch cmd in variant {
+		case ^mu.Command_Text:
+			dst := SDL.Rect{cmd.pos.x, cmd.pos.y, 0, 0}
+			for ch in cmd.str do if ch&0xc0 != 0x80 {
+				r := min(int(ch), 127)
+				src := mu.default_atlas[mu.DEFAULT_ATLAS_FONT + r]
+				render_texture(renderer, &dst, src, cmd.color)
+				dst.x += dst.w
+			}
+		case ^mu.Command_Rect:
+			SDL.SetRenderDrawColor(renderer, cmd.color.r, cmd.color.g, cmd.color.b, cmd.color.a)
+			SDL.RenderFillRect(renderer, &SDL.Rect{cmd.rect.x, cmd.rect.y, cmd.rect.w, cmd.rect.h})
+		case ^mu.Command_Icon:
+			src := mu.default_atlas[cmd.id]
+			x := cmd.rect.x + (cmd.rect.w - src.w)/2
+			y := cmd.rect.y + (cmd.rect.h - src.h)/2
+			render_texture(renderer, &SDL.Rect{x, y, 0, 0}, src, cmd.color)
+		case ^mu.Command_Clip:
+			SDL.RenderSetClipRect(renderer, &SDL.Rect{cmd.rect.x, cmd.rect.y, cmd.rect.w, cmd.rect.h})
