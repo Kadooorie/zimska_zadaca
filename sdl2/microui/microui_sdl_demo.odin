@@ -78,3 +78,34 @@ main :: proc() {
 	mu.init(ctx)
 
 	ctx.text_width = mu.default_atlas_text_width
+	ctx.text_height = mu.default_atlas_text_height
+
+	main_loop: for {
+		for e: SDL.Event; SDL.PollEvent(&e); /**/ {
+			#partial switch e.type {
+			case .QUIT:
+				break main_loop
+			case .MOUSEMOTION:
+				mu.input_mouse_move(ctx, e.motion.x, e.motion.y)
+			case .MOUSEWHEEL:
+				mu.input_scroll(ctx, e.wheel.x * 30, e.wheel.y * -30)
+			case .TEXTINPUT:
+				mu.input_text(ctx, string(cstring(&e.text.text[0])))
+
+			case .MOUSEBUTTONDOWN, .MOUSEBUTTONUP:
+				fn := mu.input_mouse_down if e.type == .MOUSEBUTTONDOWN else mu.input_mouse_up
+				switch e.button.button {
+				case SDL.BUTTON_LEFT:   fn(ctx, e.button.x, e.button.y, .LEFT)
+				case SDL.BUTTON_MIDDLE: fn(ctx, e.button.x, e.button.y, .MIDDLE)
+				case SDL.BUTTON_RIGHT:  fn(ctx, e.button.x, e.button.y, .RIGHT)
+				}
+
+			case .KEYDOWN, .KEYUP:
+				if e.type == .KEYUP && e.key.keysym.sym == .ESCAPE {
+					SDL.PushEvent(&SDL.Event{type = .QUIT})
+				}
+
+				fn := mu.input_key_down if e.type == .KEYDOWN else mu.input_key_up
+
+				#partial switch e.key.keysym.sym {
+				case .LSHIFT:    fn(ctx, .SHIFT)
