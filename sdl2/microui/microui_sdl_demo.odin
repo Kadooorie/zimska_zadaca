@@ -241,3 +241,35 @@ all_windows :: proc(ctx: ^mu.Context) {
 
 		if .ACTIVE in mu.header(ctx, "Tree and Text", {.EXPANDED}) {
 			mu.layout_row(ctx, {140, -1})
+			mu.layout_begin_column(ctx)
+			if .ACTIVE in mu.treenode(ctx, "Test 1") {
+				if .ACTIVE in mu.treenode(ctx, "Test 1a") {
+					mu.label(ctx, "Hello")
+					mu.label(ctx, "world")
+				}
+				if .ACTIVE in mu.treenode(ctx, "Test 1b") {
+					if .SUBMIT in mu.button(ctx, "Button 1") { write_log("Pressed button 1") }
+					if .SUBMIT in mu.button(ctx, "Button 2") { write_log("Pressed button 2") }
+				}
+			}
+			if .ACTIVE in mu.treenode(ctx, "Test 2") {
+				mu.layout_row(ctx, {53, 53})
+				if .SUBMIT in mu.button(ctx, "Button 3") { write_log("Pressed button 3") }
+				if .SUBMIT in mu.button(ctx, "Button 4") { write_log("Pressed button 4") }
+				if .SUBMIT in mu.button(ctx, "Button 5") { write_log("Pressed button 5") }
+				if .SUBMIT in mu.button(ctx, "Button 6") { write_log("Pressed button 6") }
+			}
+			if .ACTIVE in mu.treenode(ctx, "Test 3") {
+				@static checks := [3]bool{true, false, true}
+				mu.checkbox(ctx, "Checkbox 1", &checks[0])
+				mu.checkbox(ctx, "Checkbox 2", &checks[1])
+				mu.checkbox(ctx, "Checkbox 3", &checks[2])
+
+			}
+			mu.layout_end_column(ctx)
+
+			mu.layout_begin_column(ctx)
+			mu.layout_row(ctx, {-1})
+			mu.text(ctx,
+				"Lorem ipsum dolor sit amet, consectetur adipiscing "+
+				"elit. Maecenas lacinia, sem eu lacinia molestie, mi risus faucibus "+
