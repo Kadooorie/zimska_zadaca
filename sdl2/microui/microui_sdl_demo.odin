@@ -297,3 +297,39 @@ all_windows :: proc(ctx: ^mu.Context) {
 	}
 
 	if mu.window(ctx, "Log Window", {350, 40, 300, 200}, opts) {
+		mu.layout_row(ctx, {-1}, -28)
+		mu.begin_panel(ctx, "Log")
+		mu.layout_row(ctx, {-1}, -1)
+		mu.text(ctx, read_log())
+		if state.log_buf_updated {
+			panel := mu.get_current_container(ctx)
+			panel.scroll.y = panel.content_size.y
+			state.log_buf_updated = false
+		}
+		mu.end_panel(ctx)
+
+		@static buf: [128]byte
+		@static buf_len: int
+		submitted := false
+		mu.layout_row(ctx, {-70, -1})
+		if .SUBMIT in mu.textbox(ctx, buf[:], &buf_len) {
+			mu.set_focus(ctx, ctx.last_id)
+			submitted = true
+		}
+		if .SUBMIT in mu.button(ctx, "Submit") {
+			submitted = true
+		}
+		if submitted {
+			write_log(string(buf[:buf_len]))
+			buf_len = 0
+		}
+	}
+
+	if mu.window(ctx, "Style Window", {350, 250, 300, 240}) {
+		@static colors := [mu.Color_Type]string{
+			.TEXT         = "text",
+			.BORDER       = "border",
+			.WINDOW_BG    = "window bg",
+			.TITLE_BG     = "title bg",
+			.TITLE_TEXT   = "title text",
+			.PANEL_BG     = "panel bg",
