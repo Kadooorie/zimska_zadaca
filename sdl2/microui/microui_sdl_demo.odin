@@ -167,3 +167,44 @@ render :: proc(ctx: ^mu.Context, renderer: ^SDL.Renderer) {
 			render_texture(renderer, &SDL.Rect{x, y, 0, 0}, src, cmd.color)
 		case ^mu.Command_Clip:
 			SDL.RenderSetClipRect(renderer, &SDL.Rect{cmd.rect.x, cmd.rect.y, cmd.rect.w, cmd.rect.h})
+		case ^mu.Command_Jump:
+			unreachable()
+		}
+	}
+
+	SDL.RenderPresent(renderer)
+}
+
+
+u8_slider :: proc(ctx: ^mu.Context, val: ^u8, lo, hi: u8) -> (res: mu.Result_Set) {
+	mu.push_id(ctx, uintptr(val))
+
+	@static tmp: mu.Real
+	tmp = mu.Real(val^)
+	res = mu.slider(ctx, &tmp, mu.Real(lo), mu.Real(hi), 0, "%.0f", {.ALIGN_CENTER})
+	val^ = u8(tmp)
+	mu.pop_id(ctx)
+	return
+}
+
+write_log :: proc(str: string) {
+	state.log_buf_len += copy(state.log_buf[state.log_buf_len:], str)
+	state.log_buf_len += copy(state.log_buf[state.log_buf_len:], "\n")
+	state.log_buf_updated = true
+}
+
+read_log :: proc() -> string {
+	return string(state.log_buf[:state.log_buf_len])
+}
+reset_log :: proc() {
+	state.log_buf_updated = true
+	state.log_buf_len = 0
+}
+
+
+all_windows :: proc(ctx: ^mu.Context) {
+	@static opts := mu.Options{.NO_CLOSE}
+
+	if mu.window(ctx, "Demo Window", {40, 40, 300, 450}, opts) {
+		if .ACTIVE in mu.header(ctx, "Window Info") {
+			win := mu.get_current_container(ctx)
