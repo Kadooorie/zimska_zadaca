@@ -273,3 +273,27 @@ all_windows :: proc(ctx: ^mu.Context) {
 			mu.text(ctx,
 				"Lorem ipsum dolor sit amet, consectetur adipiscing "+
 				"elit. Maecenas lacinia, sem eu lacinia molestie, mi risus faucibus "+
+				"ipsum, eu varius magna felis a nulla.",
+		        )
+			mu.layout_end_column(ctx)
+		}
+
+		if .ACTIVE in mu.header(ctx, "Background Colour", {.EXPANDED}) {
+			mu.layout_row(ctx, {-78, -1}, 68)
+			mu.layout_begin_column(ctx)
+			{
+				mu.layout_row(ctx, {46, -1}, 0)
+				mu.label(ctx, "Red:");   u8_slider(ctx, &state.bg.r, 0, 255)
+				mu.label(ctx, "Green:"); u8_slider(ctx, &state.bg.g, 0, 255)
+				mu.label(ctx, "Blue:");  u8_slider(ctx, &state.bg.b, 0, 255)
+			}
+			mu.layout_end_column(ctx)
+
+			r := mu.layout_next(ctx)
+			mu.draw_rect(ctx, r, state.bg)
+			mu.draw_box(ctx, mu.expand_rect(r, 1), ctx.style.colors[.BORDER])
+			mu.draw_control_text(ctx, fmt.tprintf("#%02x%02x%02x", state.bg.r, state.bg.g, state.bg.b), r, .TEXT, {.ALIGN_CENTER})
+		}
+	}
+
+	if mu.window(ctx, "Log Window", {350, 40, 300, 200}, opts) {
