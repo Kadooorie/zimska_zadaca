@@ -208,3 +208,36 @@ all_windows :: proc(ctx: ^mu.Context) {
 	if mu.window(ctx, "Demo Window", {40, 40, 300, 450}, opts) {
 		if .ACTIVE in mu.header(ctx, "Window Info") {
 			win := mu.get_current_container(ctx)
+			mu.layout_row(ctx, {54, -1}, 0)
+			mu.label(ctx, "Position:")
+			mu.label(ctx, fmt.tprintf("%d, %d", win.rect.x, win.rect.y))
+			mu.label(ctx, "Size:")
+			mu.label(ctx, fmt.tprintf("%d, %d", win.rect.w, win.rect.h))
+		}
+
+		if .ACTIVE in mu.header(ctx, "Window Options") {
+			mu.layout_row(ctx, {120, 120, 120}, 0)
+			for opt in mu.Opt {
+				state := opt in opts
+				if .CHANGE in mu.checkbox(ctx, fmt.tprintf("%v", opt), &state)  {
+					if state {
+						opts += {opt}
+					} else {
+						opts -= {opt}
+					}
+				}
+			}
+		}
+
+		if .ACTIVE in mu.header(ctx, "Test Buttons", {.EXPANDED}) {
+			mu.layout_row(ctx, {86, -110, -1})
+			mu.label(ctx, "Test buttons 1:")
+			if .SUBMIT in mu.button(ctx, "Button 1") { write_log("Pressed button 1") }
+			if .SUBMIT in mu.button(ctx, "Button 2") { write_log("Pressed button 2") }
+			mu.label(ctx, "Test buttons 2:")
+			if .SUBMIT in mu.button(ctx, "Button 3") { write_log("Pressed button 3") }
+			if .SUBMIT in mu.button(ctx, "Button 4") { write_log("Pressed button 4") }
+		}
+
+		if .ACTIVE in mu.header(ctx, "Tree and Text", {.EXPANDED}) {
+			mu.layout_row(ctx, {140, -1})
