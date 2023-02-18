@@ -78,3 +78,31 @@ main :: proc() {
 	gl.BindBuffer(gl.ARRAY_BUFFER, vbo)
 	gl.BufferData(gl.ARRAY_BUFFER, len(vertices)*size_of(vertices[0]), raw_data(vertices), gl.STATIC_DRAW)
 	gl.EnableVertexAttribArray(0)
+	gl.EnableVertexAttribArray(1)
+	gl.VertexAttribPointer(0, 3, gl.FLOAT, false, size_of(Vertex), offset_of(Vertex, pos))
+	gl.VertexAttribPointer(1, 4, gl.FLOAT, false, size_of(Vertex), offset_of(Vertex, col))
+
+	gl.BindBuffer(gl.ELEMENT_ARRAY_BUFFER, ebo)
+	gl.BufferData(gl.ELEMENT_ARRAY_BUFFER, len(indices)*size_of(indices[0]), raw_data(indices), gl.STATIC_DRAW)
+
+	// high precision timer
+	start_tick := time.tick_now()
+
+	loop: for {
+		duration := time.tick_since(start_tick)
+		t := f32(time.duration_seconds(duration))
+
+		// event polling
+		event: SDL.Event
+		for SDL.PollEvent(&event) {
+			// #partial switch tells the compiler not to error if every case is not present
+			#partial switch event.type {
+			case .KEYDOWN:
+				#partial switch event.key.keysym.sym {
+				case .ESCAPE:
+					// labelled control flow
+					break loop
+				}
+			case .QUIT:
+				// labelled control flow
+				break loop
