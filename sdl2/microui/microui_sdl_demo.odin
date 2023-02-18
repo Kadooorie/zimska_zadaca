@@ -333,3 +333,26 @@ all_windows :: proc(ctx: ^mu.Context) {
 			.TITLE_BG     = "title bg",
 			.TITLE_TEXT   = "title text",
 			.PANEL_BG     = "panel bg",
+			.BUTTON       = "button",
+			.BUTTON_HOVER = "button hover",
+			.BUTTON_FOCUS = "button focus",
+			.BASE         = "base",
+			.BASE_HOVER   = "base hover",
+			.BASE_FOCUS   = "base focus",
+			.SCROLL_BASE  = "scroll base",
+			.SCROLL_THUMB = "scroll thumb",
+		}
+
+		sw := i32(f32(mu.get_current_container(ctx).body.w) * 0.14)
+		mu.layout_row(ctx, {80, sw, sw, sw, sw, -1})
+		for label, col in colors {
+			mu.label(ctx, label)
+			u8_slider(ctx, &ctx.style.colors[col].r, 0, 255)
+			u8_slider(ctx, &ctx.style.colors[col].g, 0, 255)
+			u8_slider(ctx, &ctx.style.colors[col].b, 0, 255)
+			u8_slider(ctx, &ctx.style.colors[col].a, 0, 255)
+			mu.draw_rect(ctx, mu.layout_next(ctx), ctx.style.colors[col])
+		}
+	}
+
+}
