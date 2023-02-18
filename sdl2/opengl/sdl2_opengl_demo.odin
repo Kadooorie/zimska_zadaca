@@ -106,3 +106,27 @@ main :: proc() {
 			case .QUIT:
 				// labelled control flow
 				break loop
+			}
+		}
+
+		// Native support for GLSL-like functionality
+		pos := glm.vec3{
+			glm.cos(t*2),
+			glm.sin(t*2),
+			0,
+		}
+
+		// array programming support
+		pos *= 0.3
+
+		// matrix support
+		// model matrix which a default scale of 0.5
+		model := glm.mat4{
+			0.5,   0,   0, 0,
+			  0, 0.5,   0, 0,
+			  0,   0, 0.5, 0,
+			  0,   0,   0, 1,
+		}
+
+		// matrix indexing and array short with `.x`
+		model[0, 3] = -pos.x
