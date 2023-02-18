@@ -130,3 +130,32 @@ main :: proc() {
 
 		// matrix indexing and array short with `.x`
 		model[0, 3] = -pos.x
+		model[1, 3] = -pos.y
+		model[2, 3] = -pos.z
+
+		// native swizzling support for arrays
+		model[3].yzx = pos.yzx
+
+		model = model * glm.mat4Rotate({0, 1, 1}, t)
+
+		view := glm.mat4LookAt({0, -1, +1}, {0, 0, 0}, {0, 0, 1})
+		proj := glm.mat4Perspective(45, 1.3, 0.1, 100.0)
+
+		// matrix multiplication
+		u_transform := proj * view * model
+
+		// matrix types in Odin are stored in column-major format but written as you'd normal write them
+		gl.UniformMatrix4fv(uniforms["u_transform"].location, 1, false, &u_transform[0, 0])
+
+		gl.Viewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)
+		gl.ClearColor(0.5, 0.7, 1.0, 1.0)
+		gl.Clear(gl.COLOR_BUFFER_BIT)
+
+		gl.DrawElements(gl.TRIANGLES, i32(len(indices)), gl.UNSIGNED_SHORT, nil)
+
+		SDL.GL_SwapWindow(window)
+	}
+}
+
+
+vertex_source := `#version 330 core
