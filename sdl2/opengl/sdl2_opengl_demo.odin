@@ -42,3 +42,39 @@ main :: proc() {
 		return
 	}
 	defer gl.DeleteProgram(program)
+
+	gl.UseProgram(program)
+
+	uniforms := gl.get_uniforms_from_program(program)
+	defer delete(uniforms)
+
+	vao: u32
+	gl.GenVertexArrays(1, &vao); defer gl.DeleteVertexArrays(1, &vao)
+	gl.BindVertexArray(vao)
+
+	// initialization of OpenGL buffers
+	vbo, ebo: u32
+	gl.GenBuffers(1, &vbo); defer gl.DeleteBuffers(1, &vbo)
+	gl.GenBuffers(1, &ebo); defer gl.DeleteBuffers(1, &ebo)
+
+	// struct declaration
+	Vertex :: struct {
+		pos: glm.vec3,
+		col: glm.vec4,
+	}
+
+	vertices := []Vertex{
+		{{-0.5, +0.5, 0}, {1.0, 0.0, 0.0, 0.75}},
+		{{-0.5, -0.5, 0}, {1.0, 1.0, 0.0, 0.75}},
+		{{+0.5, -0.5, 0}, {0.0, 1.0, 0.0, 0.75}},
+		{{+0.5, +0.5, 0}, {0.0, 0.0, 1.0, 0.75}},
+	}
+
+	indices := []u16{
+		0, 1, 2,
+		2, 3, 0,
+	}
+
+	gl.BindBuffer(gl.ARRAY_BUFFER, vbo)
+	gl.BufferData(gl.ARRAY_BUFFER, len(vertices)*size_of(vertices[0]), raw_data(vertices), gl.STATIC_DRAW)
+	gl.EnableVertexAttribArray(0)
